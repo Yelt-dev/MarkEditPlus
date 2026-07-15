@@ -20,7 +20,7 @@ enum AppPreferences {
     @Storage(key: "general.appearance", defaultValue: .system)
     static var appearance: Appearance
 
-    @Storage(key: "general.new-window-behavior", defaultValue: .openDocument)
+    @Storage(key: "general.new-window-behavior", defaultValue: .newDocument)
     static var newWindowBehavior: NewWindowBehavior
 
     @Storage(key: "general.new-filename-extension", defaultValue: .md)

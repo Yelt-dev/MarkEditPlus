@@ -159,7 +159,7 @@
 		87067E2629755D5C0052E795 /* EditorStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorStatusView.swift; sourceTree = "<group>"; };
 		87091B992A963C6B00F5EF0D /* EditorTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTextInput.swift; sourceTree = "<group>"; };
 		8709C69D29B4412F009EABB5 /* AssistantSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantSettingsView.swift; sourceTree = "<group>"; };
-		870A51A2294700DE0095C7EB /* MarkEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		870A51A2294700DE0095C7EB /* MarkEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MarkEdit Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		870A51A9294700E00095C7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		870A51AC294700E00095C7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		870A51AE294700E00095C7EB /* Info.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Info.entitlements; sourceTree = "<group>"; };
@@ -754,6 +754,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 				Base,
 				"zh-Hans",
 				"zh-Hant",
@@ -1153,11 +1154,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarkEditMac/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_NAME).Application";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).Application";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1165,7 +1166,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
-				PRODUCT_NAME = MarkEdit;
+				PRODUCT_NAME = "MarkEdit Plus";
+				PRODUCT_MODULE_NAME = MarkEdit;
 				REGISTER_APP_GROUPS = "$(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1190,11 +1192,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarkEditMac/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_NAME).Application";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).Application";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1202,7 +1204,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
-				PRODUCT_NAME = MarkEdit;
+				PRODUCT_NAME = "MarkEdit Plus";
+				PRODUCT_MODULE_NAME = MarkEdit;
 				REGISTER_APP_GROUPS = "$(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1234,7 +1237,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinderExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1280,7 +1283,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinderExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1313,7 +1316,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PreviewExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1344,7 +1347,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PreviewExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MarkEdit;
+				INFOPLIST_KEY_CFBundleDisplayName = "MarkEdit Plus";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
