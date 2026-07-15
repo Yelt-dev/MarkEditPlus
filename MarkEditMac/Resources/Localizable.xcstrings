@@ -4,6 +4,12 @@
     "**Author:** %@" : {
       "comment" : "Extension author line (format) in the install confirmation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Autor:** %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21,6 +27,12 @@
     "**URL:** %@" : {
       "comment" : "Extension URL line (format) in the install confirmation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**URL:** %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44,6 +56,12 @@
             "value" : "%1$d of %2$d"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$d de %2$d"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -61,6 +79,12 @@
     "⌘-click to follow" : {
       "comment" : "Tooltip for links",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘-clic para seguir"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -78,6 +102,12 @@
     "⌘-click to toggle todo" : {
       "comment" : "Tooltip for tasks",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘-clic para alternar tarea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -95,6 +125,12 @@
     "🎉 %@ is out" : {
       "comment" : "Title format for new version is out",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 %@ ya está disponible"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -112,6 +148,12 @@
     "1 tab" : {
       "comment" : "Use 1 tab as the indent unit",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 tabulación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -129,6 +171,12 @@
     "2 spaces" : {
       "comment" : "Use 2 spaces as the indent unit",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 espacios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -146,6 +194,12 @@
     "2 tabs" : {
       "comment" : "Use 2 tabs as the indent unit",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 tabulaciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -163,6 +217,12 @@
     "4 spaces" : {
       "comment" : "Use 4 spaces as the indent unit",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4 espacios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -180,6 +240,12 @@
     "Actions" : {
       "comment" : "Toolbar menu of extension manager actions",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -197,6 +263,12 @@
     "Active line indicator" : {
       "comment" : "Option to show active line indicator",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indicador de línea activa"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -214,6 +286,12 @@
     "All" : {
       "comment" : "Button title, perform actions to all items",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -230,6 +308,12 @@
     },
     "Allows the evaluation to return a Promise object. When enabled, the JavaScript must return a value." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permite que la evaluación devuelva un objeto Promise. Cuando está activado, el JavaScript debe devolver un valor."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -247,6 +331,12 @@
     "Always" : {
       "comment" : "Always show invisibles",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siempre"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -264,6 +354,12 @@
     "Appearance:" : {
       "comment" : "Appearance for the app",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -281,6 +377,12 @@
     "Argument “%@” not found in event descriptor, the descriptor is likely malformed." : {
       "comment" : "Script error when a command argument is missing due to a corrupted Apple Event",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontró el argumento “%@” en el descriptor del evento; probablemente el descriptor esté mal formado."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -298,6 +400,12 @@
     "Assistant" : {
       "comment" : "Window title for assistant settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asistente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -315,6 +423,12 @@
     "Autocomplete:" : {
       "comment" : "Label for autocomplete options",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autocompletado:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -332,6 +446,12 @@
     "Automatic" : {
       "comment" : "Automatic window tabbing mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +469,12 @@
     "Bold" : {
       "comment" : "Toolbar item to toggle bold",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negrita"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -365,6 +491,12 @@
     },
     "Call Async JavaScript" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Llamar JavaScript asíncrono"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -382,6 +514,12 @@
     "Cancel" : {
       "comment" : "Button title, cancel an action",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -405,6 +543,12 @@
             "value" : "Cannot export files with extension \"%1$@\", supported extensions: %2$@."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pueden exportar archivos con extensión “%1$@”; extensiones admitidas: %2$@."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -422,6 +566,12 @@
     "Case Sensitive" : {
       "comment" : "Toggle case sensitive search",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distinguir mayúsculas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -439,6 +589,12 @@
     "Characters" : {
       "comment" : "Statistics label: count characters",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caracteres"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -456,6 +612,12 @@
     "Check Version History" : {
       "comment" : "Title for the \"Check Version History\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprobar historial de versiones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -473,6 +635,12 @@
     "Classic Mac OS (CR)" : {
       "comment" : "Line endings used on Classic Mac OS",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac OS clásico (CR)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -490,6 +658,12 @@
     "Clear Recents" : {
       "comment" : "Menu item: clear recents",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar recientes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -507,6 +681,12 @@
     "Column" : {
       "comment" : "Column name for table creation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Columna"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -524,6 +704,12 @@
     "Comments" : {
       "comment" : "Statistics label: count comments",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comentarios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -541,6 +727,12 @@
     "Compact" : {
       "comment" : "Compact mode for window toolbar",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compacto"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -558,6 +750,12 @@
     "Completion:" : {
       "comment" : "Label for word completion options",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completado:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -574,6 +772,12 @@
     },
     "Content" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contenido"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -591,6 +795,12 @@
     "Control Character" : {
       "comment" : "Phrase used in CodeMirror to indicate control character",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carácter de control"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -608,6 +818,12 @@
     "Copy Pandoc Command" : {
       "comment" : "Toolbar item to copy pandoc command",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar comando de Pandoc"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -625,6 +841,12 @@
     "Couldn’t find a command to handle incoming Apple Event." : {
       "comment" : "Script error when MarkEdit has no command to handle the incoming Apple Event",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo encontrar un comando para gestionar el Apple Event entrante."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -642,6 +864,12 @@
     "Couldn’t find the extension “%@” in the registry." : {
       "comment" : "Error when a deep-link id does not resolve in the registry",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo encontrar la extensión “%@” en el registro."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -659,6 +887,12 @@
     "Couldn’t reach the extension registry." : {
       "comment" : "Error shown when the registry can't be loaded",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo acceder al registro de extensiones."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -675,6 +909,12 @@
     },
     "Create New Document" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear documento nuevo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -691,6 +931,12 @@
     },
     "Creates a new document, with optional parameters to set the file name and the initial content." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crea un documento nuevo, con parámetros opcionales para definir el nombre del archivo y el contenido inicial."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -708,6 +954,12 @@
     "Dark" : {
       "comment" : "Always use dark mode for the app",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oscuro"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -725,6 +977,12 @@
     "Dark Theme:" : {
       "comment" : "Dark theme for the editor",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema oscuro:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -742,6 +1000,12 @@
     "Default Line Endings:" : {
       "comment" : "Line endings for creating new files",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin de línea predeterminado:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -759,6 +1023,12 @@
     "Default Text Encoding:" : {
       "comment" : "Text encoding for opening and saving files",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codificación de texto predeterminada:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -776,6 +1046,12 @@
     "Delete" : {
       "comment" : "Button title, confirm the deletion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -793,6 +1069,12 @@
     "Diacritic Insensitive" : {
       "comment" : "Toggle diacritic insensitive search",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorar diacríticos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -810,6 +1092,12 @@
     "Diff Chars" : {
       "comment" : "Diff by characters",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diferencias por caracteres"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -827,6 +1115,12 @@
     "Diff Lines" : {
       "comment" : "Diff by lines",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diferencias por líneas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -844,6 +1138,12 @@
     "Diff Words" : {
       "comment" : "Diff by words",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diferencias por palabras"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -861,6 +1161,12 @@
     "Dim inactive lines" : {
       "comment" : "Explanation for focus mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atenuar líneas inactivas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -878,6 +1184,12 @@
     "Disable Update Checks" : {
       "comment" : "Title for the \"Disable Update Checks\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desactivar búsqueda de actualizaciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -895,6 +1207,12 @@
     "Disallowed" : {
       "comment" : "Disallowed window tabbing mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No permitido"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -912,6 +1230,12 @@
     "Discover" : {
       "comment" : "Extension manager mode: browse the registry",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descubrir"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -929,6 +1253,12 @@
     "Document" : {
       "comment" : "Statistics mode: full document",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Documento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -946,6 +1276,12 @@
     "Done" : {
       "comment" : "Button title, confirm an action",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -963,6 +1299,12 @@
     "Edit Behavior:" : {
       "comment" : "Editor behavior like focus mode and typewriter mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comportamiento de edición:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -980,6 +1322,12 @@
     "Editor" : {
       "comment" : "Window title for editor settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editor"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -997,6 +1345,12 @@
     "Enabled" : {
       "comment" : "Toggle title for enabling an installed extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1014,6 +1368,12 @@
     "Enter the line number and hit return" : {
       "comment" : "Help text for goto line window",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escribe el número de línea y pulsa Retorno"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1030,6 +1390,12 @@
     },
     "Evaluate JavaScript" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evaluar JavaScript"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1047,6 +1413,12 @@
     "Evaluate JavaScript with ${content}" : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evaluar JavaScript con ${content}"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1063,6 +1435,12 @@
     },
     "Evaluates JavaScript and gets the result on the active document; throws an error if no editor is opened." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evalúa JavaScript y obtiene el resultado en el documento activo; genera un error si no hay ningún editor abierto."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1080,6 +1458,12 @@
     "Extension Installed" : {
       "comment" : "Title for the extension installed confirmation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensión instalada"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1097,6 +1481,12 @@
     "Extension Updates Available" : {
       "comment" : "Title for the extension updates prompt",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizaciones de extensiones disponibles"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1114,6 +1504,12 @@
     "Extensions Updated" : {
       "comment" : "Title shown after extensions are updated",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensiones actualizadas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1131,6 +1527,12 @@
     "Failed to get the update." : {
       "comment" : "Title for failed to get the update",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo obtener la actualización."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1148,6 +1550,12 @@
     "Failed to install the extension." : {
       "comment" : "Title for a failed extension installation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo instalar la extensión."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1165,6 +1573,12 @@
     "File Extension:" : {
       "comment" : "Label for save panel accessory view (shorter than 'Filename Extension' to avoid save panel layout issues)",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensión de archivo:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1181,6 +1595,12 @@
     },
     "File Name" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre del archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1198,6 +1618,12 @@
     "File Size" : {
       "comment" : "Statistics label: count file size",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamaño del archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1215,6 +1641,12 @@
     "Find" : {
       "comment" : "Find mode in search menu",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1232,6 +1664,12 @@
     "Find Selection" : {
       "comment" : "Menu item: use selection to find",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1249,6 +1687,12 @@
     "Fold Line" : {
       "comment" : "Phrase used in CodeMirror fold a line",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plegar línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1266,6 +1710,12 @@
     "Folded Code" : {
       "comment" : "Phrase used in CodeMirror to indicated folded code",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código plegado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1283,6 +1733,12 @@
     "Folded Lines" : {
       "comment" : "Phrase used in CodeMirror to indicate folded lines",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líneas plegadas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1300,6 +1756,12 @@
     "Font:" : {
       "comment" : "Label for font settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuente:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1317,6 +1779,12 @@
     "Format Files:" : {
       "comment" : "Label for file formatting options",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatear archivos:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1334,6 +1802,12 @@
     "Format when saving files." : {
       "comment" : "Hint for format files on save",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatear al guardar archivos."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1369,6 +1843,24 @@
             }
           }
         },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Se encontró %lld versión, ¿quieres eliminarla?"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Se encontraron %lld versiones, ¿quieres eliminarlas?"
+                }
+              }
+            }
+          }
+        },
         "zh-Hans" : {
           "variations" : {
             "plural" : {
@@ -1398,6 +1890,12 @@
     "General" : {
       "comment" : "Window title for general settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1415,6 +1913,12 @@
     "Get Custom Themes…" : {
       "comment" : "Get custom themes from the GitHub",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener temas personalizados…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1431,6 +1935,12 @@
     },
     "Get File Content" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener contenido del archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1447,6 +1957,12 @@
     },
     "Gets file content of the active document; throws an error if no editor is opened." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtiene el contenido del archivo del documento activo; genera un error si no hay ningún editor abierto."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1464,6 +1980,12 @@
     "Go to Line" : {
       "comment" : "Placeholder text for goto line window",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a la línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1481,6 +2003,12 @@
     "Grant Access" : {
       "comment" : "Open panel prompt, used for granting access for the selected folder",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conceder acceso"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1497,6 +2025,12 @@
     },
     "Granularity" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Granularidad"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1514,6 +2048,12 @@
     "Guessed words" : {
       "comment" : "Option for guessed words suggestion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabras sugeridas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1531,6 +2071,12 @@
     "Headers" : {
       "comment" : "Toolbar item to toggle heading levels",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezados"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1548,6 +2094,12 @@
     "Hidden" : {
       "comment" : "Hidden mode for window toolbar",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculto"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1565,6 +2117,12 @@
     "Homepage" : {
       "comment" : "Link to an extension's homepage",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Página principal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1582,6 +2140,12 @@
     "Horizontal Rule" : {
       "comment" : "Toolbar item to insert horizontal rule",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regla horizontal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1599,6 +2163,12 @@
     "Indents more" : {
       "comment" : "Press tab key to indent more",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aumenta la sangría"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1615,6 +2185,12 @@
     },
     "Initial Content" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contenido inicial"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1632,6 +2208,12 @@
     "Inline Predictions" : {
       "comment" : "Whether to allow inline predictions",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predicciones en línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1649,6 +2231,12 @@
     "Insert Code" : {
       "comment" : "Toolbar item to insert code",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar código"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1666,6 +2254,12 @@
     "Insert final newline" : {
       "comment" : "Option for inserting newline at end of file",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar nueva línea final"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1683,6 +2277,12 @@
     "Insert Image" : {
       "comment" : "Toolbar item to insert image",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar imagen"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1700,6 +2300,12 @@
     "Insert Line Break" : {
       "comment" : "Insert a line break into the current editor",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar salto de línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1717,6 +2323,12 @@
     "Insert Link" : {
       "comment" : "Toolbar item to insert link",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar enlace"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1734,6 +2346,12 @@
     "Insert Tab" : {
       "comment" : "Insert a tab into the current editor",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar tabulación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1751,6 +2369,12 @@
     "Inserts 2 spaces" : {
       "comment" : "Press tab key to insert 2 spaces",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserta 2 espacios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1768,6 +2392,12 @@
     "Inserts 4 spaces" : {
       "comment" : "Press tab key to insert 4 spaces",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserta 4 espacios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1785,6 +2415,12 @@
     "Inserts tab character" : {
       "comment" : "Default tab key behavior",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserta un carácter de tabulación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1802,6 +2438,12 @@
     "Install" : {
       "comment" : "Button title to confirm installing an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1819,6 +2461,12 @@
     "Install “%@”?" : {
       "comment" : "Title (format) for the extension install confirmation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Instalar “%@”?"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1836,6 +2484,12 @@
     "Install Extension from URL" : {
       "comment" : "Title for the install-from-URL prompt",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalar extensión desde URL"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1853,6 +2507,12 @@
     "Install from URL…" : {
       "comment" : "Menu item to install an extension from a URL",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalar desde URL…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1870,6 +2530,12 @@
     "Installed" : {
       "comment" : "Extension manager mode: installed extensions",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalada"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1887,6 +2553,12 @@
     "Italic" : {
       "comment" : "Toolbar item to toggle italic",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursiva"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1904,6 +2576,12 @@
     "Item" : {
       "comment" : "Item name for table creation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ítem"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1927,6 +2605,12 @@
             "value" : "JavaScript evaluation failed at line %1$d, column %2$d: %3$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La evaluación de JavaScript falló en la línea %1$d, columna %2$d: %3$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1944,6 +2628,12 @@
     "JavaScript evaluation failed for an unknown reason." : {
       "comment" : "Script error when JavaScript evaluation raises an error with no details",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La evaluación de JavaScript falló por un motivo desconocido."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1961,6 +2651,12 @@
     "Keep caret in the middle" : {
       "comment" : "Explanation for typewriter mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantener el cursor en el centro"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1978,6 +2674,12 @@
     "Later" : {
       "comment" : "Button title to postpone relaunching after installing an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más tarde"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1995,6 +2697,12 @@
     "Light" : {
       "comment" : "Always use light mode for the app",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claro"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2012,6 +2720,12 @@
     "Light Theme:" : {
       "comment" : "Light theme for the editor",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema claro:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2029,6 +2743,12 @@
     "Line Height:" : {
       "comment" : "Label for line height option",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altura de línea:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2046,6 +2766,12 @@
     "Line numbers" : {
       "comment" : "Option to show line numbers",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Números de línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2063,6 +2789,12 @@
     "Line Wrapping:" : {
       "comment" : "Label for line wrapping option",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajuste de línea:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2080,6 +2812,12 @@
     "Literal Search" : {
       "comment" : "Toggle literal search",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búsqueda literal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2097,6 +2835,12 @@
     "macOS / Unix (LF)" : {
       "comment" : "Line endings used on macOS and Unix",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS / Unix (LF)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2114,6 +2858,12 @@
     "MarkEdit %@ is available!" : {
       "comment" : "Title for new version available",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡MarkEdit Plus %@ ya está disponible!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2131,6 +2881,12 @@
     "MarkEdit %@ is currently the latest version." : {
       "comment" : "Message for the up-to-date info",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MarkEdit Plus %@ es actualmente la versión más reciente."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2148,6 +2904,12 @@
     "MarkEdit Extensions" : {
       "comment" : "Title of the extension manager window",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensiones de MarkEdit Plus"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2164,6 +2926,12 @@
     },
     "Missing active document to proceed." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falta un documento activo para continuar."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2181,6 +2949,12 @@
     "More Fonts" : {
       "comment" : "Menu item to browse all fonts",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más fuentes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2198,6 +2972,12 @@
     "Never" : {
       "comment" : "Never show invisibles",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nunca"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2215,6 +2995,12 @@
     "New Document" : {
       "comment" : "Menu item: create a new document",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Documento nuevo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2231,6 +3017,12 @@
     },
     "New Document named ${fileName} with ${initialContent}" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Documento nuevo llamado ${fileName} con ${initialContent}"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2248,6 +3040,12 @@
     "New Filename Extension:" : {
       "comment" : "Filename extension for new files",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensión del nombre de archivo nuevo:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2265,6 +3063,12 @@
     "New Window Behavior:" : {
       "comment" : "Behavior when creating new windows",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comportamiento de ventana nueva:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2282,6 +3086,12 @@
     "Next" : {
       "comment" : "Button title, move to the next item",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siguiente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2299,6 +3109,12 @@
     "No editor for document “%@” found." : {
       "comment" : "Script error when MarkEdit cannot find the editor view to run document commands in",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontró ningún editor para el documento “%@”."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2316,6 +3132,12 @@
     "No extensions found." : {
       "comment" : "Empty state for the Discover list",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontraron extensiones."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2333,6 +3155,12 @@
     "No extensions installed." : {
       "comment" : "Empty state for installed extensions",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay extensiones instaladas."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2350,6 +3178,12 @@
     "No versions match the specified condition." : {
       "comment" : "Alert title for no versions found",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninguna versión coincide con la condición especificada."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2367,6 +3201,12 @@
     "Normal" : {
       "comment" : "Normal line spacing\nNormal mode for window toolbar",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2384,6 +3224,12 @@
     "Not Now" : {
       "comment" : "Title for the \"Not Now\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora no"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2401,6 +3247,12 @@
     "Open Document" : {
       "comment" : "Menu item: open an existing document",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir documento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2418,6 +3270,12 @@
     "Open Font Panel…" : {
       "comment" : "Menu item for selecting custom fonts",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir panel de fuentes…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2435,6 +3293,12 @@
     "Open Scripts Folder" : {
       "comment" : "Menu item to reveal the extensions scripts folder",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir carpeta de scripts"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2450,11 +3314,25 @@
       }
     },
     "option-esc" : {
-      "shouldTranslate" : false
+      "shouldTranslate" : false,
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "opción-esc"
+          }
+        }
+      }
     },
     "Paragraphs" : {
       "comment" : "Statistics label: count paragraphs",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Párrafos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2472,6 +3350,12 @@
     "Please check your network connection or get the latest release from the version history." : {
       "comment" : "Message for failed to get the update",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprueba tu conexión de red u obtén la última versión desde el historial de versiones."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2489,6 +3373,12 @@
     "Prefer Indent Using:" : {
       "comment" : "Label for indent unit settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferir sangría con:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2506,6 +3396,12 @@
     "Preferred" : {
       "comment" : "Preferred window tabbing mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferido"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2523,6 +3419,12 @@
     "Press ⌥ ⎋ to show the panel." : {
       "comment" : "Hint for using word completion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsa ⌥ ⎋ para mostrar el panel."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2540,6 +3442,12 @@
     "Preview" : {
       "comment" : "Button title for code preview",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2557,6 +3465,12 @@
     "Previous" : {
       "comment" : "Button title, move to the previous item",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anterior"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2574,6 +3488,12 @@
     "Quit always keeps windows" : {
       "comment" : "Whether to keep windows when quit the app",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir siempre conserva las ventanas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2591,6 +3511,12 @@
     "Quote" : {
       "comment" : "Toolbar item to toggle blockquote",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cita"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2608,6 +3534,12 @@
     "Read Time" : {
       "comment" : "Statistics label: count read time",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo de lectura"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2625,6 +3557,12 @@
     "Recent Searches" : {
       "comment" : "Menu item: recent searches",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búsquedas recientes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2642,6 +3580,12 @@
     "Recently Used" : {
       "comment" : "Menu item to show recently used fonts",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usados recientemente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2659,6 +3603,12 @@
     "Reduce Transparency:" : {
       "comment" : "Label for the option to reduce window transparency",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducir transparencia:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2676,6 +3626,12 @@
     "Refresh" : {
       "comment" : "Menu item to refetch the extension registry",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2693,6 +3649,12 @@
     "Refreshing…" : {
       "comment" : "State shown while the extension list is being refreshed",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizando…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2710,6 +3672,12 @@
     "Regular Expression" : {
       "comment" : "Toggle regular expression for search",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expresión regular"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2727,6 +3695,12 @@
     "Relaunch" : {
       "comment" : "Button title to relaunch the app after installing an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reiniciar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2744,6 +3718,12 @@
     "Relaunch MarkEdit to start using “%@”." : {
       "comment" : "Message (format) shown after an extension is installed",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reinicia MarkEdit Plus para empezar a usar “%@”."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2761,6 +3741,12 @@
     "Relaunch MarkEdit to use the updated extensions." : {
       "comment" : "Message shown after extensions are updated",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reinicia MarkEdit Plus para usar las extensiones actualizadas."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2778,6 +3764,12 @@
     "Relaunch to apply your changes." : {
       "comment" : "Notice shown when extension changes need a relaunch",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reinicia para aplicar los cambios."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2795,6 +3787,12 @@
     "Relaxed" : {
       "comment" : "Relaxed line spacing",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relajado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2812,6 +3810,12 @@
     "Remind Me Later" : {
       "comment" : "Title for the \"Remind Me Later\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recordármelo más tarde"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2829,6 +3833,12 @@
     "Remove the toolbar blur" : {
       "comment" : "Explanation for the option to reduce window transparency",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitar el desenfoque de la barra de herramientas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2846,6 +3856,12 @@
     "Render Invisibles:" : {
       "comment" : "Label for invisibles behavior setting",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar caracteres invisibles:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2863,6 +3879,12 @@
     "Replace" : {
       "comment" : "Replace mode in search menu",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reemplazar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2880,6 +3902,12 @@
     "Replace All" : {
       "comment" : "Replace all occurrences",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reemplazar todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2897,6 +3925,12 @@
     "Replace All in Selection" : {
       "comment" : "Replace all occurrences in selection",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reemplazar todo en la selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2914,6 +3948,12 @@
     "Retry" : {
       "comment" : "Button to retry reaching the extension registry",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2931,6 +3971,12 @@
     "Reveal" : {
       "comment" : "Button title to reveal an extension's script file in Finder",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2948,6 +3994,12 @@
     "Revert to This Version" : {
       "comment" : "Title for button to select a file version",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revertir a esta versión"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2964,6 +4016,12 @@
     },
     "Save Changes" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar cambios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2981,6 +4039,12 @@
     "Search Actions" : {
       "comment" : "Search actions, like select all, select all in selection",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar acciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2998,6 +4062,12 @@
     "Select All" : {
       "comment" : "Select all occurrences",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3015,6 +4085,12 @@
     "Select All in Selection" : {
       "comment" : "Select all occurrences in selection",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar todo en la selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3032,6 +4108,12 @@
     "Select All Occurrences" : {
       "comment" : "Menu item: select all occurrences",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar todas las coincidencias"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3049,6 +4131,12 @@
     "Select…" : {
       "comment" : "Menu label for selecting fonts",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3066,6 +4154,12 @@
     "Selected" : {
       "comment" : "General title that indicates something is selected",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3083,6 +4177,12 @@
     "Selection" : {
       "comment" : "Show invisibles for selected ranges\nStatistics mode: selection",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3100,6 +4200,12 @@
     "Selection status" : {
       "comment" : "Option to show selection status",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado de la selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3117,6 +4223,12 @@
     "Sentences" : {
       "comment" : "Statistics label: count sentences",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oraciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3134,6 +4246,12 @@
     "Share this document" : {
       "comment" : "Toolbar item to share the document",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir este documento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3151,6 +4269,12 @@
     "Show Hidden Files" : {
       "comment" : "Label for save panel accessory view",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar archivos ocultos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3168,6 +4292,12 @@
     "Show Writing Tools" : {
       "comment" : "Show Writing Tools",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar herramientas de escritura"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3185,6 +4315,12 @@
     "Show:" : {
       "comment" : "Label for display options",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3202,6 +4338,12 @@
     "Skip This Version" : {
       "comment" : "Title for the \"Skip This Version\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omitir esta versión"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3219,6 +4361,12 @@
     "Standard words" : {
       "comment" : "Option for standard words suggestion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabras estándar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3236,6 +4384,12 @@
     "Statistics" : {
       "comment" : "Toolbar item to show statistics",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3253,6 +4407,12 @@
     "Strikethrough" : {
       "comment" : "Toolbar item to toggle strikethrough",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tachado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3270,6 +4430,12 @@
     "Submit an Extension…" : {
       "comment" : "Menu item to open the extension contributing guide",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar una extensión…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3287,6 +4453,12 @@
     "Suggest while typing" : {
       "comment" : "Whether to suggest while typing",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugerir mientras se escribe"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3304,6 +4476,12 @@
     "System" : {
       "comment" : "Follow the system appearance",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3321,6 +4499,12 @@
     "System Default" : {
       "comment" : "System default font name",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predeterminado del sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3338,6 +4522,12 @@
     "System Mono" : {
       "comment" : "System mono font name",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monoespaciada del sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3355,6 +4545,12 @@
     "System Rounded" : {
       "comment" : "System rounded font name",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redondeada del sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3372,6 +4568,12 @@
     "System Serif" : {
       "comment" : "System serif font name",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serif del sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3389,6 +4591,12 @@
     "Tab Key:" : {
       "comment" : "Label for tab key behavior settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla de tabulación:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3406,6 +4614,12 @@
     "Tabbing Mode:" : {
       "comment" : "Label for window tabbing mode settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de tabulación:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3423,6 +4637,12 @@
     "Table" : {
       "comment" : "Toolbar item to insert table",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3440,6 +4660,12 @@
     "Table of Contents" : {
       "comment" : "Toolbar item to show table of contents",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de contenido"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3457,6 +4683,12 @@
     "Text Encoding:" : {
       "comment" : "Label for save panel accessory view",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codificación de texto:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3474,6 +4706,12 @@
     "Text Format" : {
       "comment" : "Toolbar item to use text format menu",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formato de texto"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3491,6 +4729,12 @@
     "The extension couldn’t be downloaded or verified." : {
       "comment" : "Message for a failed extension installation",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo descargar ni verificar la extensión."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3508,6 +4752,12 @@
     "This action cannot be undone." : {
       "comment" : "Alert message for cannot undo",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta acción no se puede deshacer."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3525,6 +4775,12 @@
     "This extension requires MarkEdit %@ or later." : {
       "comment" : "Error (format) when an extension needs a newer app version",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta extensión requiere MarkEdit Plus %@ o posterior."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3542,6 +4798,12 @@
     "This extension runs with full editor access." : {
       "comment" : "Disclosure shown before installing an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta extensión se ejecuta con acceso completo al editor."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3559,6 +4821,12 @@
     "This release requires macOS %@ or later and cannot be installed without upgrading your operating system." : {
       "comment" : "Message for minimum required OS version",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta versión requiere macOS %@ o posterior y no se puede instalar sin actualizar tu sistema operativo."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3576,6 +4844,12 @@
     "This removes its script from the scripts folder." : {
       "comment" : "Message shown when confirming an extension uninstall",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto elimina su script de la carpeta de scripts."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3593,6 +4867,12 @@
     "This source is not reviewed by MarkEdit. Only continue if you trust it." : {
       "comment" : "Caution shown before installing an extension from a raw URL",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta fuente no ha sido revisada por MarkEdit Plus. Continúa solo si confías en ella."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3610,6 +4890,12 @@
     "Tight" : {
       "comment" : "Tight line spacing",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3627,6 +4913,12 @@
     "title" : {
       "comment" : "Default title used for link insertion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "título"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3644,6 +4936,12 @@
     "Toggle List" : {
       "comment" : "Toolbar item to toggle bullet list",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternar lista"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3661,6 +4959,12 @@
     "Toolbar Mode:" : {
       "comment" : "Label for window toolbar mode",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de barra de herramientas:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3678,6 +4982,12 @@
     "Trailing" : {
       "comment" : "Show trailing invisibles",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al final"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3695,6 +5005,12 @@
     "Trim trailing whitespace" : {
       "comment" : "Option for trimming trailing whitespaces",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar espacios finales"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3712,6 +5028,12 @@
     "Turn off to keep the extension installed but inactive" : {
       "comment" : "Tooltip explaining the enable switch",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desactívalo para mantener la extensión instalada pero inactiva"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3729,6 +5051,12 @@
     "Unfold" : {
       "comment" : "Phrase used in CodeMirror to unfold a piece of text",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desplegar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3746,6 +5074,12 @@
     "Unfold Line" : {
       "comment" : "Phrase used in CodeMirror to unfold a line",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desplegar línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3763,6 +5097,12 @@
     "Unfolded Lines" : {
       "comment" : "Phrase used in CodeMirror to indicate unfolded lines",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líneas desplegadas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3780,6 +5120,12 @@
     "Uninstall" : {
       "comment" : "Button title to uninstall an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desinstalar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3797,6 +5143,12 @@
     "Uninstall “%@”?" : {
       "comment" : "Title (format) to confirm uninstalling an extension",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Desinstalar “%@”?"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3814,6 +5166,12 @@
     "Update" : {
       "comment" : "Button title to install extension updates",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3831,6 +5189,12 @@
     "Update All" : {
       "comment" : "Menu item to update all extensions with available updates",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3847,6 +5211,12 @@
     },
     "Update File Content" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar contenido del archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3864,6 +5234,12 @@
     "Update file with ${content}" : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar archivo con ${content}"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3881,6 +5257,12 @@
     "Update to %@" : {
       "comment" : "Button title (format) to update an extension to a version",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar a %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3897,6 +5279,12 @@
     },
     "Updates file content of the active document; throws an error if no editor is opened." : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualiza el contenido del archivo del documento activo; genera un error si no hay ningún editor abierto."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3914,6 +5302,12 @@
     "View Release Page" : {
       "comment" : "Title for the \"View Release Page\" button",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver página de la versión"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3930,6 +5324,12 @@
     },
     "Whole Document" : {
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todo el documento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3947,6 +5347,12 @@
     "Whole Word" : {
       "comment" : "Toggle whole word search",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabra completa"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3964,6 +5370,12 @@
     "Window" : {
       "comment" : "Window title for window settings",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ventana"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3981,6 +5393,12 @@
     "Window Restoration:" : {
       "comment" : "Label for window restoration options",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restauración de ventanas:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3998,6 +5416,12 @@
     "Windows (CRLF)" : {
       "comment" : "Line endings used on Windows",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Windows (CRLF)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4015,6 +5439,12 @@
     "Words" : {
       "comment" : "Statistics label: count words",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabras"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4032,6 +5462,12 @@
     "Words in document" : {
       "comment" : "Option for words in documents suggestion",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabras en el documento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4049,6 +5485,12 @@
     "Wrap lines to editor width" : {
       "comment" : "Explanation for line wrapping option",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustar líneas al ancho del editor"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4066,6 +5508,12 @@
     "Writing Tools" : {
       "comment" : "Writing Tools",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herramientas de escritura"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4089,6 +5537,12 @@
             "value" : "Wrong file extension for type \"%1$@\", use \".%2$@\" instead."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensión de archivo incorrecta para el tipo “%1$@”; usa “.%2$@” en su lugar."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4106,6 +5560,12 @@
     "You’re up-to-date!" : {
       "comment" : "Title for the up-to-date info",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Estás al día!"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",

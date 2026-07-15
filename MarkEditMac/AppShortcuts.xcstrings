@@ -12,6 +12,12 @@
             ]
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear documento nuevo en ${applicationName}"
+          }
+        },
         "zh-Hans" : {
           "stringSet" : {
             "state" : "translated",
@@ -39,6 +45,12 @@
             "values" : [
               "Evaluate JavaScript in ${applicationName}"
             ]
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evaluar JavaScript en ${applicationName}"
           }
         },
         "zh-Hans" : {
@@ -70,6 +82,12 @@
             ]
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener contenido del archivo en ${applicationName}"
+          }
+        },
         "zh-Hans" : {
           "stringSet" : {
             "state" : "translated",
@@ -97,6 +115,12 @@
             "values" : [
               "Update File Content in ${applicationName}"
             ]
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar contenido del archivo en ${applicationName}"
           }
         },
         "zh-Hans" : {

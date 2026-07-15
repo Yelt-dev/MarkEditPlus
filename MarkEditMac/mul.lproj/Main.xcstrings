@@ -11,6 +11,12 @@
             "value" : "Float on Top"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantener encima"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33,6 +39,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Version History"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de versiones"
           }
         },
         "zh-Hans" : {
@@ -59,6 +71,12 @@
             "value" : "New File from Clipboard"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuevo archivo desde el portapapeles"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -81,6 +99,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
           }
         },
         "zh-Hans" : {
@@ -107,6 +131,12 @@
             "value" : "Customize Toolbar…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalizar barra de herramientas…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -129,6 +159,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "MarkEdit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MarkEdit Plus"
           }
         },
         "zh-Hans" : {
@@ -155,6 +191,12 @@
             "value" : "Last Edited 3 Months Ago"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última edición hace 3 meses"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -177,6 +219,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Transformations"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformaciones"
           }
         },
         "zh-Hans" : {
@@ -203,6 +251,12 @@
             "value" : "Spelling"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ortografía"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -225,6 +279,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Speech"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habla"
           }
         },
         "zh-Hans" : {
@@ -251,6 +311,12 @@
             "value" : "Find"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -273,6 +339,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Enter Full Screen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrar en pantalla completa"
           }
         },
         "zh-Hans" : {
@@ -299,6 +371,12 @@
             "value" : "Quit MarkEdit"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir de MarkEdit Plus"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -321,6 +399,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copy Path"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar ruta"
           }
         },
         "zh-Hans" : {
@@ -347,6 +431,12 @@
             "value" : "About MarkEdit"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de MarkEdit Plus"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -369,6 +459,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Edit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edición"
           }
         },
         "zh-Hans" : {
@@ -395,6 +491,12 @@
             "value" : "Save All"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -417,6 +519,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Headers"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezados"
           }
         },
         "zh-Hans" : {
@@ -443,6 +551,12 @@
             "value" : "Redo"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rehacer"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -466,6 +580,12 @@
             "state" : "new",
             "value" : "(settings.json)"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(settings.json)"
+          }
         }
       },
       "shouldTranslate" : false
@@ -478,6 +598,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Line Endings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin de línea"
           }
         },
         "zh-Hans" : {
@@ -504,6 +630,12 @@
             "value" : "Quote"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cita"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -526,6 +658,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Substitutions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sustituciones"
           }
         },
         "zh-Hans" : {
@@ -552,6 +690,12 @@
             "value" : "Commands"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -574,6 +718,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Copy/Paste"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar/pegar inteligente"
           }
         },
         "zh-Hans" : {
@@ -600,6 +750,12 @@
             "value" : "Copy Pandoc Command"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar comando de Pandoc"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -622,6 +778,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Correct Spelling Automatically"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corregir ortografía automáticamente"
           }
         },
         "zh-Hans" : {
@@ -648,6 +810,12 @@
             "value" : "Classic Mac OS (CR)"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac OS clásico (CR)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -670,6 +838,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "List"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lista"
           }
         },
         "zh-Hans" : {
@@ -696,6 +870,12 @@
             "value" : "Move Line Down"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mover línea abajo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -718,6 +898,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Development Guide"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guía de desarrollo"
           }
         },
         "zh-Hans" : {
@@ -744,6 +930,12 @@
             "value" : "Print…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imprimir…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -766,6 +958,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Window"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ventana"
           }
         },
         "zh-Hans" : {
@@ -792,6 +990,12 @@
             "value" : "Main Menu"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú principal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -814,6 +1018,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Last Edited 2 Weeks Ago"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última edición hace 2 semanas"
           }
         },
         "zh-Hans" : {
@@ -840,6 +1050,12 @@
             "value" : "Heading 3"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 3"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -862,6 +1078,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "File"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivo"
           }
         },
         "zh-Hans" : {
@@ -888,6 +1110,12 @@
             "value" : "Keep Up to 100 Versions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservar hasta 100 versiones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -910,6 +1138,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Insert Link"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar enlace"
           }
         },
         "zh-Hans" : {
@@ -936,6 +1170,12 @@
             "value" : "Preferences…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferencias…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -958,6 +1198,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Use Selection for Find"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar selección para buscar"
           }
         },
         "zh-Hans" : {
@@ -984,6 +1230,12 @@
             "value" : "Statistics"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1006,6 +1258,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Save As…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar como…"
           }
         },
         "zh-Hans" : {
@@ -1031,6 +1289,12 @@
             "state" : "new",
             "value" : "Writing Tools (Placeholder)"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herramientas de escritura (marcador de posición)"
+          }
         }
       },
       "shouldTranslate" : false
@@ -1043,6 +1307,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Table of Contents"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de contenido"
           }
         },
         "zh-Hans" : {
@@ -1069,6 +1339,12 @@
             "value" : "File Path"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruta del archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1091,6 +1367,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Transformations"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformaciones"
           }
         },
         "zh-Hans" : {
@@ -1117,6 +1399,12 @@
             "value" : "Window"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ventana"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1139,6 +1427,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smaller"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más pequeño"
           }
         },
         "zh-Hans" : {
@@ -1165,6 +1459,12 @@
             "value" : "Typewriter Mode"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo máquina de escribir"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1187,6 +1487,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Links"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enlaces inteligentes"
           }
         },
         "zh-Hans" : {
@@ -1213,6 +1519,12 @@
             "value" : "Make Lower Case"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poner en minúsculas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1235,6 +1547,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "New Tab"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nueva pestaña"
           }
         },
         "zh-Hans" : {
@@ -1261,6 +1579,12 @@
             "value" : "File"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1283,6 +1607,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Undo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deshacer"
           }
         },
         "zh-Hans" : {
@@ -1309,6 +1639,12 @@
             "value" : "Spelling and Grammar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ortografía y gramática"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1331,6 +1667,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Close"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
           }
         },
         "zh-Hans" : {
@@ -1357,6 +1699,12 @@
             "value" : "Todo"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1379,6 +1727,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Line Endings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin de línea"
           }
         },
         "zh-Hans" : {
@@ -1405,6 +1759,12 @@
             "value" : "Font"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1427,6 +1787,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "All Local Versions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todas las versiones locales"
           }
         },
         "zh-Hans" : {
@@ -1453,6 +1819,12 @@
             "value" : "Bigger"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más grande"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1475,6 +1847,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Table"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla"
           }
         },
         "zh-Hans" : {
@@ -1501,6 +1879,12 @@
             "value" : "Read Only Mode"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de solo lectura"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1523,6 +1907,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Help"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayuda"
           }
         },
         "zh-Hans" : {
@@ -1549,6 +1939,12 @@
             "value" : "Substitutions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sustituciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1571,6 +1967,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "MarkEdit Help"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayuda de MarkEdit Plus"
           }
         },
         "zh-Hans" : {
@@ -1597,6 +1999,12 @@
             "value" : "Open Documents Folder"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir carpeta de documentos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1619,6 +2027,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Select Previous Section"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar sección anterior"
           }
         },
         "zh-Hans" : {
@@ -1645,6 +2059,12 @@
             "value" : "Open In…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir en…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1667,6 +2087,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Heading 6"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 6"
           }
         },
         "zh-Hans" : {
@@ -1693,6 +2119,12 @@
             "value" : "Reset to Default"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restablecer valores predeterminados"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1715,6 +2147,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Go Back"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retroceder"
           }
         },
         "zh-Hans" : {
@@ -1740,6 +2178,12 @@
             "state" : "new",
             "value" : "Writing Tools (Placeholder)"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herramientas de escritura (marcador de posición)"
+          }
         }
       },
       "shouldTranslate" : false
@@ -1752,6 +2196,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Paste"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pegar"
           }
         },
         "zh-Hans" : {
@@ -1778,6 +2228,12 @@
             "value" : "Reveal in Finder"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar en el Finder"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1800,6 +2256,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "View"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualización"
           }
         },
         "zh-Hans" : {
@@ -1826,6 +2288,12 @@
             "value" : "Show Spelling and Grammar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar ortografía y gramática"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1848,6 +2316,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Text Replacement"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reemplazo de texto"
           }
         },
         "zh-Hans" : {
@@ -1874,6 +2348,12 @@
             "value" : "Last Edited 6 Months Ago"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última edición hace 6 meses"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1896,6 +2376,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Smart Quotes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comillas tipográficas"
           }
         },
         "zh-Hans" : {
@@ -1922,6 +2408,12 @@
             "value" : "Grant Folder Access"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conceder acceso a la carpeta"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1944,6 +2436,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "View"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualización"
           }
         },
         "zh-Hans" : {
@@ -1970,6 +2468,12 @@
             "value" : "Check Document Now"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprobar documento ahora"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1992,6 +2496,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Services"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servicios"
           }
         },
         "zh-Hans" : {
@@ -2018,6 +2528,12 @@
             "value" : "Zoom Out"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alejar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2040,6 +2556,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir…"
           }
         },
         "zh-Hans" : {
@@ -2066,6 +2588,12 @@
             "value" : "Code"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2088,6 +2616,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Export to HTML"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a HTML"
           }
         },
         "zh-Hans" : {
@@ -2114,6 +2648,12 @@
             "value" : "Select Line"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2136,6 +2676,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir menú"
           }
         },
         "zh-Hans" : {
@@ -2162,6 +2708,12 @@
             "value" : "Official Website"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sitio web oficial"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2184,6 +2736,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Grant Folder Access"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conceder acceso a la carpeta"
           }
         },
         "zh-Hans" : {
@@ -2210,6 +2768,12 @@
             "value" : "Customization Guide"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guía de personalización"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2232,6 +2796,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copy Path"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar ruta"
           }
         },
         "zh-Hans" : {
@@ -2258,6 +2828,12 @@
             "value" : "Move Line Up"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mover línea arriba"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2280,6 +2856,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Italic"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursiva"
           }
         },
         "zh-Hans" : {
@@ -2306,6 +2888,12 @@
             "value" : "Revert to Saved"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revertir a lo guardado"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2328,6 +2916,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show All"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar todo"
           }
         },
         "zh-Hans" : {
@@ -2354,6 +2948,12 @@
             "value" : "Heading 1"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 1"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2376,6 +2976,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Developer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desarrollador"
           }
         },
         "zh-Hans" : {
@@ -2402,6 +3008,12 @@
             "value" : "Bring All to Front"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traer todo al frente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2426,6 +3038,12 @@
             "value" : "Format"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formato"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2447,6 +3065,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "Windows (CRLF)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Windows (CRLF)"
           }
         },
@@ -2474,6 +3098,12 @@
             "value" : "Extensions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensiones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2496,6 +3126,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Check Grammar With Spelling"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprobar gramática con ortografía"
           }
         },
         "zh-Hans" : {
@@ -2521,6 +3157,12 @@
             "state" : "new",
             "value" : "option-esc"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "opción-esc"
+          }
         }
       },
       "shouldTranslate" : false
@@ -2533,6 +3175,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Complete"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completar"
           }
         },
         "zh-Hans" : {
@@ -2559,6 +3207,12 @@
             "value" : "Insert Image"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar imagen"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2581,6 +3235,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Extensions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extensiones"
           }
         },
         "zh-Hans" : {
@@ -2607,6 +3267,12 @@
             "value" : "Services"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servicios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2629,6 +3295,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open Recent"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir recientes"
           }
         },
         "zh-Hans" : {
@@ -2655,6 +3327,12 @@
             "value" : "Toggle Block Comment"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternar comentario de bloque"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2677,6 +3355,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Export to PDF"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a PDF"
           }
         },
         "zh-Hans" : {
@@ -2703,6 +3387,12 @@
             "value" : "Hide MarkEdit"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar MarkEdit Plus"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2725,6 +3415,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Export to EPUB"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a EPUB"
           }
         },
         "zh-Hans" : {
@@ -2751,6 +3447,12 @@
             "value" : "Zoom In"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acercar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2773,6 +3475,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find Previous"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar anterior"
           }
         },
         "zh-Hans" : {
@@ -2799,6 +3507,12 @@
             "value" : "Minimize"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimizar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2821,6 +3535,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Stop Speaking"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detener locución"
           }
         },
         "zh-Hans" : {
@@ -2847,6 +3567,12 @@
             "value" : "Horizontal Rule"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regla horizontal"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2869,6 +3595,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Heading 4"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 4"
           }
         },
         "zh-Hans" : {
@@ -2895,6 +3627,12 @@
             "value" : "Toggle Line Comment"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternar comentario de línea"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2917,6 +3655,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Delete"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
           }
         },
         "zh-Hans" : {
@@ -2943,6 +3687,12 @@
             "value" : "Last Edited 1 Year Ago"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última edición hace 1 año"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2965,6 +3715,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copy Line Up"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar línea arriba"
           }
         },
         "zh-Hans" : {
@@ -2991,6 +3747,12 @@
             "value" : "Save…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3013,6 +3775,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find Next"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar siguiente"
           }
         },
         "zh-Hans" : {
@@ -3039,6 +3807,12 @@
             "value" : "Page Setup…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustar página…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3063,6 +3837,12 @@
             "value" : "Developer"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desarrollador"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3084,6 +3864,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "macOS / Unix (LF)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "macOS / Unix (LF)"
           }
         },
@@ -3111,6 +3897,12 @@
             "value" : "Code Block"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloque de código"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3133,6 +3925,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Export to RTF"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a RTF"
           }
         },
         "zh-Hans" : {
@@ -3159,6 +3957,12 @@
             "value" : "Copy Pandoc Command"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar comando de Pandoc"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3180,6 +3984,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "Zoom"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Zoom"
           }
         },
@@ -3207,6 +4017,12 @@
             "value" : "Expand Selection"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expandir selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3229,6 +4045,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Check Spelling While Typing"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprobar ortografía mientras se escribe"
           }
         },
         "zh-Hans" : {
@@ -3255,6 +4077,12 @@
             "value" : "Reopen Closed Tab"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reabrir pestaña cerrada"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3277,6 +4105,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Table of Contents"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de contenido"
           }
         },
         "zh-Hans" : {
@@ -3303,6 +4137,12 @@
             "value" : "Smart Dashes"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guiones inteligentes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3325,6 +4165,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Purge History Versions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purgar versiones del historial"
           }
         },
         "zh-Hans" : {
@@ -3351,6 +4197,12 @@
             "value" : "Heading 2"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 2"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3373,6 +4225,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Select All"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar todo"
           }
         },
         "zh-Hans" : {
@@ -3399,6 +4257,12 @@
             "value" : "Jump to Selection"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a la selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3421,6 +4285,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Check for Updates…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar actualizaciones…"
           }
         },
         "zh-Hans" : {
@@ -3447,6 +4317,12 @@
             "value" : "Reopen with Encoding"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reabrir con codificación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3469,6 +4345,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Math Block"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloque de matemáticas"
           }
         },
         "zh-Hans" : {
@@ -3495,6 +4377,12 @@
             "value" : "Actual Size"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamaño real"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3517,6 +4405,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Window"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ventana"
           }
         },
         "zh-Hans" : {
@@ -3543,6 +4437,12 @@
             "value" : "Heading 5"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezado 5"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3565,6 +4465,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Commands"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandos"
           }
         },
         "zh-Hans" : {
@@ -3591,6 +4497,12 @@
             "value" : "Shrink Selection"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducir selección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3613,6 +4525,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open In…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir en…"
           }
         },
         "zh-Hans" : {
@@ -3639,6 +4557,12 @@
             "value" : "Open Recent"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir recientes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3661,6 +4585,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Copy Line Down"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar línea abajo"
           }
         },
         "zh-Hans" : {
@@ -3687,6 +4617,12 @@
             "value" : "Capitalize"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capitalizar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3709,6 +4645,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Indent More"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aumentar sangría"
           }
         },
         "zh-Hans" : {
@@ -3735,6 +4677,12 @@
             "value" : "Export to Word Docx"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a Word (Docx)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3757,6 +4705,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Issue Tracker"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguimiento de incidencias"
           }
         },
         "zh-Hans" : {
@@ -3783,6 +4737,12 @@
             "value" : "MarkEdit"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MarkEdit Plus"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3805,6 +4765,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Cut"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cortar"
           }
         },
         "zh-Hans" : {
@@ -3831,6 +4797,12 @@
             "value" : "Keep Up to 50 Versions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservar hasta 50 versiones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3853,6 +4825,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Hide Others"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar los demás"
           }
         },
         "zh-Hans" : {
@@ -3879,6 +4857,12 @@
             "value" : "Ordered List"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lista ordenada"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3901,6 +4885,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Select Next Occurrence"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar coincidencia siguiente"
           }
         },
         "zh-Hans" : {
@@ -3927,6 +4917,12 @@
             "value" : "Make Upper Case"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poner en mayúsculas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3949,6 +4945,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Clear Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaciar menú"
           }
         },
         "zh-Hans" : {
@@ -3975,6 +4977,12 @@
             "value" : "Font"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3997,6 +5005,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Indent Less"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducir sangría"
           }
         },
         "zh-Hans" : {
@@ -4023,6 +5037,12 @@
             "value" : "Edit"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edición"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4045,6 +5065,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open Documents Folder"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir carpeta de documentos"
           }
         },
         "zh-Hans" : {
@@ -4071,6 +5097,12 @@
             "value" : "Bold"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negrita"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4093,6 +5125,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "New"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuevo"
           }
         },
         "zh-Hans" : {
@@ -4119,6 +5157,12 @@
             "value" : "Inspect Element"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspeccionar elemento"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4141,6 +5185,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Go to Line…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a la línea…"
           }
         },
         "zh-Hans" : {
@@ -4167,6 +5217,12 @@
             "value" : "Math"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matemáticas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4189,6 +5245,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Help"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayuda"
           }
         },
         "zh-Hans" : {
@@ -4215,6 +5277,12 @@
             "value" : "Copy"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4237,6 +5305,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Reopen with Encoding"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reabrir con codificación"
           }
         },
         "zh-Hans" : {
@@ -4263,6 +5337,12 @@
             "value" : "Speech"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habla"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4285,6 +5365,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Go Forward"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avanzar"
           }
         },
         "zh-Hans" : {
@@ -4311,6 +5397,12 @@
             "value" : "Find…"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4333,6 +5425,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Find and Replace…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar y reemplazar…"
           }
         },
         "zh-Hans" : {
@@ -4359,6 +5457,12 @@
             "value" : "Purge History Versions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purgar versiones del historial"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4381,6 +5485,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Start Speaking"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar locución"
           }
         },
         "zh-Hans" : {
@@ -4407,6 +5517,12 @@
             "value" : "Last Edited 1 Month Ago"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última edición hace 1 mes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4429,6 +5545,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Learn More…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más información…"
           }
         },
         "zh-Hans" : {
@@ -4455,6 +5577,12 @@
             "value" : "Format"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formato"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4477,6 +5605,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Headers"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encabezados"
           }
         },
         "zh-Hans" : {
@@ -4503,6 +5637,12 @@
             "value" : "Show Substitutions"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar sustituciones"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4525,6 +5665,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Strikethrough"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tachado"
           }
         },
         "zh-Hans" : {
@@ -4551,6 +5697,12 @@
             "value" : "Select Next Section"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar sección siguiente"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4575,6 +5727,12 @@
             "value" : "Select All Occurrences"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccionar todas las coincidencias"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4597,6 +5755,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Folder Path"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruta de la carpeta"
           }
         },
         "zh-Hans" : {
