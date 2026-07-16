@@ -3551,6 +3551,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"github-slugger@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "github-slugger@npm:2.0.0"
+  checksum: 10c0/21b912b6b1e48f1e5a50b2292b48df0ff6abeeb0691b161b3d93d84f4ae6b1acd6ae23702e914af7ea5d441c096453cf0f621b72d57893946618d21dd1a1c486
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^6.0.2":
   version: 6.0.2
   resolution: "glob-parent@npm:6.0.2"
@@ -3649,6 +3656,13 @@ __metadata:
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
   checksum: 10c0/2e789c61b7888d66993e14e8331449e525ef42aac53c627cc53d1c3334e768bcb6abdc4f5f0de1478a25beec6f0bd62c7549058b7ac53e924040d4f301f02fd1
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^11.11.1":
+  version: 11.11.1
+  resolution: "highlight.js@npm:11.11.1"
+  checksum: 10c0/40f53ac19dac079891fcefd5bd8a21cf2e8931fd47da5bd1dca73b7e4375c1defed0636fc39120c639b9c44119b7d110f7f0c15aa899557a5a1c8910f3c0144c
   languageName: node
   linkType: hard
 
@@ -4636,6 +4650,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"marked-gfm-heading-id@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "marked-gfm-heading-id@npm:4.1.4"
+  dependencies:
+    github-slugger: "npm:^2.0.0"
+  peerDependencies:
+    marked: ">=13 <19"
+  checksum: 10c0/677982332f26e64fce426c00219b7b6ee9a45dd87e3e83ee0606b42bdb0548fe04789767aa2119573343db0143d8417afd60654d9fc7f3ba421ca3030f9755f4
+  languageName: node
+  linkType: hard
+
+"marked-highlight@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "marked-highlight@npm:2.2.4"
+  peerDependencies:
+    marked: ">=4 <19"
+  checksum: 10c0/27a1f017bc48c14ec2b5838439d819a7efb5d487459900a57119f178f9e8b27bdb5e8f934ae682a053a4c66b0b71f6b6209ec8c1e520a040fadb8f3b6703f9c8
+  languageName: node
+  linkType: hard
+
 "marked@npm:^18.0.6":
   version: 18.0.6
   resolution: "marked@npm:18.0.6"
@@ -4691,9 +4725,12 @@ __metadata:
     eslint-plugin-compat: "npm:^6.0.2"
     eslint-plugin-promise: "npm:^7.2.1"
     glob: "npm:^12.0.0"
+    highlight.js: "npm:^11.11.1"
     jest: "npm:^30.2.0"
     jest-environment-jsdom: "npm:^30.2.0"
     marked: "npm:^18.0.6"
+    marked-gfm-heading-id: "npm:^4.1.4"
+    marked-highlight: "npm:^2.2.4"
     markedit-api: "https://github.com/MarkEdit-app/MarkEdit-api#v0.28.0"
     rollup: "npm:^4.59.0"
     ts-gyb: "npm:^0.12.0"
