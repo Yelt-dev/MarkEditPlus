@@ -52,7 +52,7 @@ let templateId: TemplateId = defaultTemplate;
 const styleElementId = 'me-document-style';
 
 /**
- * Switch the visual template (SPEC-TEMPLATES-001).
+ * Switch the visual template.
  *
  * Only the stylesheet is swapped: the Markdown source and the rendered body are
  * untouched, so the preview restyles in place without losing the scroll position.
