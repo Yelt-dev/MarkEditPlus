@@ -5932,6 +5932,114 @@
           }
         }
       }
+    },
+    "Tpl-00-menu.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Template\"; ObjectID = \"Tpl-00-menu\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Template"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plantilla"
+          }
+        }
+      }
+    },
+    "Tpl-00-sub.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Template\"; ObjectID = \"Tpl-00-sub\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Template"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plantilla"
+          }
+        }
+      }
+    },
+    "Tpl-01-min.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Minimal\"; ObjectID = \"Tpl-01-min\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Minimal"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimalista"
+          }
+        }
+      }
+    },
+    "Tpl-02-tec.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Technical\"; ObjectID = \"Tpl-02-tec\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Technical"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Técnica"
+          }
+        }
+      }
+    },
+    "Tpl-03-bus.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Business\"; ObjectID = \"Tpl-03-bus\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Business"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empresarial"
+          }
+        }
+      }
+    },
+    "Tpl-04-aca.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Academic\"; ObjectID = \"Tpl-04-aca\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Academic"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Académica"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

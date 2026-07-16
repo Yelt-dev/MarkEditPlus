@@ -5,6 +5,7 @@ import { gfmHeadingId } from 'marked-gfm-heading-id';
 import hljs from 'highlight.js';
 import hljsLightTheme from 'highlight.js/styles/github.css?raw';
 import hljsDarkTheme from 'highlight.js/styles/github-dark.css?raw';
+import { TemplateId, defaultTemplate, isTemplateId, templateExtra, templateStyle } from './templates';
 
 /**
  * Full-document live preview.
@@ -46,6 +47,28 @@ const markdown = new Marked(
 let renderTimer: ReturnType<typeof setTimeout> | undefined;
 let frameReady = false;
 let previewScrollBound = false;
+let templateId: TemplateId = defaultTemplate;
+
+const styleElementId = 'me-document-style';
+
+/**
+ * Switch the visual template (SPEC-TEMPLATES-001).
+ *
+ * Only the stylesheet is swapped: the Markdown source and the rendered body are
+ * untouched, so the preview restyles in place without losing the scroll position.
+ */
+export function setTemplate(id: string): void {
+  templateId = isTemplateId(id) ? id : defaultTemplate;
+
+  const style = previewFrame()?.contentDocument?.getElementById(styleElementId);
+  if (style !== null && style !== undefined) {
+    style.textContent = previewStyle(templateId);
+  }
+}
+
+export function currentTemplate(): TemplateId {
+  return templateId;
+}
 
 function previewFrame(): HTMLIFrameElement | null {
   return document.getElementById('preview') as HTMLIFrameElement | null;
@@ -308,7 +331,7 @@ function inlineHighlightColors(html: string): string {
   });
 }
 
-// MARK: - HTML export (self-contained, "Minimal" template)
+// MARK: - HTML export (self-contained, styled with the active template)
 
 interface FrontMatter {
   title?: string;
@@ -341,7 +364,7 @@ function firstHeadingText(html: string): string | undefined {
 }
 
 /**
- * Build a self-contained HTML document (Minimal template) for export.
+ * Build a self-contained HTML document for export, using the active visual template.
  * Local images stay as image-loader URLs so the native side can embed them as data URIs.
  */
 export function getExportHTML(): string {
@@ -358,7 +381,7 @@ export function getExportHTML(): string {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeText(title)}</title>
-<style>${exportStyle}</style>
+<style>${exportStyle(templateId)}</style>
 </head>
 <body>
 ${body}
@@ -376,78 +399,93 @@ function previewDocument(): string {
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="${csp}">
-<style>${previewStyle}</style>
+<style id="${styleElementId}">${previewStyle(templateId)}</style>
 </head>
 <body></body>
 </html>`;
 }
 
+// Structure and metrics shared by every template. Anything a template is allowed to
+// restyle is expressed as a `--document-*` variable (see templates.ts) rather than a
+// literal, so switching templates is a matter of swapping the variable block.
 const baseStyle = `
-:root { color-scheme: light dark; }
 html { height: 100%; }
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  max-width: 820px;
+  font-family: var(--document-font-family);
+  font-size: var(--document-font-size);
+  line-height: var(--document-line-height);
+  color: var(--document-text-color);
+  background: var(--document-background-color);
+  max-width: var(--document-page-width);
   margin: 0 auto;
-  padding: 32px 32px 64px;
+  padding: var(--document-page-margin);
   word-wrap: break-word;
 }
-h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.5em 0 0.6em; font-weight: 600; }
-h1 { font-size: 1.9em; border-bottom: 1px solid rgba(128,128,128,0.25); padding-bottom: 0.3em; }
-h2 { font-size: 1.5em; border-bottom: 1px solid rgba(128,128,128,0.2); padding-bottom: 0.3em; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--document-heading-font-family);
+  color: var(--document-heading-color);
+  line-height: 1.25;
+  margin: 1.5em 0 0.6em;
+  font-weight: 600;
+}
+h1 { font-size: 1.9em; }
+h2 { font-size: 1.5em; }
 p { margin: 0.85em 0; }
-a { color: #0969da; text-decoration: none; }
+a { color: var(--document-accent-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 code {
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 0.88em;
-  background: rgba(128,128,128,0.15);
+  background: var(--document-code-background);
+  color: var(--document-text-color);
   padding: 0.2em 0.4em;
   border-radius: 4px;
 }
-pre { margin: 0.9em 0; border-radius: 8px; overflow: auto; }
-pre code, pre code.hljs { display: block; padding: 14px 16px; font-size: 0.88em; background: rgba(128,128,128,0.1); }
+pre { margin: 0.9em 0; border-radius: 8px; overflow: auto; background: var(--document-code-background); }
+pre code, pre code.hljs {
+  display: block;
+  padding: 14px 16px;
+  font-size: 0.88em;
+  background: var(--document-code-background);
+}
 blockquote {
   margin: 0.9em 0;
   padding: 0 1em;
-  color: rgba(128,128,128,1);
-  border-left: 3px solid rgba(128,128,128,0.4);
+  color: var(--document-muted-color);
+  border-left: 3px solid var(--document-border-color);
 }
 table { border-collapse: collapse; margin: 0.9em 0; display: block; overflow: auto; }
-th, td { border: 1px solid rgba(128,128,128,0.35); padding: 6px 12px; }
-th { background: rgba(128,128,128,0.1); }
+th, td { border: 1px solid var(--document-border-color); padding: 6px 12px; }
+th { background: var(--document-code-background); }
 img { max-width: 100%; }
-hr { border: none; border-top: 1px solid rgba(128,128,128,0.3); margin: 1.6em 0; }
+hr { border: none; border-top: 1px solid var(--document-border-color); margin: 1.6em 0; }
 ul, ol { padding-left: 1.6em; }
 li { margin: 0.25em 0; }
 li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.3em; }
 li > input[type="checkbox"] { margin: 0 0.5em 0 0; }
 `;
 
-const previewStyle = `${baseStyle}
+/** Preview stylesheet: follows the system appearance, light and dark code themes. */
+function previewStyle(id: TemplateId): string {
+  return `:root { color-scheme: light dark; }
+${templateStyle(id, 'auto')}
+${baseStyle}
+${templateExtra(id)}
 ${hljsLightTheme}
 @media (prefers-color-scheme: dark) { ${hljsDarkTheme} }`;
+}
 
-// Export always uses a light "paper" look (white background, light code theme), independent
-// of the system appearance, plus fragmentation rules so PDF pages don't cut content awkwardly.
-const exportStyle = `${baseStyle}
-:root { color-scheme: light; }
-html, body { background: #ffffff; color: #1f2328; }
+// Exports always use a light "paper" look (white background, light code theme) regardless of
+// the system appearance, plus fragmentation rules so PDF pages don't cut content awkwardly.
+function exportStyle(id: TemplateId): string {
+  return `:root { color-scheme: light; }
+${templateStyle(id, 'light')}
+${baseStyle}
+${templateExtra(id)}
 ${hljsLightTheme}
-/* Solid colors below: the macOS text system (PDF export) handles rgba() poorly */
-code { background: #eff1f3; color: #1f2328; }
-pre { background: #f6f8fa; }
-pre code, pre code.hljs { background: #f6f8fa; }
-blockquote { color: #57606a; border-left: 3px solid #d0d7de; }
-th { background: #f0f1f3; }
-th, td { border: 1px solid #d0d7de; }
-h1 { border-bottom: 1px solid #d0d7de; }
-h2 { border-bottom: 1px solid #d8dee4; }
-hr { border-top: 1px solid #d0d7de; }
 pre, blockquote, table, img, figure { break-inside: avoid; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid; }
 @media print {
   body { max-width: none; margin: 0; padding: 0; }
 }`;
+}
