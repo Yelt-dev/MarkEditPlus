@@ -105,11 +105,25 @@ final class AppDocumentController: NSDocumentController {
       // Ensure the preloader has a fully loaded editor before opening the document
       await EditorPreloader.shared.prepareViewController()
 
-      super.openDocument(
-        withContentsOf: url,
-        display: displayDocument,
-        completionHandler: completionHandler
-      )
+      // If the frontmost window is an empty, untitled document, reuse its place: open the
+      // file, move the new window to where the empty one was, then close the empty one.
+      // This keeps a single window in the same spot instead of leaving a blank one behind.
+      let transientEmpty = self.documents.compactMap { $0 as? EditorDocument }.first {
+        $0.fileURL == nil && !$0.isDocumentEdited && $0.stringValue.isEmpty
+      }
+      let emptyFrame = transientEmpty?.windowControllers.first?.window?.frame
+
+      super.openDocument(withContentsOf: url, display: displayDocument) { document, wasAlreadyOpen, error in
+        if let transientEmpty, let document, document !== transientEmpty, !wasAlreadyOpen, error == nil {
+          if let emptyFrame, let newWindow = document.windowControllers.first?.window {
+            newWindow.setFrame(emptyFrame, display: true)
+          }
+
+          transientEmpty.close()
+        }
+
+        completionHandler(document, wasAlreadyOpen, error)
+      }
     }
   }
 
