@@ -5860,6 +5860,24 @@
           }
         }
       }
+    },
+    "Prv-06-syn.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Sync Scroll\"; ObjectID = \"Prv-06-syn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sync Scroll"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizar scroll"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

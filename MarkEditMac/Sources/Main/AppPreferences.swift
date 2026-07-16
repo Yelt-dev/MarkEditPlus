@@ -61,6 +61,10 @@ enum AppPreferences {
     /// Integrated preview layout: "editor", "split" or "preview".
     @Storage(key: "preview.view-mode", defaultValue: "editor")
     static var viewMode: String
+
+    /// Whether the preview scroll follows the editor in split view.
+    @Storage(key: "preview.sync-scroll", defaultValue: true)
+    static var syncScroll: Bool
   }
 
   enum Editor {

@@ -34,7 +34,7 @@ import { filterTransaction, wordTokenizer, observeChanges, interceptInputs } fro
 import { customizedCommandsKeymap } from './modules/commands';
 import { autocompleteExtensions, standardLinkCompletion, referenceLinkCompletion } from './modules/completion';
 import { tocKeymap } from './modules/toc';
-import { previewUpdateListener } from './modules/preview/document';
+import { previewUpdateListener, previewScrollListener } from './modules/preview/document';
 import { userExtensions, userMarkdownConfigs, userCodeLanguages } from './api/methods';
 
 const theme = new Compartment;
@@ -162,6 +162,7 @@ export function extensions(options: { lineBreak?: string }) {
     interceptInputs(),
     observeChanges(),
     previewUpdateListener(),
+    previewScrollListener(),
 
     // Accessibility
     EditorView.contentAttributes.of({

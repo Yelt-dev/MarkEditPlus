@@ -50,8 +50,14 @@ export function setPreviewMode(mode: PreviewMode): void {
   }
 }
 
+let frameReady = false;
+
 /**
  * Render the current document into the preview iframe immediately.
+ *
+ * The iframe skeleton (head with CSP and styles) is written once via srcdoc; after
+ * that only the <body> content is swapped, which preserves the preview scroll position
+ * across edits instead of jumping back to the top on every keystroke.
  */
 export function renderPreview(): void {
   const frame = previewFrame();
@@ -60,8 +66,31 @@ export function renderPreview(): void {
   }
 
   const source = window.editor.state.doc.toString();
-  const rendered = marked.parse(source, { async: false, gfm: true }) as string;
-  frame.srcdoc = previewDocument(withExternalLinks(rendered));
+  const rendered = withExternalLinks(marked.parse(source, { async: false, gfm: true }) as string);
+
+  const body = frame.contentDocument?.body;
+  if (frameReady && body != null) {
+    body.innerHTML = rendered;
+    if (scrollSyncEnabled) {
+      syncScroll();
+    }
+
+    return;
+  }
+
+  // First render: write the skeleton, then fill the body once the frame has loaded.
+  frame.onload = () => {
+    frameReady = true;
+    const loadedBody = frame.contentDocument?.body;
+    if (loadedBody != null) {
+      loadedBody.innerHTML = rendered;
+      if (scrollSyncEnabled) {
+        syncScroll();
+      }
+    }
+  };
+
+  frame.srcdoc = previewDocument('');
 }
 
 function scheduleRender(): void {
@@ -85,6 +114,54 @@ export function previewUpdateListener() {
       scheduleRender();
     }
   });
+}
+
+// MARK: - Synchronized scrolling
+
+let scrollSyncEnabled = true;
+
+/**
+ * Enable or disable synchronized scrolling between the editor and the preview.
+ */
+export function setScrollSync(enabled: boolean): void {
+  scrollSyncEnabled = enabled;
+  if (enabled) {
+    syncScroll();
+  }
+}
+
+/**
+ * CodeMirror extension that mirrors the editor scroll position onto the preview.
+ * The iframe is same-origin (but script-free), so the editor can drive its scroll.
+ */
+export function previewScrollListener() {
+  return EditorView.domEventHandlers({
+    scroll: () => {
+      syncScroll();
+    },
+  });
+}
+
+function syncScroll(): void {
+  if (!scrollSyncEnabled || currentPreviewMode() !== 'split') {
+    return;
+  }
+
+  const frame = previewFrame();
+  const target = frame?.contentDocument?.scrollingElement;
+  if (frame === null || target == null) {
+    return;
+  }
+
+  const source = window.editor.scrollDOM;
+  const sourceRange = source.scrollHeight - source.clientHeight;
+  const targetRange = target.scrollHeight - target.clientHeight;
+  if (sourceRange <= 0 || targetRange <= 0) {
+    return;
+  }
+
+  const ratio = source.scrollTop / sourceRange;
+  target.scrollTop = ratio * targetRange;
 }
 
 /**

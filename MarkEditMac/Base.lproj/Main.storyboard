@@ -963,6 +963,13 @@ Gw
                                                             <action selector="setPreviewModePreviewOnly:" target="Ady-hI-5gd" id="Prv-03-act"/>
                                                         </connections>
                                                     </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="Prv-05-sep"/>
+                                                    <menuItem title="Sync Scroll" id="Prv-06-syn">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="toggleScrollSync:" target="Ady-hI-5gd" id="Prv-06-act"/>
+                                                        </connections>
+                                                    </menuItem>
                                                 </items>
                                             </menu>
                                         </menuItem>

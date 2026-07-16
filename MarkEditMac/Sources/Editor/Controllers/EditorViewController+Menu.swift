@@ -82,6 +82,25 @@ extension EditorViewController: NSMenuItemValidation {
   ]
 
   func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+    // Preview menu items reflect the current state with a checkmark
+    switch menuItem.action {
+    case #selector(setPreviewModeEditorOnly(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "editor" ? .on : .off
+      return true
+    case #selector(setPreviewModeSplit(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "split" ? .on : .off
+      return true
+    case #selector(setPreviewModePreviewOnly(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "preview" ? .on : .off
+      return true
+    case #selector(toggleScrollSync(_:)):
+      menuItem.state = AppPreferences.Preview.syncScroll ? .on : .off
+      // Scroll sync only matters in split view
+      return AppPreferences.Preview.viewMode == "split"
+    default:
+      break
+    }
+
     // Disable most edit actions for read-only mode
     if isReadOnlyMode {
       guard let menu = menuItem.menu, let delegate = NSApp.appDelegate else {
@@ -260,14 +279,21 @@ extension EditorViewController {
     setPreviewMode("preview")
   }
 
+  @IBAction func toggleScrollSync(_ sender: Any?) {
+    let enabled = !AppPreferences.Preview.syncScroll
+    AppPreferences.Preview.syncScroll = enabled
+    webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(enabled))")
+  }
+
   private func setPreviewMode(_ mode: String) {
     AppPreferences.Preview.viewMode = mode
     invokePreviewMode(mode)
   }
 
-  /// Push the persisted preview mode to the editor (used on launch/reset and when switching).
+  /// Push the persisted preview state to the editor (used on launch/reset and when switching).
   func applyPreviewMode() {
     invokePreviewMode(AppPreferences.Preview.viewMode)
+    webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
   }
 
   private func invokePreviewMode(_ mode: String) {
