@@ -248,8 +248,30 @@ extension EditorViewController {
 
   // MARK: - Preview
 
-  @IBAction func togglePreview(_ sender: Any?) {
-    webView.evaluateJavaScript("window.markEditTogglePreview && window.markEditTogglePreview()")
+  @IBAction func setPreviewModeEditorOnly(_ sender: Any?) {
+    setPreviewMode("editor")
+  }
+
+  @IBAction func setPreviewModeSplit(_ sender: Any?) {
+    setPreviewMode("split")
+  }
+
+  @IBAction func setPreviewModePreviewOnly(_ sender: Any?) {
+    setPreviewMode("preview")
+  }
+
+  private func setPreviewMode(_ mode: String) {
+    AppPreferences.Preview.viewMode = mode
+    invokePreviewMode(mode)
+  }
+
+  /// Push the persisted preview mode to the editor (used on launch/reset and when switching).
+  func applyPreviewMode() {
+    invokePreviewMode(AppPreferences.Preview.viewMode)
+  }
+
+  private func invokePreviewMode(_ mode: String) {
+    webView.evaluateJavaScript("window.markEditSetPreviewMode && window.markEditSetPreviewMode('\(mode)')")
   }
 
   // MARK: - Hyper Link

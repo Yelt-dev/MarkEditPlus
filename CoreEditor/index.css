@@ -11,32 +11,45 @@ html, body {
   overflow: auto;
 }
 
-/* Integrated live preview (split view) */
+/* Integrated live preview (editor / split / preview-only modes) */
 
 #preview {
   display: none;
 }
 
-body.me-preview-active {
+body.me-preview-split,
+body.me-preview-only {
   display: flex;
   overflow: hidden;
   height: 100vh;
 }
 
-body.me-preview-active #editor {
+body.me-preview-split #editor {
   flex: 1 1 50%;
   min-width: 0;
   height: 100vh;
   overflow: hidden;
 }
 
-body.me-preview-active #preview {
+body.me-preview-only #editor {
+  display: none;
+}
+
+body.me-preview-split #preview {
   display: block;
   flex: 1 1 50%;
   min-width: 0;
   height: 100vh;
   border: none;
   border-inline-start: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+body.me-preview-only #preview {
+  display: block;
+  flex: 1 1 100%;
+  min-width: 0;
+  height: 100vh;
+  border: none;
 }
 
 /* CodeMirror */

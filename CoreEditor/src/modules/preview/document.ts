@@ -7,10 +7,13 @@ import { marked } from 'marked';
  * The rendered Markdown is injected into a sandboxed <iframe> (see index.html),
  * which keeps it fully isolated from the editor context: no script execution and
  * no access to the native bridge (SPEC-PREVIEW-005). All rendering is local; no
- * remote resources are fetched.
+ * remote resources are fetched to build the document.
  */
 
-const activeClassName = 'me-preview-active';
+export type PreviewMode = 'editor' | 'split' | 'preview';
+
+const splitClassName = 'me-preview-split';
+const previewClassName = 'me-preview-only';
 const renderDebounce = 150;
 
 let renderTimer: ReturnType<typeof setTimeout> | undefined;
@@ -19,8 +22,32 @@ function previewFrame(): HTMLIFrameElement | null {
   return document.getElementById('preview') as HTMLIFrameElement | null;
 }
 
-export function isPreviewVisible(): boolean {
-  return document.body.classList.contains(activeClassName);
+export function currentPreviewMode(): PreviewMode {
+  if (document.body.classList.contains(previewClassName)) {
+    return 'preview';
+  }
+
+  if (document.body.classList.contains(splitClassName)) {
+    return 'split';
+  }
+
+  return 'editor';
+}
+
+function isPreviewVisible(): boolean {
+  return currentPreviewMode() !== 'editor';
+}
+
+/**
+ * Switch the preview layout: editor only, split, or preview only.
+ */
+export function setPreviewMode(mode: PreviewMode): void {
+  document.body.classList.toggle(splitClassName, mode === 'split');
+  document.body.classList.toggle(previewClassName, mode === 'preview');
+
+  if (mode !== 'editor') {
+    renderPreview();
+  }
 }
 
 /**
@@ -33,8 +60,8 @@ export function renderPreview(): void {
   }
 
   const source = window.editor.state.doc.toString();
-  const body = marked.parse(source, { async: false, gfm: true }) as string;
-  frame.srcdoc = previewDocument(body);
+  const rendered = marked.parse(source, { async: false, gfm: true }) as string;
+  frame.srcdoc = previewDocument(withExternalLinks(rendered));
 }
 
 function scheduleRender(): void {
@@ -50,18 +77,6 @@ function scheduleRender(): void {
 }
 
 /**
- * Toggle the preview pane, returns the new visibility.
- */
-export function togglePreview(): boolean {
-  const visible = document.body.classList.toggle(activeClassName);
-  if (visible) {
-    renderPreview();
-  }
-
-  return visible;
-}
-
-/**
  * CodeMirror extension that re-renders the preview when the document changes.
  */
 export function previewUpdateListener() {
@@ -72,11 +87,24 @@ export function previewUpdateListener() {
   });
 }
 
+/**
+ * Make links open outside the sandboxed frame (in the default browser),
+ * rather than trying to navigate the isolated preview.
+ */
+function withExternalLinks(html: string): string {
+  return html.replace(/<a /g, '<a target="_blank" rel="noopener noreferrer" ');
+}
+
 function previewDocument(body: string): string {
+  // Content Security Policy hardening (defense in depth on top of the iframe sandbox):
+  // no scripts, no network connections, no frames. Inline styles and images are allowed
+  // so the document renders; scripts are additionally blocked by the sandbox attribute.
+  const csp = "default-src 'none'; style-src 'unsafe-inline'; img-src data: https: http:; font-src data:;";
   return `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="${csp}">
 <style>${previewStyle}</style>
 </head>
 <body>${body}</body>
