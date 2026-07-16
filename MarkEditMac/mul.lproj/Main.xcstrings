@@ -5878,6 +5878,60 @@
           }
         }
       }
+    },
+    "Exp-01-htm.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"HTML…\"; ObjectID = \"Exp-01-htm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "HTML…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTML…"
+          }
+        }
+      }
+    },
+    "Exp-03-pdf.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"PDF…\"; ObjectID = \"Exp-03-pdf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "PDF…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PDF…"
+          }
+        }
+      }
+    },
+    "Exp-00-sub.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Export\"; ObjectID = \"Exp-00-sub\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Export"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

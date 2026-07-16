@@ -29,7 +29,7 @@ import { initThemeExtractors, initMarkEditModules } from './src/api/modules';
 import { setUp, applyReducedMotion } from './src/styling/config';
 import { loadTheme } from './src/styling/themes';
 import { startObserving } from './src/modules/events';
-import { setPreviewMode, setScrollSync, renderPreview } from './src/modules/preview/document';
+import { setPreviewMode, setScrollSync, renderPreview, getExportHTML } from './src/modules/preview/document';
 
 // Initialize and inject modules to the global MarkEdit object
 initMarkEditModules();
@@ -129,6 +129,7 @@ startObserving();
 window.markEditSetPreviewMode = setPreviewMode;
 window.markEditSetScrollSync = setScrollSync;
 window.markEditRenderPreview = renderPreview;
+window.markEditGetExportHTML = getExportHTML;
 
 // Respond to reduced motion preference changes
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

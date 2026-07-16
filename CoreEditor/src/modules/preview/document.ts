@@ -267,6 +267,105 @@ function escapeAttribute(value: string): string {
     .replace(/>/g, '&gt;');
 }
 
+function escapeText(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// The macOS text system (used for PDF export) honors inline styles far more reliably than
+// stylesheet classes, so bake the highlight.js token colors into the spans for export.
+let highlightColors: Record<string, string> | undefined;
+
+function highlightColorMap(): Record<string, string> {
+  if (highlightColors !== undefined) {
+    return highlightColors;
+  }
+
+  const map: Record<string, string> = {};
+  const rulePattern = /([^{}]+)\{([^}]*)\}/g;
+  let rule: RegExpExecArray | null;
+  while ((rule = rulePattern.exec(hljsLightTheme)) !== null) {
+    const color = /(?:^|;)\s*color\s*:\s*([^;]+)/i.exec(rule[2]);
+    if (color === null) {
+      continue;
+    }
+
+    for (const selector of rule[1].split(',')) {
+      const token = /\.hljs-([\w-]+)\s*$/.exec(selector.trim());
+      if (token !== null) {
+        map[token[1]] = color[1].trim();
+      }
+    }
+  }
+
+  highlightColors = map;
+  return map;
+}
+
+function inlineHighlightColors(html: string): string {
+  const map = highlightColorMap();
+  return html.replace(/<span class="hljs-([\w-]+)"/g, (whole, token: string) => {
+    return Object.hasOwn(map, token) ? `<span style="color:${map[token]}"` : whole;
+  });
+}
+
+// MARK: - HTML export (self-contained, "Minimal" template)
+
+interface FrontMatter {
+  title?: string;
+  language?: string;
+}
+
+function parseFrontMatter(source: string): FrontMatter {
+  const match = /^\uFEFF?---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(\r?\n|$)/.exec(source);
+  if (match === null) {
+    return {};
+  }
+
+  const block = match[1];
+  const read = (key: string): string | undefined => {
+    const line = new RegExp(`^${key}[ \\t]*:[ \\t]*(.+)$`, 'm').exec(block);
+    return line === null ? undefined : line[1].trim().replace(/^["']|["']$/g, '');
+  };
+
+  return { title: read('title'), language: read('language') };
+}
+
+function firstHeadingText(html: string): string | undefined {
+  const match = /<h1[^>]*>([\s\S]*?)<\/h1>/i.exec(html);
+  if (match === null) {
+    return undefined;
+  }
+
+  const text = match[1].replace(/<[^>]+>/g, '').trim();
+  return text === '' ? undefined : text;
+}
+
+/**
+ * Build a self-contained HTML document (Minimal template) for export.
+ * Local images stay as image-loader URLs so the native side can embed them as data URIs.
+ */
+export function getExportHTML(): string {
+  const raw = window.editor.state.doc.toString();
+  const meta = parseFrontMatter(raw);
+  const rendered = externalizeLinks(markdown.parse(stripFrontMatter(raw), { async: false }) as string);
+  const body = inlineHighlightColors(rendered);
+  const title = meta.title ?? firstHeadingText(body) ?? 'Untitled';
+  const lang = meta.language ?? 'en';
+
+  return `<!DOCTYPE html>
+<html lang="${escapeAttribute(lang)}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeText(title)}</title>
+<style>${exportStyle}</style>
+</head>
+<body>
+${body}
+</body>
+</html>`;
+}
+
 function previewDocument(): string {
   // Content Security Policy hardening (defense in depth on top of the iframe sandbox):
   // no scripts, no network connections, no frames. Inline styles and images are allowed
@@ -323,9 +422,32 @@ img { max-width: 100%; }
 hr { border: none; border-top: 1px solid rgba(128,128,128,0.3); margin: 1.6em 0; }
 ul, ol { padding-left: 1.6em; }
 li { margin: 0.25em 0; }
-li input[type="checkbox"] { margin-right: 0.4em; }
+li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.3em; }
+li > input[type="checkbox"] { margin: 0 0.5em 0 0; }
 `;
 
 const previewStyle = `${baseStyle}
 ${hljsLightTheme}
 @media (prefers-color-scheme: dark) { ${hljsDarkTheme} }`;
+
+// Export always uses a light "paper" look (white background, light code theme), independent
+// of the system appearance, plus fragmentation rules so PDF pages don't cut content awkwardly.
+const exportStyle = `${baseStyle}
+:root { color-scheme: light; }
+html, body { background: #ffffff; color: #1f2328; }
+${hljsLightTheme}
+/* Solid colors below: the macOS text system (PDF export) handles rgba() poorly */
+code { background: #eff1f3; color: #1f2328; }
+pre { background: #f6f8fa; }
+pre code, pre code.hljs { background: #f6f8fa; }
+blockquote { color: #57606a; border-left: 3px solid #d0d7de; }
+th { background: #f0f1f3; }
+th, td { border: 1px solid #d0d7de; }
+h1 { border-bottom: 1px solid #d0d7de; }
+h2 { border-bottom: 1px solid #d8dee4; }
+hr { border-top: 1px solid #d0d7de; }
+pre, blockquote, table, img, figure { break-inside: avoid; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+@media print {
+  body { max-width: none; margin: 0; padding: 0; }
+}`;

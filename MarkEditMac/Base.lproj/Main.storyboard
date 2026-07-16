@@ -207,6 +207,26 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
+                                        <menuItem title="Export" id="Exp-00-sub">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Export" id="Exp-00-menu">
+                                                <items>
+                                                    <menuItem title="HTML…" id="Exp-01-htm">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportHTML:" target="Ady-hI-5gd" id="Exp-01-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="PDF…" id="Exp-03-pdf">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportPDF:" target="Ady-hI-5gd" id="Exp-03-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Exp-02-sep"/>
                                         <menuItem title="Copy Pandoc Command" id="53x-nK-wnX">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Copy Pandoc Command" id="QZC-LS-WMo">
