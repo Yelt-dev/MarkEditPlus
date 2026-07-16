@@ -5880,37 +5880,37 @@
       }
     },
     "Exp-01-htm.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"HTML\"; ObjectID = \"Exp-01-htm\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"HTML…\"; ObjectID = \"Exp-01-htm\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "HTML"
+            "value" : "HTML…"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HTML"
+            "value" : "HTML…"
           }
         }
       }
     },
     "Exp-03-pdf.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"PDF\"; ObjectID = \"Exp-03-pdf\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"PDF…\"; ObjectID = \"Exp-03-pdf\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "PDF"
+            "value" : "PDF…"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PDF"
+            "value" : "PDF…"
           }
         }
       }

@@ -7,6 +7,7 @@
 
 import AppKit
 import WebKit
+import PDFKit
 import UniformTypeIdentifiers
 import MarkEditKit
 import FontPicker
@@ -377,8 +378,8 @@ extension EditorViewController {
   }
 
   /// Export the document as a paginated PDF, no external tools.
-  /// Rendered through the text system (like MarkEdit's own printing), which paginates
-  /// reliably — unlike headless WKWebView printing.
+  /// Renders through WebKit (identical to the preview) and paginates with PDFKit,
+  /// breaking at element boundaries so content isn't cut across pages.
   @IBAction func exportPDF(_ sender: Any?) {
     Task { @MainActor in
       guard let result = try? await webView.evaluateJavaScript("window.markEditGetExportHTML && window.markEditGetExportHTML()"),
@@ -386,54 +387,13 @@ extension EditorViewController {
         return Logger.log(.error, "Failed to build export HTML")
       }
 
-      guard let pdfData = makePDFData(fromHTML: embedLocalImages(in: html)) else {
+      guard let pdfData = await PDFExporter().export(html: embedLocalImages(in: html)) else {
         return Logger.log(.error, "Failed to render PDF")
       }
 
       let name = (self.document?.fileURL?.deletingPathExtension().lastPathComponent ?? "Untitled") + ".pdf"
       _ = await showSavePanel(data: pdfData, fileName: name)
     }
-  }
-
-  private func makePDFData(fromHTML html: String) -> Data? {
-    guard let htmlData = html.data(using: .utf8),
-          let attributed = try? NSAttributedString(
-            data: htmlData,
-            options: [
-              .documentType: NSAttributedString.DocumentType.html,
-              .characterEncoding: String.Encoding.utf8.rawValue,
-            ],
-            documentAttributes: nil
-          ) else {
-      return nil
-    }
-
-    let outputURL = FileManager.default.temporaryDirectory.appending(path: "markeditplus-\(UUID().uuidString).pdf")
-    let printInfo = NSPrintInfo(dictionary: [
-      .jobDisposition: NSPrintInfo.JobDisposition.save.rawValue,
-      .jobSavingURL: outputURL,
-    ])
-    printInfo.topMargin = 54
-    printInfo.bottomMargin = 54
-    printInfo.leftMargin = 54
-    printInfo.rightMargin = 54
-    printInfo.horizontalPagination = .fit
-    printInfo.verticalPagination = .automatic
-
-    let contentWidth = printInfo.paperSize.width - printInfo.leftMargin - printInfo.rightMargin
-    let textView = NSTextView(frame: CGRect(x: 0, y: 0, width: contentWidth, height: 1))
-    textView.textContainerInset = .zero
-    textView.textStorage?.setAttributedString(attributed)
-    textView.sizeToFit()
-
-    let operation = NSPrintOperation(view: textView, printInfo: printInfo)
-    operation.showsPrintPanel = false
-    operation.showsProgressPanel = false
-    operation.run()
-
-    let data = try? Data(contentsOf: outputURL)
-    try? FileManager.default.removeItem(at: outputURL)
-    return data
   }
 
   /// Replace image-loader URLs with base64 data URIs so the exported file is self-contained.
@@ -790,5 +750,154 @@ private extension EditorViewController {
       name: .fontSizeChanged,
       object: AppPreferences.Editor.fontSize
     )
+  }
+}
+
+// MARK: - PDF Export
+
+/// Renders HTML to a paginated PDF that matches the preview exactly: WebKit produces a single
+/// tall PDF (which is reliable, unlike headless print), then PDFKit slices it into pages,
+/// breaking at element boundaries (measured in the DOM) so content isn't cut mid-block.
+@MainActor
+private final class PDFExporter: NSObject, WKNavigationDelegate {
+  private struct Metrics: Decodable {
+    let total: Double
+    let breaks: [Double]
+  }
+
+  // A4 in points, with page margins
+  private let pageWidth: CGFloat = 595
+  private let pageHeight: CGFloat = 842
+  private let verticalMargin: CGFloat = 48
+
+  private var webView: WKWebView?
+  private var continuation: CheckedContinuation<Data?, Never>?
+  private var didComplete = false
+
+  func export(html: String) async -> Data? {
+    await withCheckedContinuation { continuation in
+      self.continuation = continuation
+
+      let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight))
+      webView.navigationDelegate = self
+      self.webView = webView
+      webView.loadHTMLString(html, baseURL: nil)
+
+      // Safety net so the caller never waits forever
+      DispatchQueue.main.asyncAfter(deadline: .now() + 20) { [weak self] in
+        self?.finish(nil)
+      }
+    }
+  }
+
+  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation?) {
+    // Let layout and images settle before capturing
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { [weak self] in
+      self?.render(webView)
+    }
+  }
+
+  func webView(_ webView: WKWebView, didFail navigation: WKNavigation?, withError error: Error) {
+    finish(nil)
+  }
+
+  func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation?, withError error: Error) {
+    finish(nil)
+  }
+
+  private func render(_ webView: WKWebView) {
+    // Measure safe page-break positions (bottom of each top-level block)
+    let script = """
+    (() => {
+      const body = document.body;
+      const breaks = [];
+      for (const el of body.children) { breaks.push(el.offsetTop + el.offsetHeight); }
+      return JSON.stringify({ total: body.scrollHeight, breaks });
+    })()
+    """
+
+    webView.evaluateJavaScript(script) { [weak self] result, _ in
+      guard let self else { return }
+
+      let metrics = (result as? String)
+        .flatMap { $0.data(using: .utf8) }
+        .flatMap { try? JSONDecoder().decode(Metrics.self, from: $0) }
+
+      webView.createPDF(configuration: WKPDFConfiguration()) { pdfResult in
+        switch pdfResult {
+        case .success(let data): self.paginate(tallPDF: data, metrics: metrics)
+        case .failure(let error):
+          Logger.log(.error, "createPDF failed: \(error.localizedDescription)")
+          self.finish(nil)
+        }
+      }
+    }
+  }
+
+  private func paginate(tallPDF: Data, metrics: Metrics?) {
+    guard let document = PDFDocument(data: tallPDF), let page = document.page(at: 0) else {
+      return finish(nil)
+    }
+
+    let bounds = page.bounds(for: .mediaBox)
+    let contentHeight = bounds.height
+    let width = bounds.width
+
+    // Map DOM pixel break points to PDF points (createPDF may not be exactly 1:1)
+    let breaks: [CGFloat] = {
+      guard let metrics, metrics.total > 0 else {
+        return []
+      }
+
+      let scale = contentHeight / CGFloat(metrics.total)
+      return metrics.breaks.map { CGFloat($0) * scale }.sorted()
+    }()
+
+    // Stop at the bottom of the last content block, ignoring trailing body padding,
+    // otherwise that empty space spills onto an extra blank page.
+    let contentEnd = breaks.last ?? contentHeight
+    let usableHeight = pageHeight - 2 * verticalMargin
+    var slices: [(top: CGFloat, bottom: CGFloat)] = []
+    var start: CGFloat = 0
+    while start < contentEnd - 0.5 {
+      let limit = start + usableHeight
+      let candidate = breaks.last { $0 > start + 1 && $0 <= limit }
+      let end = candidate ?? min(limit, contentEnd)
+      slices.append((start, end))
+      start = end
+    }
+
+    let output = NSMutableData()
+    var mediaBox = CGRect(x: 0, y: 0, width: width, height: pageHeight)
+    guard let consumer = CGDataConsumer(data: output as CFMutableData),
+          let context = CGContext(consumer: consumer, mediaBox: &mediaBox, nil) else {
+      return finish(nil)
+    }
+
+    for slice in slices {
+      context.beginPDFPage(nil)
+      context.saveGState()
+      // Keep the slice inside the top/bottom margins
+      context.clip(to: CGRect(x: 0, y: verticalMargin, width: width, height: usableHeight))
+      // Align the slice's top with the top of the page's content area
+      context.translateBy(x: 0, y: (pageHeight - verticalMargin) - (contentHeight - slice.top))
+      page.draw(with: .mediaBox, to: context)
+      context.restoreGState()
+      context.endPDFPage()
+    }
+
+    context.closePDF()
+    finish(output as Data)
+  }
+
+  private func finish(_ data: Data?) {
+    guard !didComplete else {
+      return
+    }
+
+    didComplete = true
+    webView = nil
+    continuation?.resume(returning: data)
+    continuation = nil
   }
 }
