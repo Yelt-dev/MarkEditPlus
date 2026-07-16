@@ -320,7 +320,7 @@ export function getExportHTML(): string {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeText(title)}</title>
-<style>${previewStyle}</style>
+<style>${exportStyle}</style>
 </head>
 <body>
 ${body}
@@ -390,3 +390,15 @@ li input[type="checkbox"] { margin-right: 0.4em; }
 const previewStyle = `${baseStyle}
 ${hljsLightTheme}
 @media (prefers-color-scheme: dark) { ${hljsDarkTheme} }`;
+
+// Export always uses a light "paper" look (white background, light code theme), independent
+// of the system appearance, plus fragmentation rules so PDF pages don't cut content awkwardly.
+const exportStyle = `${baseStyle}
+:root { color-scheme: light; }
+html, body { background: #ffffff; color: #1f2328; }
+${hljsLightTheme}
+pre, blockquote, table, img, figure { break-inside: avoid; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+@media print {
+  body { max-width: none; margin: 0; padding: 0; }
+}`;

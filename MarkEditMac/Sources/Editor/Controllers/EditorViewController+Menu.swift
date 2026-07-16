@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import WebKit
 import UniformTypeIdentifiers
 import MarkEditKit
 import FontPicker
@@ -373,6 +374,66 @@ extension EditorViewController {
       let name = (self.document?.fileURL?.deletingPathExtension().lastPathComponent ?? "Untitled") + ".html"
       _ = await showSavePanel(data: Data(document.utf8), fileName: name)
     }
+  }
+
+  /// Export the document as a paginated PDF, no external tools.
+  /// Rendered through the text system (like MarkEdit's own printing), which paginates
+  /// reliably — unlike headless WKWebView printing.
+  @IBAction func exportPDF(_ sender: Any?) {
+    Task { @MainActor in
+      guard let result = try? await webView.evaluateJavaScript("window.markEditGetExportHTML && window.markEditGetExportHTML()"),
+            let html = result as? String else {
+        return Logger.log(.error, "Failed to build export HTML")
+      }
+
+      guard let pdfData = makePDFData(fromHTML: embedLocalImages(in: html)) else {
+        return Logger.log(.error, "Failed to render PDF")
+      }
+
+      let name = (self.document?.fileURL?.deletingPathExtension().lastPathComponent ?? "Untitled") + ".pdf"
+      _ = await showSavePanel(data: pdfData, fileName: name)
+    }
+  }
+
+  private func makePDFData(fromHTML html: String) -> Data? {
+    guard let htmlData = html.data(using: .utf8),
+          let attributed = try? NSAttributedString(
+            data: htmlData,
+            options: [
+              .documentType: NSAttributedString.DocumentType.html,
+              .characterEncoding: String.Encoding.utf8.rawValue,
+            ],
+            documentAttributes: nil
+          ) else {
+      return nil
+    }
+
+    let outputURL = FileManager.default.temporaryDirectory.appending(path: "markeditplus-\(UUID().uuidString).pdf")
+    let printInfo = NSPrintInfo(dictionary: [
+      .jobDisposition: NSPrintInfo.JobDisposition.save.rawValue,
+      .jobSavingURL: outputURL,
+    ])
+    printInfo.topMargin = 54
+    printInfo.bottomMargin = 54
+    printInfo.leftMargin = 54
+    printInfo.rightMargin = 54
+    printInfo.horizontalPagination = .fit
+    printInfo.verticalPagination = .automatic
+
+    let contentWidth = printInfo.paperSize.width - printInfo.leftMargin - printInfo.rightMargin
+    let textView = NSTextView(frame: CGRect(x: 0, y: 0, width: contentWidth, height: 1))
+    textView.textContainerInset = .zero
+    textView.textStorage?.setAttributedString(attributed)
+    textView.sizeToFit()
+
+    let operation = NSPrintOperation(view: textView, printInfo: printInfo)
+    operation.showsPrintPanel = false
+    operation.showsProgressPanel = false
+    operation.run()
+
+    let data = try? Data(contentsOf: outputURL)
+    try? FileManager.default.removeItem(at: outputURL)
+    return data
   }
 
   /// Replace image-loader URLs with base64 data URIs so the exported file is self-contained.
