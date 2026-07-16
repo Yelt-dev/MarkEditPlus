@@ -6040,6 +6040,60 @@
           }
         }
       }
+    },
+    "Trf-00-top.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Transform\"; ObjectID = \"Trf-00-top\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Transform"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformar"
+          }
+        }
+      }
+    },
+    "Trf-00-menu.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Transform\"; ObjectID = \"Trf-00-menu\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Transform"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformar"
+          }
+        }
+      }
+    },
+    "Trf-01-fmt.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Format Document\"; ObjectID = \"Trf-01-fmt\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Format Document"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatear documento"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

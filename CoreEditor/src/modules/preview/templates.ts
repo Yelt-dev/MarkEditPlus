@@ -1,5 +1,5 @@
 /**
- * Visual templates (SPEC-TEMPLATES-001).
+ * Visual templates.
  *
  * A template is presentation only: it never touches the Markdown source. Each one is
  * a set of `--document-*` custom properties consumed by the shared document stylesheet

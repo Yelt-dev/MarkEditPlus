@@ -57,6 +57,8 @@ declare global {
     markEditSetTemplate: (id: string) => void;
     markEditRenderPreview: () => void;
     markEditGetExportHTML: () => string;
+    /** Returns a JSON-encoded TransformSummary; only mutates the document when apply is true. */
+    markEditFormatDocument: (apply: boolean) => string;
   }
 
   interface ImportMetaEnv {

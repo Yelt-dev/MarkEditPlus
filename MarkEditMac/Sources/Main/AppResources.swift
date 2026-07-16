@@ -33,6 +33,39 @@ enum Localized {
     static let insertLineBreak = String(localized: "Insert Line Break", comment: "Insert a line break into the current editor")
   }
 
+  enum Transform {
+    static let formatDocument = String(localized: "Format Document", comment: "Alert title, formatting the document with deterministic rules")
+    static let apply = String(localized: "Apply", comment: "Button title, apply the previewed transform to the document")
+    static let noChanges = String(localized: "This document is already formatted, nothing to change.", comment: "Alert message shown when a transform would not change anything")
+    static let summaryHeader = String(localized: "The following changes will be applied:", comment: "Alert message header, followed by the list of transform rules that matched")
+
+    /// Human-readable name for a transform rule reported by the editor.
+    static func ruleName(_ id: String) -> String {
+      switch id {
+      case "trailing-whitespace":
+        return String(localized: "Trailing spaces removed", comment: "Transform rule summary")
+      case "blank-lines":
+        return String(localized: "Blank lines normalized", comment: "Transform rule summary")
+      case "heading-space":
+        return String(localized: "Space added after #", comment: "Transform rule summary")
+      case "list-markers":
+        return String(localized: "List markers unified", comment: "Transform rule summary")
+      case "checklists":
+        return String(localized: "Checklists normalized", comment: "Transform rule summary")
+      case "fences":
+        return String(localized: "Code fences unified", comment: "Transform rule summary")
+      case "separators":
+        return String(localized: "Separators unified", comment: "Transform rule summary")
+      case "tables":
+        return String(localized: "Tables aligned", comment: "Transform rule summary")
+      case "final-newline":
+        return String(localized: "Final newline added", comment: "Transform rule summary")
+      default:
+        return id
+      }
+    }
+  }
+
   enum Editor {
     static let controlCharacter = String(localized: "Control Character", comment: "Phrase used in CodeMirror to indicate control character")
     static let foldedLines = String(localized: "Folded Lines", comment: "Phrase used in CodeMirror to indicate folded lines")

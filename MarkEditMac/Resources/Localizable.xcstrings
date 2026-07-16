@@ -5599,6 +5599,149 @@
           }
         }
       }
+    },
+    "Format Document" : {
+      "comment" : "Alert title, formatting the document with deterministic rules",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatear documento"
+          }
+        }
+      }
+    },
+    "Apply" : {
+      "comment" : "Button title, apply the previewed transform to the document",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar"
+          }
+        }
+      }
+    },
+    "This document is already formatted, nothing to change." : {
+      "comment" : "Alert message shown when a transform would not change anything",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este documento ya está formateado, no hay nada que cambiar."
+          }
+        }
+      }
+    },
+    "The following changes will be applied:" : {
+      "comment" : "Alert message header, followed by the list of transform rules that matched",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se aplicarán los siguientes cambios:"
+          }
+        }
+      }
+    },
+    "Trailing spaces removed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espacios finales eliminados"
+          }
+        }
+      }
+    },
+    "Blank lines normalized" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líneas en blanco normalizadas"
+          }
+        }
+      }
+    },
+    "Space added after #" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espacio añadido después de #"
+          }
+        }
+      }
+    },
+    "List markers unified" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcadores de lista unificados"
+          }
+        }
+      }
+    },
+    "Checklists normalized" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Checklists normalizadas"
+          }
+        }
+      }
+    },
+    "Code fences unified" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delimitadores de código unificados"
+          }
+        }
+      }
+    },
+    "Separators unified" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separadores unificados"
+          }
+        }
+      }
+    },
+    "Tables aligned" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tablas alineadas"
+          }
+        }
+      }
+    },
+    "Final newline added" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nueva línea final añadida"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

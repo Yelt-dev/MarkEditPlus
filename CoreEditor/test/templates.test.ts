@@ -8,7 +8,7 @@ import {
   templateStyle,
 } from '../src/modules/preview/templates';
 
-// The variables SPEC-TEMPLATES-002 requires every template to define.
+// The document variables every template must define.
 const requiredVariables = [
   '--document-font-family',
   '--document-font-size',

@@ -920,6 +920,19 @@ Gw
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Transform" id="Trf-00-top">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Transform" id="Trf-00-menu">
+                                    <items>
+                                        <menuItem title="Format Document" keyEquivalent="f" id="Trf-01-fmt">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="formatDocument:" target="Ady-hI-5gd" id="Trf-01-act"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Extensions" id="mGH-Xd-vai">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Extensions" autoenablesItems="NO" id="nkD-z6-yjV">
