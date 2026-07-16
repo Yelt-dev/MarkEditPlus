@@ -5878,6 +5878,24 @@
           }
         }
       }
+    },
+    "Exp-01-htm.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Export to HTML…\"; ObjectID = \"Exp-01-htm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Export to HTML…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar a HTML…"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

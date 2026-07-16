@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import UniformTypeIdentifiers
 import MarkEditKit
 import FontPicker
 
@@ -356,6 +357,50 @@ extension EditorViewController {
   private func documentReferencesLocalImages(_ text: String) -> Bool {
     let pattern = #"!\[[^\]]*\]\(\s*(?![a-zA-Z][a-zA-Z0-9+.\-]*:)(?!#)[^)\s]+"#
     return text.range(of: pattern, options: .regularExpression) != nil
+  }
+
+  // MARK: - Export
+
+  /// Export the document as a self-contained HTML file (Minimal template), no external tools.
+  @IBAction func exportHTML(_ sender: Any?) {
+    Task { @MainActor in
+      guard let result = try? await webView.evaluateJavaScript("window.markEditGetExportHTML && window.markEditGetExportHTML()"),
+            let html = result as? String else {
+        return Logger.log(.error, "Failed to build export HTML")
+      }
+
+      let document = embedLocalImages(in: html)
+      let name = (self.document?.fileURL?.deletingPathExtension().lastPathComponent ?? "Untitled") + ".html"
+      _ = await showSavePanel(data: Data(document.utf8), fileName: name)
+    }
+  }
+
+  /// Replace image-loader URLs with base64 data URIs so the exported file is self-contained.
+  private func embedLocalImages(in html: String) -> String {
+    guard let folderURL = document?.folderURL,
+          let regex = try? NSRegularExpression(pattern: "image-loader://([^\"']+)") else {
+      return html
+    }
+
+    var result = html
+    let matches = regex.matches(in: html, range: NSRange(html.startIndex..., in: html)).reversed()
+    for match in matches {
+      guard let fullRange = Range(match.range, in: result),
+            let pathRange = Range(match.range(at: 1), in: result) else {
+        continue
+      }
+
+      let path = String(result[pathRange])
+      let fileURL = folderURL.appending(path: path.removingPercentEncoding ?? path, directoryHint: .notDirectory)
+      guard let data = try? Data(contentsOf: fileURL) else {
+        continue
+      }
+
+      let mime = UTType(filenameExtension: fileURL.pathExtension)?.preferredMIMEType ?? "application/octet-stream"
+      result.replaceSubrange(fullRange, with: "data:\(mime);base64,\(data.base64EncodedString())")
+    }
+
+    return result
   }
 
   // MARK: - Hyper Link

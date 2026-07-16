@@ -267,6 +267,67 @@ function escapeAttribute(value: string): string {
     .replace(/>/g, '&gt;');
 }
 
+function escapeText(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// MARK: - HTML export (self-contained, "Minimal" template)
+
+interface FrontMatter {
+  title?: string;
+  language?: string;
+}
+
+function parseFrontMatter(source: string): FrontMatter {
+  const match = /^\uFEFF?---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(\r?\n|$)/.exec(source);
+  if (match === null) {
+    return {};
+  }
+
+  const block = match[1];
+  const read = (key: string): string | undefined => {
+    const line = new RegExp(`^${key}[ \\t]*:[ \\t]*(.+)$`, 'm').exec(block);
+    return line === null ? undefined : line[1].trim().replace(/^["']|["']$/g, '');
+  };
+
+  return { title: read('title'), language: read('language') };
+}
+
+function firstHeadingText(html: string): string | undefined {
+  const match = /<h1[^>]*>([\s\S]*?)<\/h1>/i.exec(html);
+  if (match === null) {
+    return undefined;
+  }
+
+  const text = match[1].replace(/<[^>]+>/g, '').trim();
+  return text === '' ? undefined : text;
+}
+
+/**
+ * Build a self-contained HTML document (Minimal template) for export.
+ * Local images stay as image-loader URLs so the native side can embed them as data URIs.
+ */
+export function getExportHTML(): string {
+  const raw = window.editor.state.doc.toString();
+  const meta = parseFrontMatter(raw);
+  const body = externalizeLinks(markdown.parse(stripFrontMatter(raw), { async: false }) as string);
+  const title = meta.title ?? firstHeadingText(body) ?? 'Untitled';
+  const lang = meta.language ?? 'en';
+
+  return `<!DOCTYPE html>
+<html lang="${escapeAttribute(lang)}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeText(title)}</title>
+<style>${previewStyle}</style>
+</head>
+<body>
+${body}
+</body>
+</html>`;
+}
+
 function previewDocument(): string {
   // Content Security Policy hardening (defense in depth on top of the iframe sandbox):
   // no scripts, no network connections, no frames. Inline styles and images are allowed

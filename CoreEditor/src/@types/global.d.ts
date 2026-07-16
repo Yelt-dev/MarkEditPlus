@@ -55,6 +55,7 @@ declare global {
     markEditSetPreviewMode: (mode: 'editor' | 'split' | 'preview') => void;
     markEditSetScrollSync: (enabled: boolean) => void;
     markEditRenderPreview: () => void;
+    markEditGetExportHTML: () => string;
   }
 
   interface ImportMetaEnv {
