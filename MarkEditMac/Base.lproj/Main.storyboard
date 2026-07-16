@@ -993,6 +993,37 @@ Gw
                                                 </items>
                                             </menu>
                                         </menuItem>
+                                        <menuItem title="Template" id="Tpl-00-sub">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Template" id="Tpl-00-menu">
+                                                <items>
+                                                    <menuItem title="Minimal" id="Tpl-01-min">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setTemplateMinimal:" target="Ady-hI-5gd" id="Tpl-01-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Technical" id="Tpl-02-tec">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setTemplateTechnical:" target="Ady-hI-5gd" id="Tpl-02-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Business" id="Tpl-03-bus">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setTemplateBusiness:" target="Ady-hI-5gd" id="Tpl-03-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Academic" id="Tpl-04-aca">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="setTemplateAcademic:" target="Ady-hI-5gd" id="Tpl-04-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="Prv-04-sep"/>
                                         <menuItem title="Actual Size" keyEquivalent="0" id="Sqh-CT-2fi">
                                             <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>

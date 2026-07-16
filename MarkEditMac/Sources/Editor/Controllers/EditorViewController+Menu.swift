@@ -100,6 +100,18 @@ extension EditorViewController: NSMenuItemValidation {
       menuItem.state = AppPreferences.Preview.syncScroll ? .on : .off
       // Scroll sync only matters in split view
       return AppPreferences.Preview.viewMode == "split"
+    case #selector(setTemplateMinimal(_:)):
+      menuItem.state = AppPreferences.Preview.template == "minimal" ? .on : .off
+      return true
+    case #selector(setTemplateTechnical(_:)):
+      menuItem.state = AppPreferences.Preview.template == "technical" ? .on : .off
+      return true
+    case #selector(setTemplateBusiness(_:)):
+      menuItem.state = AppPreferences.Preview.template == "business" ? .on : .off
+      return true
+    case #selector(setTemplateAcademic(_:)):
+      menuItem.state = AppPreferences.Preview.template == "academic" ? .on : .off
+      return true
     default:
       break
     }
@@ -297,14 +309,44 @@ extension EditorViewController {
     }
   }
 
+  // MARK: - Visual templates
+
+  @IBAction func setTemplateMinimal(_ sender: Any?) {
+    setTemplate("minimal")
+  }
+
+  @IBAction func setTemplateTechnical(_ sender: Any?) {
+    setTemplate("technical")
+  }
+
+  @IBAction func setTemplateBusiness(_ sender: Any?) {
+    setTemplate("business")
+  }
+
+  @IBAction func setTemplateAcademic(_ sender: Any?) {
+    setTemplate("academic")
+  }
+
+  /// The template styles the preview and both exports; the Markdown itself never changes.
+  private func setTemplate(_ template: String) {
+    AppPreferences.Preview.template = template
+    invokeTemplate(template)
+  }
+
   /// Push the persisted preview state to the editor (used on launch/reset and when switching).
   func applyPreviewMode() {
+    // Template first: it decides the stylesheet the preview is built with.
+    invokeTemplate(AppPreferences.Preview.template)
     invokePreviewMode(AppPreferences.Preview.viewMode)
     webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
   }
 
   private func invokePreviewMode(_ mode: String) {
     webView.evaluateJavaScript("window.markEditSetPreviewMode && window.markEditSetPreviewMode('\(mode)')")
+  }
+
+  private func invokeTemplate(_ template: String) {
+    webView.evaluateJavaScript("window.markEditSetTemplate && window.markEditSetTemplate('\(template)')")
   }
 
   // MARK: - Local image access

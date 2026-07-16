@@ -65,6 +65,10 @@ enum AppPreferences {
     /// Whether the preview scroll follows the editor in split view.
     @Storage(key: "preview.sync-scroll", defaultValue: true)
     static var syncScroll: Bool
+
+    /// Visual template used by the preview and by HTML/PDF exports.
+    @Storage(key: "preview.template", defaultValue: "minimal")
+    static var template: String
   }
 
   enum Editor {
