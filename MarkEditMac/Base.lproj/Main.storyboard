@@ -941,6 +941,13 @@ Gw
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="PIb-KM-OZU"/>
+                                        <menuItem title="Preview" keyEquivalent="p" id="Prv-01-tog">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="togglePreview:" target="Ady-hI-5gd" id="Prv-02-act"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Prv-03-sep"/>
                                         <menuItem title="Actual Size" keyEquivalent="0" id="Sqh-CT-2fi">
                                             <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>

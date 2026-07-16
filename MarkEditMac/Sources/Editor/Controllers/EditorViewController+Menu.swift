@@ -246,6 +246,12 @@ extension EditorViewController {
     bridge.format.toggleStrikethrough()
   }
 
+  // MARK: - Preview
+
+  @IBAction func togglePreview(_ sender: Any?) {
+    webView.evaluateJavaScript("window.markEditTogglePreview && window.markEditTogglePreview()")
+  }
+
   // MARK: - Hyper Link
 
   @IBAction func insertLink(_ sender: Any?) {

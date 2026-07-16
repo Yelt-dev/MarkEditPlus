@@ -25,7 +25,8 @@
     "@lezer/common": "^1.0.0",
     "@lezer/highlight": "^1.0.0",
     "@lezer/lr": "^1.0.0",
-    "@lezer/markdown": "^1.0.0"
+    "@lezer/markdown": "^1.0.0",
+    "marked": "^18.0.6"
   },
   "devDependencies": {
     "@eslint/plugin-kit": "^0.3.5",

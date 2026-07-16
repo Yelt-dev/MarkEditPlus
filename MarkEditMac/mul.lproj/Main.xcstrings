@@ -5776,6 +5776,24 @@
           }
         }
       }
+    },
+    "Prv-01-tog.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Preview\"; ObjectID = \"Prv-01-tog\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Preview"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

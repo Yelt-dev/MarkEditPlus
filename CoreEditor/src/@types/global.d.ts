@@ -52,6 +52,7 @@ declare global {
     };
     __extractStyleRules__: (theme: Extension) => string[] | undefined;
     __extractHighlightSpecs__: (theme: Extension) => TagStyle[] | undefined;
+    markEditTogglePreview: () => boolean;
   }
 
   interface ImportMetaEnv {
