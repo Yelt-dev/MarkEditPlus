@@ -288,6 +288,10 @@ extension EditorViewController {
   private func setPreviewMode(_ mode: String) {
     AppPreferences.Preview.viewMode = mode
     invokePreviewMode(mode)
+
+    if mode != "editor" {
+      offerFolderAccessIfNeeded()
+    }
   }
 
   /// Push the persisted preview state to the editor (used on launch/reset and when switching).
@@ -298,6 +302,60 @@ extension EditorViewController {
 
   private func invokePreviewMode(_ mode: String) {
     webView.evaluateJavaScript("window.markEditSetPreviewMode && window.markEditSetPreviewMode('\(mode)')")
+  }
+
+  // MARK: - Local image access
+
+  /// Folders we already offered access to this session, to avoid repeated prompts.
+  private static var foldersOfferedImageAccess = Set<String>()
+
+  /// When a document references local images the sandbox can't read yet, offer to
+  /// grant access to its folder so the preview can display them.
+  func offerFolderAccessIfNeeded() {
+    guard AppPreferences.Preview.viewMode != "editor" else {
+      return
+    }
+
+    guard let document, let folderURL = document.folderURL else {
+      return
+    }
+
+    let path = folderURL.path
+    guard !Self.foldersOfferedImageAccess.contains(path) else {
+      return
+    }
+
+    guard documentReferencesLocalImages(document.stringValue) else {
+      return
+    }
+
+    // Already readable (e.g., a previously granted folder)? Nothing to do.
+    guard (try? FileManager.default.contentsOfDirectory(atPath: path)) == nil else {
+      return
+    }
+
+    Self.foldersOfferedImageAccess.insert(path)
+
+    Task { @MainActor in
+      let response = await showAlert(
+        title: Localized.General.grantImageAccessTitle,
+        message: Localized.General.grantImageAccessMessage,
+        buttons: [Localized.General.grantAccess, Localized.Updater.notNow]
+      )
+
+      guard response == .alertFirstButtonReturn else {
+        return
+      }
+
+      if await NSApp.appDelegate?.requestFolderAccess(startingAt: folderURL) == true {
+        _ = try? await webView.evaluateJavaScript("window.markEditRenderPreview && window.markEditRenderPreview()")
+      }
+    }
+  }
+
+  private func documentReferencesLocalImages(_ text: String) -> Bool {
+    let pattern = #"!\[[^\]]*\]\(\s*(?![a-zA-Z][a-zA-Z0-9+.\-]*:)(?!#)[^)\s]+"#
+    return text.range(of: pattern, options: .regularExpression) != nil
   }
 
   // MARK: - Hyper Link

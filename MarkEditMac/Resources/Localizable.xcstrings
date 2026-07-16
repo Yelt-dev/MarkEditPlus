@@ -5579,6 +5579,26 @@
           }
         }
       }
+    },
+    "Show local images?" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Mostrar imágenes locales?"
+          }
+        }
+      }
+    },
+    "This document uses images from its folder. Grant access to the folder to show them in the preview." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este documento usa imágenes de su carpeta. Concede acceso a la carpeta para mostrarlas en la vista previa."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -27,6 +27,8 @@ enum Localized {
     static let all = String(localized: "All", comment: "Button title, perform actions to all items")
     static let selected = String(localized: "Selected", comment: "General title that indicates something is selected")
     static let grantAccess = String(localized: "Grant Access", comment: "Open panel prompt, used for granting access for the selected folder")
+    static let grantImageAccessTitle = String(localized: "Show local images?", comment: "Alert title asking to grant folder access to display local images")
+    static let grantImageAccessMessage = String(localized: "This document uses images from its folder. Grant access to the folder to show them in the preview.", comment: "Alert message asking to grant folder access to display local images")
     static let insertTab = String(localized: "Insert Tab", comment: "Insert a tab into the current editor")
     static let insertLineBreak = String(localized: "Insert Line Break", comment: "Insert a line break into the current editor")
   }
