@@ -1,4 +1,5 @@
 import { EditorSelection } from '@codemirror/state';
+import { TextRule, cleanLineRules, cleanTextRules } from './cleanAI';
 import { Rule, finalNewline, formatRules } from './rules';
 import { classifyLines, joinLines } from './segments';
 
@@ -22,15 +23,36 @@ export interface TransformSummary {
   rules: RuleSummary[];
 }
 
-/** Run a rule set over the source and report what each rule changed. */
-export function runRules(source: string, rules: Rule[]): { text: string; summary: TransformSummary } {
+/**
+ * Run a transform over the source and report what each rule changed.
+ *
+ * Text rules run first, over the raw source: they remove packaging that would otherwise be
+ * misread once the document is classified — an outer fence makes everything it wraps look
+ * like code. Line rules run afterwards, on the classified result.
+ */
+export function runRules(
+  source: string,
+  rules: Rule[],
+  textRules: TextRule[] = [],
+): { text: string; summary: TransformSummary } {
+  const applied: RuleSummary[] = [];
+  let current = source;
+
+  for (const rule of textRules) {
+    const outcome = rule.apply(current);
+    current = outcome.text;
+
+    if (outcome.count > 0) {
+      applied.push({ id: rule.id, count: outcome.count });
+    }
+  }
+
   // A well-formed document ends with a newline, which `split` turns into a phantom empty
   // line. Dropping it keeps rules from reporting that artifact as a change; `finalNewline`
   // puts the terminator back at the end.
-  const body = source.endsWith('\n') ? source.slice(0, -1) : source;
+  const body = current.endsWith('\n') ? current.slice(0, -1) : current;
 
   let lines = classifyLines(body);
-  const applied: RuleSummary[] = [];
 
   for (const rule of rules) {
     const outcome = rule.apply(lines);
@@ -42,7 +64,7 @@ export function runRules(source: string, rules: Rule[]): { text: string; summary
   }
 
   const text = finalNewline(joinLines(lines));
-  if (!source.endsWith('\n')) {
+  if (!current.endsWith('\n')) {
     applied.push({ id: 'final-newline', count: 1 });
   }
 
@@ -66,9 +88,9 @@ function replaceDocument(text: string): void {
   });
 }
 
-function perform(rules: Rule[], apply: boolean): string {
+function perform(rules: Rule[], apply: boolean, textRules: TextRule[] = []): string {
   const source = window.editor.state.doc.toString();
-  const { text, summary } = runRules(source, rules);
+  const { text, summary } = runRules(source, rules, textRules);
 
   if (apply && summary.changed) {
     replaceDocument(text);
@@ -83,4 +105,13 @@ function perform(rules: Rule[], apply: boolean): string {
  */
 export function formatDocument(apply: boolean): string {
   return perform(formatRules, apply);
+}
+
+/**
+ * Clean up Markdown pasted out of an AI chat: strip the packaging the assistant wrapped it
+ * in, then format it. Entirely offline and rule-based — no model is involved, and no prose
+ * is rewritten.
+ */
+export function cleanMarkdown(apply: boolean): string {
+  return perform(cleanLineRules, apply, cleanTextRules);
 }

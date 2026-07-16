@@ -59,6 +59,7 @@ declare global {
     markEditGetExportHTML: () => string;
     /** Returns a JSON-encoded TransformSummary; only mutates the document when apply is true. */
     markEditFormatDocument: (apply: boolean) => string;
+    markEditCleanMarkdown: (apply: boolean) => string;
   }
 
   interface ImportMetaEnv {

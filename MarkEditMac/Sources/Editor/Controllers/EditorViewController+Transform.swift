@@ -13,6 +13,11 @@ extension EditorViewController {
   @IBAction func formatDocument(_ sender: Any?) {
     performTransform("markEditFormatDocument", title: Localized.Transform.formatDocument)
   }
+
+  /// Strip the packaging an AI chat wraps around a document, then format it.
+  @IBAction func cleanMarkdown(_ sender: Any?) {
+    performTransform("markEditCleanMarkdown", title: Localized.Transform.cleanMarkdown)
+  }
 }
 
 // MARK: - Private

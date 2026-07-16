@@ -112,9 +112,9 @@ extension EditorViewController: NSMenuItemValidation {
     case #selector(setTemplateAcademic(_:)):
       menuItem.state = AppPreferences.Preview.template == "academic" ? .on : .off
       return true
-    case #selector(formatDocument(_:)):
+    case #selector(formatDocument(_:)), #selector(cleanMarkdown(_:)):
       // Transform lives in its own menu, which the read-only rules below don't cover;
-      // it rewrites the document, so it must be disabled explicitly.
+      // these rewrite the document, so they must be disabled explicitly.
       return !isReadOnlyMode
     default:
       break

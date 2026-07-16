@@ -5742,6 +5742,72 @@
           }
         }
       }
+    },
+    "Clean Markdown" : {
+      "comment" : "Alert title, removing AI chat packaging from the document",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limpiar Markdown"
+          }
+        }
+      }
+    },
+    "Surrounding code fence removed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloque de código envolvente eliminado"
+          }
+        }
+      }
+    },
+    "Introduction line removed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Línea de introducción eliminada"
+          }
+        }
+      }
+    },
+    "Stray language tag removed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etiqueta de lenguaje suelta eliminada"
+          }
+        }
+      }
+    },
+    "Unclosed code block closed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloque de código sin cerrar cerrado"
+          }
+        }
+      }
+    },
+    "Duplicate separators removed" : {
+      "comment" : "Transform rule summary",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separadores duplicados eliminados"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

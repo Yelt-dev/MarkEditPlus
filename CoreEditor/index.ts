@@ -30,7 +30,7 @@ import { setUp, applyReducedMotion } from './src/styling/config';
 import { loadTheme } from './src/styling/themes';
 import { startObserving } from './src/modules/events';
 import { setPreviewMode, setScrollSync, setTemplate, renderPreview, getExportHTML } from './src/modules/preview/document';
-import { formatDocument } from './src/modules/transform';
+import { cleanMarkdown, formatDocument } from './src/modules/transform';
 
 // Initialize and inject modules to the global MarkEdit object
 initMarkEditModules();
@@ -135,6 +135,7 @@ window.markEditGetExportHTML = getExportHTML;
 
 // Deterministic transforms: called with apply=false for a summary, apply=true to commit
 window.markEditFormatDocument = formatDocument;
+window.markEditCleanMarkdown = cleanMarkdown;
 
 // Respond to reduced motion preference changes
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
