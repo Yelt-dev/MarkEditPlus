@@ -57,6 +57,16 @@ enum AppPreferences {
     }
   }
 
+  enum Preview {
+    /// Integrated preview layout: "editor", "split" or "preview".
+    @Storage(key: "preview.view-mode", defaultValue: "editor")
+    static var viewMode: String
+
+    /// Whether the preview scroll follows the editor in split view.
+    @Storage(key: "preview.sync-scroll", defaultValue: true)
+    static var syncScroll: Bool
+  }
+
   enum Editor {
     @Storage(key: "editor.light-theme", defaultValue: AppTheme.GitHubLight.editorTheme)
     static var lightTheme: String {

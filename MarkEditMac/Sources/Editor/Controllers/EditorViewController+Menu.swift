@@ -82,6 +82,25 @@ extension EditorViewController: NSMenuItemValidation {
   ]
 
   func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+    // Preview menu items reflect the current state with a checkmark
+    switch menuItem.action {
+    case #selector(setPreviewModeEditorOnly(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "editor" ? .on : .off
+      return true
+    case #selector(setPreviewModeSplit(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "split" ? .on : .off
+      return true
+    case #selector(setPreviewModePreviewOnly(_:)):
+      menuItem.state = AppPreferences.Preview.viewMode == "preview" ? .on : .off
+      return true
+    case #selector(toggleScrollSync(_:)):
+      menuItem.state = AppPreferences.Preview.syncScroll ? .on : .off
+      // Scroll sync only matters in split view
+      return AppPreferences.Preview.viewMode == "split"
+    default:
+      break
+    }
+
     // Disable most edit actions for read-only mode
     if isReadOnlyMode {
       guard let menu = menuItem.menu, let delegate = NSApp.appDelegate else {
@@ -244,6 +263,99 @@ extension EditorViewController {
 
   @IBAction func toggleStrikethrough(_ sender: Any?) {
     bridge.format.toggleStrikethrough()
+  }
+
+  // MARK: - Preview
+
+  @IBAction func setPreviewModeEditorOnly(_ sender: Any?) {
+    setPreviewMode("editor")
+  }
+
+  @IBAction func setPreviewModeSplit(_ sender: Any?) {
+    setPreviewMode("split")
+  }
+
+  @IBAction func setPreviewModePreviewOnly(_ sender: Any?) {
+    setPreviewMode("preview")
+  }
+
+  @IBAction func toggleScrollSync(_ sender: Any?) {
+    let enabled = !AppPreferences.Preview.syncScroll
+    AppPreferences.Preview.syncScroll = enabled
+    webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(enabled))")
+  }
+
+  private func setPreviewMode(_ mode: String) {
+    AppPreferences.Preview.viewMode = mode
+    invokePreviewMode(mode)
+
+    if mode != "editor" {
+      offerFolderAccessIfNeeded()
+    }
+  }
+
+  /// Push the persisted preview state to the editor (used on launch/reset and when switching).
+  func applyPreviewMode() {
+    invokePreviewMode(AppPreferences.Preview.viewMode)
+    webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
+  }
+
+  private func invokePreviewMode(_ mode: String) {
+    webView.evaluateJavaScript("window.markEditSetPreviewMode && window.markEditSetPreviewMode('\(mode)')")
+  }
+
+  // MARK: - Local image access
+
+  /// Folders we already offered access to this session, to avoid repeated prompts.
+  private static var foldersOfferedImageAccess = Set<String>()
+
+  /// When a document references local images the sandbox can't read yet, offer to
+  /// grant access to its folder so the preview can display them.
+  func offerFolderAccessIfNeeded() {
+    guard AppPreferences.Preview.viewMode != "editor" else {
+      return
+    }
+
+    guard let document, let folderURL = document.folderURL else {
+      return
+    }
+
+    let path = folderURL.path
+    guard !Self.foldersOfferedImageAccess.contains(path) else {
+      return
+    }
+
+    guard documentReferencesLocalImages(document.stringValue) else {
+      return
+    }
+
+    // Already readable (e.g., a previously granted folder)? Nothing to do.
+    guard (try? FileManager.default.contentsOfDirectory(atPath: path)) == nil else {
+      return
+    }
+
+    Self.foldersOfferedImageAccess.insert(path)
+
+    Task { @MainActor in
+      let response = await showAlert(
+        title: Localized.General.grantImageAccessTitle,
+        message: Localized.General.grantImageAccessMessage,
+        buttons: [Localized.General.grantAccess, Localized.Updater.notNow]
+      )
+
+      guard response == .alertFirstButtonReturn else {
+        return
+      }
+
+      if await NSApp.appDelegate?.requestFolderAccess(startingAt: folderURL) == true {
+        _ = try? await webView.evaluateJavaScript("window.markEditRenderPreview && window.markEditRenderPreview()")
+      }
+    }
+  }
+
+  private func documentReferencesLocalImages(_ text: String) -> Bool {
+    let pattern = #"!\[[^\]]*\]\(\s*(?![a-zA-Z][a-zA-Z0-9+.\-]*:)(?!#)[^)\s]+"#
+    return text.range(of: pattern, options: .regularExpression) != nil
   }
 
   // MARK: - Hyper Link

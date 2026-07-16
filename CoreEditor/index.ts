@@ -29,6 +29,7 @@ import { initThemeExtractors, initMarkEditModules } from './src/api/modules';
 import { setUp, applyReducedMotion } from './src/styling/config';
 import { loadTheme } from './src/styling/themes';
 import { startObserving } from './src/modules/events';
+import { setPreviewMode, setScrollSync, renderPreview } from './src/modules/preview/document';
 
 // Initialize and inject modules to the global MarkEdit object
 initMarkEditModules();
@@ -123,6 +124,11 @@ window.onload = () => {
 
 setUp(config, loadTheme(config.theme).colors);
 startObserving();
+
+// Exposed so the native "Preview" menu items can switch the preview layout
+window.markEditSetPreviewMode = setPreviewMode;
+window.markEditSetScrollSync = setScrollSync;
+window.markEditRenderPreview = renderPreview;
 
 // Respond to reduced motion preference changes
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

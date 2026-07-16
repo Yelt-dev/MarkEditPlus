@@ -422,6 +422,14 @@ extension EditorViewController {
         self.prependTextContent(text)
         self.initialContent = nil
       }
+
+      // Restore the persisted preview layout now that the content is loaded
+      self.applyPreviewMode()
+
+      // Offer folder access if the freshly opened document needs it to show local images
+      if documentChanged {
+        self.offerFolderAccessIfNeeded()
+      }
     }
 
     hasBeenEdited = false
