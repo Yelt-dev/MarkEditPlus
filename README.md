@@ -1,74 +1,48 @@
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MarkEdit-app/MarkEdit/main/Icon.png" width="96">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MarkEdit-app/MarkEdit/main/Icon-dark.png" width="96">
-  <img src="./Icon.png" width="96">
+  <img src="./Icon.png" width="96" alt="MarkEdit Plus">
 </picture>
 
-# MarkEdit
+# MarkEdit Plus
 
-[![](https://img.shields.io/badge/Platform-macOS_15.0+-blue?color=007bff)](https://github.com/MarkEdit-app/MarkEdit?tab=readme-ov-file#installation) [![](https://github.com/MarkEdit-app/MarkEdit/actions/workflows/build-and-test.yml/badge.svg?branch=main)](https://github.com/MarkEdit-app/MarkEdit/actions/workflows/build-and-test.yml)
+Editor de Markdown para macOS, nativo y local. Es un fork de [MarkEdit](https://github.com/MarkEdit-app/MarkEdit) (MIT) con la interfaz en español y un conjunto de funciones para trabajar y publicar documentos sin salir de la app ni depender de la terminal.
 
-MarkEdit is a free and **open-source** Markdown editor, for macOS. It's just like _TextEdit_ on Mac but dedicated to `Markdown`.
+Todo es **local**: tu archivo `.md` es la fuente de verdad, no se envía nada a ningún servidor y no hay IA en el flujo.
 
-No bloat. Markdown editing done right in a 4 MB app that flies through million-line files.
+## Funciones
 
-We do not claim to be the best in any single dimension. Instead, we aim to strike the right balance across **size**, **speed**, **native integration**, and **correctness**.
+- **Vista previa integrada** en vivo, con resaltado de código, imágenes y scroll sincronizado.
+- **Plantillas visuales** (Minimalista, Técnica, Empresarial, Académica) que se aplican a la vista previa y a las exportaciones.
+- **Exportación a HTML y PDF** nativa, sin Pandoc ni terminal. El PDF sale idéntico a la vista previa.
+- **Transformaciones** deterministas: formatear el documento, limpiar Markdown pegado desde un chat de IA y generar una tabla de contenido.
+- **Esquema** del documento: panel navegable con la estructura de encabezados, en vivo.
+- **Inspector**: métricas del documento (palabras, tiempo de lectura, etc.) y validaciones estructurales.
+- Interfaz **en español** y arranque en documento nuevo.
 
-_For perspective: at just 4 MB, MarkEdit is much smaller than Electron apps. Handling a 10 MB file with ease puts it ahead of TextKit-based editors. Performance-first editors built with Rust lack native features, while correctness alone rules out editors that rely on regex-based Markdown parsing._
+## Instalación
 
-> [!TIP]
-> Discover our other free and open-source apps at [libremac.github.io](https://libremac.github.io/).
->
-> Follow our Mastodon account [@MarkEditApp](https://mastodon.social/@MarkEditApp) for the latest updates.
+1. Descarga el `.dmg` más reciente desde la [página de Releases](https://github.com/Yelt-dev/MarkEditPlus/releases).
+2. Ábrelo y arrastra **MarkEdit Plus** a la carpeta *Aplicaciones*.
 
-## Preview
+La app no está firmada con una cuenta de desarrollador de Apple, así que la primera vez macOS avisará de que procede de un desarrollador no identificado. Para abrirla:
 
-![Screenshots 01](/Screenshots/01.png)
+- **Haz clic derecho** sobre la app y elige **Abrir**, y confirma en el diálogo; **o**
+- Ve a **Ajustes del Sistema › Privacidad y Seguridad** y pulsa **Abrir de todos modos** junto al aviso de MarkEdit Plus.
 
-![Screenshots 02](/Screenshots/02.png)
+Solo hay que hacerlo la primera vez. Después abre con normalidad.
 
-![Screenshots 03](/Screenshots/03.png)
+## Requisitos
 
-![Screenshots 04](/Screenshots/04.png)
+- macOS 15.0 o posterior.
+- Apple Silicon.
 
-## What makes MarkEdit different
+## Actualizaciones
 
-- Privacy-focused: doesn't collect any user data
-- Native: clean and intuitive, feels right at home on Mac
-- Fast: edits 10 MB files easily
-- Lightweight: installer size is about 4 MB
-- Extensible: seamless integration with Shortcuts and AppleScript
+La app comprueba las [releases de GitHub](https://github.com/Yelt-dev/MarkEditPlus/releases) y, cuando hay una versión nueva, te avisa con las novedades y abre la página para descargar el `.dmg`.
 
-MarkEdit strictly follows the [GFM specification](https://github.github.com/gfm/), with no proprietary syntax or invented features. Complex editing like multi-caret and code folding is built on [CodeMirror 6](https://codemirror.net/) for correctness and performance, consistently faster than most macOS editors. UI controls remain native to macOS in both aesthetics and behavior, including force-touch word lookup, inline predictions, and Writing Tools.
+## Créditos
 
-Customization is built around CSS, JavaScript, and [CodeMirror extensions](https://github.com/MarkEdit-app/MarkEdit-api). Official extensions include [MarkEdit-preview](https://markedit-app.github.io/extensions/#markedit-preview) for a preview pane, [MarkEdit-theming](https://github.com/MarkEdit-app/MarkEdit-theming) for custom themes, and [MarkEdit-ai-writer](https://markedit-app.github.io/extensions/#markedit-ai-writer) for Apple Intelligence on macOS Tahoe.
+MarkEdit Plus se basa en [MarkEdit](https://github.com/MarkEdit-app/MarkEdit) de MarkEdit.app, distribuido bajo licencia MIT. Gracias a su autor por una base excelente.
 
-> To learn more, refer to [Philosophy](https://github.com/MarkEdit-app/MarkEdit/wiki/Philosophy), [Why MarkEdit](https://github.com/MarkEdit-app/MarkEdit/wiki/Why-MarkEdit) and [MarkEdit-api](https://github.com/MarkEdit-app/MarkEdit-api).
+## Licencia
 
-## Installation
-
-Get `MarkEdit.dmg` from the <a href="https://github.com/MarkEdit-app/MarkEdit/releases/latest" target="_blank">latest release</a>, open it, and drag `MarkEdit.app` to `Applications`. Or install via [Homebrew](https://brew.sh/): `brew install --cask markedit`.
-
-<img src="./Screenshots/install.png" width="540" alt="Install MarkEdit">
-
-MarkEdit checks for updates automatically; you can also browse version history [here](https://github.com/MarkEdit-app/MarkEdit/releases).
-
-For older macOS: [macos-12](https://github.com/MarkEdit-app/MarkEdit/releases/tag/macos-12), [macos-13](https://github.com/MarkEdit-app/MarkEdit/releases/tag/macos-13), [macos-14](https://github.com/MarkEdit-app/MarkEdit/releases/tag/macos-14).
-
-## Using MarkEdit
-
-Please refer to the [wiki page](https://github.com/MarkEdit-app/MarkEdit/wiki/Manual) for details. Check out [MarkEdit-skill](https://github.com/MarkEdit-app/MarkEdit-skill) if you're interested in managing MarkEdit with an AI agent.
-
-## Why MarkEdit is free
-
-MarkEdit is a tool we use every day and keep improving for ourselves. We ship it openly, hoping it's useful to others with the same needs.
-
-## Contributing to MarkEdit
-
-For bugs, [open an issue](https://github.com/MarkEdit-app/MarkEdit/issues/new) or [pull request](https://github.com/MarkEdit-app/MarkEdit/compare). For behavior changes, discuss first; MarkEdit is intentionally minimal ([why](https://github.com/MarkEdit-app/MarkEdit/wiki/Why-MarkEdit#feature-poor)).
-
-Please refer to the [wiki page](https://github.com/MarkEdit-app/MarkEdit/wiki/Development) for development instructions.
-
-## Acknowledgments
-
-Built on [CodeMirror 6](https://codemirror.net/), with [ts-gyb](https://github.com/microsoft/ts-gyb) for code generation.
+MIT. Ver [LICENSE](./LICENSE).

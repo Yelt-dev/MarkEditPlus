@@ -1,0 +1,77 @@
+name: Release
+
+# Publishes a GitHub Release with a .dmg whenever a version tag (v1.2.3) is pushed.
+# The app is ad-hoc signed (no Apple Developer account); users authorize it once via
+# Gatekeeper. To add notarization later, sign the .app before packaging and add the
+# App Store Connect secrets — no other step changes.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish
+    runs-on: macos-26
+    env:
+      node-version: '22.x'
+      DEVELOPER_DIR: /Applications/Xcode_26.5.app/Contents/Developer
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Use Node.js ${{ env.node-version }}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.node-version }}
+          cache: 'npm'
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: Build CoreEditor
+        working-directory: CoreEditor
+        run: |
+          corepack enable
+          yarn install
+          yarn build
+
+      - name: Build the app (Release, ad-hoc signed)
+        run: |
+          xcodebuild build \
+            -project MarkEdit.xcodeproj \
+            -scheme MarkEditMac \
+            -configuration Release \
+            -destination 'platform=macOS' \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="-" CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+
+      - name: Resolve version
+        id: meta
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Package the .dmg
+        run: |
+          VERSION="${{ steps.meta.outputs.version }}"
+          APP="build/Build/Products/Release/MarkEdit Plus.app"
+          STAGE="$(mktemp -d)"
+          cp -R "$APP" "$STAGE/"
+          ln -s /Applications "$STAGE/Applications"
+          hdiutil create -volname "MarkEdit Plus" -srcfolder "$STAGE" -ov -format UDZO "MarkEdit-Plus-${VERSION}.dmg"
+          rm -rf "$STAGE"
+
+      - name: Write ReleaseInfo.json
+        run: |
+          echo '{ "minOSVer": "15.0" }' > ReleaseInfo.json
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          # The updater compares this name against the installed version and treats an empty
+          # name as a Mac App Store build, so it must be the plain version (no leading "v").
+          name: ${{ steps.meta.outputs.version }}
+          tag_name: ${{ github.ref_name }}
+          files: |
+            MarkEdit-Plus-*.dmg
+            ReleaseInfo.json
+          generate_release_notes: true
