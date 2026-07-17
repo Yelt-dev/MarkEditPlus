@@ -208,10 +208,10 @@ private extension AppDelegate {
   }
 
   @IBAction func openIssueTracker(_ sender: Any?) {
-    NSWorkspace.shared.safelyOpenURL(string: "https://github.com/MarkEdit-app/MarkEdit/issues")
+    NSWorkspace.shared.safelyOpenURL(string: "https://github.com/Yelt-dev/MarkEditPlus/issues")
   }
 
   @IBAction func openVersionHistory(_ sender: Any?) {
-    NSWorkspace.shared.safelyOpenURL(string: "https://github.com/MarkEdit-app/MarkEdit/releases")
+    NSWorkspace.shared.safelyOpenURL(string: "https://github.com/Yelt-dev/MarkEditPlus/releases")
   }
 }

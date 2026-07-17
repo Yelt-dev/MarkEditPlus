@@ -12,7 +12,7 @@ import MarkEditKit
 enum AppUpdater {
   private enum Constants {
     static let defaultOSVer = "1.0.0"
-    static let endpoint = "https://api.github.com/repos/MarkEdit-app/MarkEdit/releases/latest"
+    static let endpoint = "https://api.github.com/repos/Yelt-dev/MarkEditPlus/releases/latest"
     static let decoder = {
       let decoder = JSONDecoder()
       decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -123,7 +123,7 @@ private extension AppUpdater {
     alert.addButton(withTitle: Localized.Updater.notNow)
 
     if alert.runModal() == .alertFirstButtonReturn {
-      NSWorkspace.shared.safelyOpenURL(string: "https://github.com/MarkEdit-app/MarkEdit/releases")
+      NSWorkspace.shared.safelyOpenURL(string: "https://github.com/Yelt-dev/MarkEditPlus/releases")
     }
   }
 
