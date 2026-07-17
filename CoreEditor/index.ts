@@ -33,6 +33,7 @@ import { setPreviewMode, setScrollSync, setTemplate, renderPreview, getExportHTM
 import { cleanMarkdown, formatDocument, generateTableOfContents } from './src/modules/transform';
 import { setOutlineVisible, renderOutline } from './src/modules/outline';
 import { setInspectorVisible, renderInspector } from './src/modules/inspector';
+import { setFrontMatterVisible, renderFrontMatter } from './src/modules/frontMatter/panel';
 
 // Initialize and inject modules to the global MarkEdit object
 initMarkEditModules();
@@ -147,6 +148,10 @@ window.markEditRenderOutline = renderOutline;
 // Document inspector panel
 window.markEditSetInspectorVisible = setInspectorVisible;
 window.markEditRenderInspector = renderInspector;
+
+// Frontmatter form panel
+window.markEditSetFrontMatterVisible = setFrontMatterVisible;
+window.markEditRenderFrontMatter = renderFrontMatter;
 
 // Respond to reduced motion preference changes
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

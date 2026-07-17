@@ -37,6 +37,7 @@ import { tocKeymap } from './modules/toc';
 import { previewUpdateListener, previewScrollListener } from './modules/preview/document';
 import { outlineUpdateListener } from './modules/outline';
 import { inspectorUpdateListener } from './modules/inspector';
+import { frontMatterUpdateListener } from './modules/frontMatter/panel';
 import { userExtensions, userMarkdownConfigs, userCodeLanguages } from './api/methods';
 
 const theme = new Compartment;
@@ -167,6 +168,7 @@ export function extensions(options: { lineBreak?: string }) {
     previewScrollListener(),
     outlineUpdateListener(),
     inspectorUpdateListener(),
+    frontMatterUpdateListener(),
 
     // Accessibility
     EditorView.contentAttributes.of({

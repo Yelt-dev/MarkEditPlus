@@ -5841,6 +5841,28 @@
           }
         }
       }
+    },
+    "Save the document first" : {
+      "comment" : "Alert title, image insertion needs a saved document",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda el documento primero"
+          }
+        }
+      }
+    },
+    "Save the document so images can be copied to a folder next to it." : {
+      "comment" : "Alert message, image insertion needs a saved document",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda el documento para poder copiar las imágenes a una carpeta junto a él."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

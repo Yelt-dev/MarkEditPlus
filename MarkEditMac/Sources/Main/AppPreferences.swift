@@ -83,6 +83,12 @@ enum AppPreferences {
     static var visible: Bool
   }
 
+  enum FrontMatter {
+    /// Whether the frontmatter metadata form is shown beside the editor.
+    @Storage(key: "frontmatter.visible", defaultValue: false)
+    static var visible: Bool
+  }
+
   enum Editor {
     @Storage(key: "editor.light-theme", defaultValue: AppTheme.GitHubLight.editorTheme)
     static var lightTheme: String {

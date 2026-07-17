@@ -6166,6 +6166,42 @@
           }
         }
       }
+    },
+    "Frm-00-tog.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Frontmatter\"; ObjectID = \"Frm-00-tog\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Frontmatter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frontmatter"
+          }
+        }
+      }
+    },
+    "Img-00-loc.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Insert Local Image…\"; ObjectID = \"Img-00-loc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Insert Local Image…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insertar imagen local…"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

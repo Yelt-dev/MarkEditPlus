@@ -856,6 +856,12 @@ Gw
                                                 <action selector="insertImage:" target="Ady-hI-5gd" id="2gg-3g-RKb"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Insert Local Image…" id="Img-00-loc">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="insertLocalImage:" target="Ady-hI-5gd" id="Img-00-act"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="e3G-Nt-QJa"/>
                                         <menuItem title="List" keyEquivalent="l" id="ANX-uP-CA4">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
@@ -990,6 +996,12 @@ Gw
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="toggleOutline:" target="Ady-hI-5gd" id="Otl-00-act"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Frontmatter" id="Frm-00-tog">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleFrontMatter:" target="Ady-hI-5gd" id="Frm-00-act"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Inspector" keyEquivalent="i" id="Ins-00-tog">

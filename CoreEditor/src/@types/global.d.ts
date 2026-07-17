@@ -65,6 +65,8 @@ declare global {
     markEditRenderOutline: () => void;
     markEditSetInspectorVisible: (visible: boolean) => void;
     markEditRenderInspector: () => void;
+    markEditSetFrontMatterVisible: (visible: boolean) => void;
+    markEditRenderFrontMatter: () => void;
   }
 
   interface ImportMetaEnv {

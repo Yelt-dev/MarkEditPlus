@@ -77,6 +77,24 @@ extension EditorViewController: EditorWebViewActionDelegate {
   }
 
   func editorWebView(_ webView: EditorWebView, didDrop fileURLs: [URL]) {
+    // Dropped images are copied into ./assets and inserted with a relative path, keeping the
+    // document portable. Non-images (and shift-drop inlining) keep the existing behavior.
+    if !NSApp.shiftKeyIsPressed, document?.fileURL != nil, fileURLs.contains(where: { $0.isImageFile }) {
+      let images = fileURLs.filter { $0.isImageFile }
+      let others = fileURLs.filter { !$0.isImageFile }
+      Task { @MainActor in
+        await insertLocalImages(images)
+        if !others.isEmpty {
+          insertDroppedFiles(others)
+        }
+      }
+      return
+    }
+
+    insertDroppedFiles(fileURLs)
+  }
+
+  private func insertDroppedFiles(_ fileURLs: [URL]) {
     let lineBreak = document?.stringValue.getLineBreak(
       defaultValue: AppPreferences.General.defaultLineEndings.characters
     ) ?? "\n"
