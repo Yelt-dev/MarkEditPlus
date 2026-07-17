@@ -35,6 +35,7 @@ enum Localized {
 
   enum Transform {
     static let formatDocument = String(localized: "Format Document", comment: "Alert title, formatting the document with deterministic rules")
+    static let cleanMarkdown = String(localized: "Clean Markdown", comment: "Alert title, removing AI chat packaging from the document")
     static let apply = String(localized: "Apply", comment: "Button title, apply the previewed transform to the document")
     static let noChanges = String(localized: "This document is already formatted, nothing to change.", comment: "Alert message shown when a transform would not change anything")
     static let summaryHeader = String(localized: "The following changes will be applied:", comment: "Alert message header, followed by the list of transform rules that matched")
@@ -60,6 +61,16 @@ enum Localized {
         return String(localized: "Tables aligned", comment: "Transform rule summary")
       case "final-newline":
         return String(localized: "Final newline added", comment: "Transform rule summary")
+      case "outer-fence":
+        return String(localized: "Surrounding code fence removed", comment: "Transform rule summary")
+      case "preamble":
+        return String(localized: "Introduction line removed", comment: "Transform rule summary")
+      case "stray-language-tag":
+        return String(localized: "Stray language tag removed", comment: "Transform rule summary")
+      case "unclosed-fence":
+        return String(localized: "Unclosed code block closed", comment: "Transform rule summary")
+      case "duplicate-separators":
+        return String(localized: "Duplicate separators removed", comment: "Transform rule summary")
       default:
         return id
       }

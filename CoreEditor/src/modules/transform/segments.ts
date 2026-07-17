@@ -37,7 +37,7 @@ export function classifyLines(source: string): ClassifiedLine[] {
   const lines = source.split('\n');
   const result: ClassifiedLine[] = [];
 
-  let fenceMarker: string | undefined;
+  let fence: { char: string; length: number } | undefined;
   let inFrontMatter = false;
 
   for (const [index, text] of lines.entries()) {
@@ -57,11 +57,11 @@ export function classifyLines(source: string): ClassifiedLine[] {
       continue;
     }
 
-    const fence = fencePattern.exec(text);
+    const match = fencePattern.exec(text);
 
-    if (fenceMarker === undefined) {
-      if (fence !== null) {
-        fenceMarker = fence[1][0].repeat(3);
+    if (fence === undefined) {
+      if (match !== null) {
+        fence = { char: match[1][0], length: match[1].length };
         result.push({ text, kind: LineKind.fenceOpen });
       } else {
         result.push({ text, kind: LineKind.text });
@@ -70,11 +70,16 @@ export function classifyLines(source: string): ClassifiedLine[] {
       continue;
     }
 
-    // A fence is closed only by the same character it was opened with, and an info string
-    // is not allowed on a closing fence.
-    const closes = fence !== null && fence[1][0] === fenceMarker[0] && fence[2].trim() === '';
+    // A closing fence uses the same character, is at least as long as the opening one, and
+    // carries no info string. The length rule is what lets a ```` block hold ``` blocks —
+    // exactly how a document containing code gets wrapped for pasting.
+    const closes = match !== null
+      && match[1][0] === fence.char
+      && match[1].length >= fence.length
+      && match[2].trim() === '';
+
     if (closes) {
-      fenceMarker = undefined;
+      fence = undefined;
       result.push({ text, kind: LineKind.fenceClose });
     } else {
       result.push({ text, kind: LineKind.protected });

@@ -6094,6 +6094,24 @@
           }
         }
       }
+    },
+    "Trf-02-cln.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Clean Markdown\"; ObjectID = \"Trf-02-cln\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clean Markdown"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limpiar Markdown"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
