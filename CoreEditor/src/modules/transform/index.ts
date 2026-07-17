@@ -2,6 +2,11 @@ import { EditorSelection } from '@codemirror/state';
 import { TextRule, cleanLineRules, cleanTextRules } from './cleanAI';
 import { Rule, finalNewline, formatRules } from './rules';
 import { classifyLines, joinLines } from './segments';
+import { TOCOptions, buildTableOfContents } from './toc';
+
+// The heading of the generated index. It is document content, not UI, so it is not localized
+// to the system language; the app writes in Spanish. Users can edit it in their document.
+const tocTitle = 'Tabla de contenido';
 
 /**
  * Deterministic document transforms.
@@ -114,4 +119,30 @@ export function formatDocument(apply: boolean): string {
  */
 export function cleanMarkdown(apply: boolean): string {
   return perform(cleanLineRules, apply, cleanTextRules);
+}
+
+// A TOC covering h2–h6 fits the common shape: h1 is the document title, and the index lists
+// the sections beneath it. h1 is still slugged (see toc.ts) so its anchors don't drift.
+const tocOptions: TOCOptions = {
+  minLevel: 2,
+  maxLevel: 6,
+  ordered: false,
+  title: tocTitle,
+};
+
+/**
+ * Generate (or refresh) the table of contents. Unlike the rule-based transforms this builds
+ * the new document directly, then commits it in one transaction so undo stays a single step.
+ */
+export function generateTableOfContents(apply: boolean): string {
+  const source = window.editor.state.doc.toString();
+  const { text, count, mode } = buildTableOfContents(source, tocOptions);
+
+  const changed = mode !== 'none' && text !== source;
+  if (apply && changed) {
+    replaceDocument(text);
+  }
+
+  const rules = changed ? [{ id: `toc-${mode}`, count }] : [];
+  return JSON.stringify({ changed, rules } satisfies TransformSummary);
 }

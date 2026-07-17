@@ -36,45 +36,10 @@ enum Localized {
   enum Transform {
     static let formatDocument = String(localized: "Format Document", comment: "Alert title, formatting the document with deterministic rules")
     static let cleanMarkdown = String(localized: "Clean Markdown", comment: "Alert title, removing AI chat packaging from the document")
+    static let tableOfContents = String(localized: "Generate Table of Contents", comment: "Alert title, inserting or refreshing the table of contents")
     static let apply = String(localized: "Apply", comment: "Button title, apply the previewed transform to the document")
     static let noChanges = String(localized: "This document is already formatted, nothing to change.", comment: "Alert message shown when a transform would not change anything")
     static let summaryHeader = String(localized: "The following changes will be applied:", comment: "Alert message header, followed by the list of transform rules that matched")
-
-    /// Human-readable name for a transform rule reported by the editor.
-    static func ruleName(_ id: String) -> String {
-      switch id {
-      case "trailing-whitespace":
-        return String(localized: "Trailing spaces removed", comment: "Transform rule summary")
-      case "blank-lines":
-        return String(localized: "Blank lines normalized", comment: "Transform rule summary")
-      case "heading-space":
-        return String(localized: "Space added after #", comment: "Transform rule summary")
-      case "list-markers":
-        return String(localized: "List markers unified", comment: "Transform rule summary")
-      case "checklists":
-        return String(localized: "Checklists normalized", comment: "Transform rule summary")
-      case "fences":
-        return String(localized: "Code fences unified", comment: "Transform rule summary")
-      case "separators":
-        return String(localized: "Separators unified", comment: "Transform rule summary")
-      case "tables":
-        return String(localized: "Tables aligned", comment: "Transform rule summary")
-      case "final-newline":
-        return String(localized: "Final newline added", comment: "Transform rule summary")
-      case "outer-fence":
-        return String(localized: "Surrounding code fence removed", comment: "Transform rule summary")
-      case "preamble":
-        return String(localized: "Introduction line removed", comment: "Transform rule summary")
-      case "stray-language-tag":
-        return String(localized: "Stray language tag removed", comment: "Transform rule summary")
-      case "unclosed-fence":
-        return String(localized: "Unclosed code block closed", comment: "Transform rule summary")
-      case "duplicate-separators":
-        return String(localized: "Duplicate separators removed", comment: "Transform rule summary")
-      default:
-        return id
-      }
-    }
   }
 
   enum Editor {
@@ -353,5 +318,47 @@ extension EditorLocalizable {
       cmdClickToFollow: Localized.Editor.cmdClickToFollow,
       cmdClickToToggleTodo: Localized.Editor.cmdClickToToggleTodo
     )
+  }
+}
+
+extension Localized.Transform {
+  /// Human-readable name for a transform rule reported by the editor.
+  static func ruleName(_ id: String) -> String {
+    switch id {
+    case "trailing-whitespace":
+      return String(localized: "Trailing spaces removed", comment: "Transform rule summary")
+    case "blank-lines":
+      return String(localized: "Blank lines normalized", comment: "Transform rule summary")
+    case "heading-space":
+      return String(localized: "Space added after #", comment: "Transform rule summary")
+    case "list-markers":
+      return String(localized: "List markers unified", comment: "Transform rule summary")
+    case "checklists":
+      return String(localized: "Checklists normalized", comment: "Transform rule summary")
+    case "fences":
+      return String(localized: "Code fences unified", comment: "Transform rule summary")
+    case "separators":
+      return String(localized: "Separators unified", comment: "Transform rule summary")
+    case "tables":
+      return String(localized: "Tables aligned", comment: "Transform rule summary")
+    case "final-newline":
+      return String(localized: "Final newline added", comment: "Transform rule summary")
+    case "outer-fence":
+      return String(localized: "Surrounding code fence removed", comment: "Transform rule summary")
+    case "preamble":
+      return String(localized: "Introduction line removed", comment: "Transform rule summary")
+    case "stray-language-tag":
+      return String(localized: "Stray language tag removed", comment: "Transform rule summary")
+    case "unclosed-fence":
+      return String(localized: "Unclosed code block closed", comment: "Transform rule summary")
+    case "duplicate-separators":
+      return String(localized: "Duplicate separators removed", comment: "Transform rule summary")
+    case "toc-inserted":
+      return String(localized: "Table of contents inserted", comment: "Transform rule summary; the count is the number of entries")
+    case "toc-updated":
+      return String(localized: "Table of contents updated", comment: "Transform rule summary; the count is the number of entries")
+    default:
+      return id
+    }
   }
 }

@@ -936,6 +936,12 @@ Gw
                                                 <action selector="cleanMarkdown:" target="Ady-hI-5gd" id="Trf-02-act"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Generate Table of Contents" id="Trf-03-toc">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="generateTableOfContents:" target="Ady-hI-5gd" id="Trf-03-act"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

@@ -6112,6 +6112,24 @@
           }
         }
       }
+    },
+    "Trf-03-toc.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Generate Table of Contents\"; ObjectID = \"Trf-03-toc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Generate Table of Contents"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar tabla de contenido"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
