@@ -119,6 +119,9 @@ extension EditorViewController: NSMenuItemValidation {
     case #selector(toggleOutline(_:)):
       menuItem.state = AppPreferences.Outline.visible ? .on : .off
       return true
+    case #selector(toggleInspector(_:)):
+      menuItem.state = AppPreferences.Inspector.visible ? .on : .off
+      return true
     default:
       break
     }
@@ -347,6 +350,7 @@ extension EditorViewController {
     invokePreviewMode(AppPreferences.Preview.viewMode)
     webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
     invokeOutline(AppPreferences.Outline.visible)
+    invokeInspector(AppPreferences.Inspector.visible)
   }
 
   // MARK: - Document outline
@@ -357,8 +361,18 @@ extension EditorViewController {
     invokeOutline(visible)
   }
 
+  @IBAction func toggleInspector(_ sender: Any?) {
+    let visible = !AppPreferences.Inspector.visible
+    AppPreferences.Inspector.visible = visible
+    invokeInspector(visible)
+  }
+
   private func invokeOutline(_ visible: Bool) {
     webView.evaluateJavaScript("window.markEditSetOutlineVisible && window.markEditSetOutlineVisible(\(visible))")
+  }
+
+  private func invokeInspector(_ visible: Bool) {
+    webView.evaluateJavaScript("window.markEditSetInspectorVisible && window.markEditSetInspectorVisible(\(visible))")
   }
 
   private func invokePreviewMode(_ mode: String) {
