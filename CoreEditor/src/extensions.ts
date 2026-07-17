@@ -35,6 +35,7 @@ import { customizedCommandsKeymap } from './modules/commands';
 import { autocompleteExtensions, standardLinkCompletion, referenceLinkCompletion } from './modules/completion';
 import { tocKeymap } from './modules/toc';
 import { previewUpdateListener, previewScrollListener } from './modules/preview/document';
+import { outlineUpdateListener } from './modules/outline';
 import { userExtensions, userMarkdownConfigs, userCodeLanguages } from './api/methods';
 
 const theme = new Compartment;
@@ -163,6 +164,7 @@ export function extensions(options: { lineBreak?: string }) {
     observeChanges(),
     previewUpdateListener(),
     previewScrollListener(),
+    outlineUpdateListener(),
 
     // Accessibility
     EditorView.contentAttributes.of({

@@ -71,6 +71,12 @@ enum AppPreferences {
     static var template: String
   }
 
+  enum Outline {
+    /// Whether the document outline panel is shown beside the editor.
+    @Storage(key: "outline.visible", defaultValue: false)
+    static var visible: Bool
+  }
+
   enum Editor {
     @Storage(key: "editor.light-theme", defaultValue: AppTheme.GitHubLight.editorTheme)
     static var lightTheme: String {
