@@ -986,6 +986,13 @@ Gw
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="PIb-KM-OZU"/>
+                                        <menuItem title="Outline" keyEquivalent="o" id="Otl-00-tog">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleOutline:" target="Ady-hI-5gd" id="Otl-00-act"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Otl-00-sep"/>
                                         <menuItem title="Preview" id="Prv-00-sub">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Preview" id="Prv-00-menu">

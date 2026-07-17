@@ -31,6 +31,7 @@ import { loadTheme } from './src/styling/themes';
 import { startObserving } from './src/modules/events';
 import { setPreviewMode, setScrollSync, setTemplate, renderPreview, getExportHTML } from './src/modules/preview/document';
 import { cleanMarkdown, formatDocument, generateTableOfContents } from './src/modules/transform';
+import { setOutlineVisible, renderOutline } from './src/modules/outline';
 
 // Initialize and inject modules to the global MarkEdit object
 initMarkEditModules();
@@ -137,6 +138,10 @@ window.markEditGetExportHTML = getExportHTML;
 window.markEditFormatDocument = formatDocument;
 window.markEditCleanMarkdown = cleanMarkdown;
 window.markEditGenerateTableOfContents = generateTableOfContents;
+
+// Document outline panel
+window.markEditSetOutlineVisible = setOutlineVisible;
+window.markEditRenderOutline = renderOutline;
 
 // Respond to reduced motion preference changes
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

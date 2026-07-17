@@ -116,6 +116,9 @@ extension EditorViewController: NSMenuItemValidation {
       // Transform lives in its own menu, which the read-only rules below don't cover;
       // these rewrite the document, so they must be disabled explicitly.
       return !isReadOnlyMode
+    case #selector(toggleOutline(_:)):
+      menuItem.state = AppPreferences.Outline.visible ? .on : .off
+      return true
     default:
       break
     }
@@ -343,6 +346,19 @@ extension EditorViewController {
     invokeTemplate(AppPreferences.Preview.template)
     invokePreviewMode(AppPreferences.Preview.viewMode)
     webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
+    invokeOutline(AppPreferences.Outline.visible)
+  }
+
+  // MARK: - Document outline
+
+  @IBAction func toggleOutline(_ sender: Any?) {
+    let visible = !AppPreferences.Outline.visible
+    AppPreferences.Outline.visible = visible
+    invokeOutline(visible)
+  }
+
+  private func invokeOutline(_ visible: Bool) {
+    webView.evaluateJavaScript("window.markEditSetOutlineVisible && window.markEditSetOutlineVisible(\(visible))")
   }
 
   private func invokePreviewMode(_ mode: String) {

@@ -61,6 +61,8 @@ declare global {
     markEditFormatDocument: (apply: boolean) => string;
     markEditCleanMarkdown: (apply: boolean) => string;
     markEditGenerateTableOfContents: (apply: boolean) => string;
+    markEditSetOutlineVisible: (visible: boolean) => void;
+    markEditRenderOutline: () => void;
   }
 
   interface ImportMetaEnv {

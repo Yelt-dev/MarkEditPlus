@@ -6130,6 +6130,24 @@
           }
         }
       }
+    },
+    "Otl-00-tog.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Outline\"; ObjectID = \"Otl-00-tog\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Outline"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esquema"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
