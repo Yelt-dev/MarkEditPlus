@@ -5808,6 +5808,39 @@
           }
         }
       }
+    },
+    "Generate Table of Contents" : {
+      "comment" : "Alert title, inserting or refreshing the table of contents",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar tabla de contenido"
+          }
+        }
+      }
+    },
+    "Table of contents inserted" : {
+      "comment" : "Transform rule summary; the count is the number of entries",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de contenido insertada"
+          }
+        }
+      }
+    },
+    "Table of contents updated" : {
+      "comment" : "Transform rule summary; the count is the number of entries",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de contenido actualizada"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

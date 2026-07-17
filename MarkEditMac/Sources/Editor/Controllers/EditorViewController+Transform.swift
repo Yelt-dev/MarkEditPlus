@@ -18,6 +18,11 @@ extension EditorViewController {
   @IBAction func cleanMarkdown(_ sender: Any?) {
     performTransform("markEditCleanMarkdown", title: Localized.Transform.cleanMarkdown)
   }
+
+  /// Insert or refresh a table of contents built from the document's headings.
+  @IBAction func generateTableOfContents(_ sender: Any?) {
+    performTransform("markEditGenerateTableOfContents", title: Localized.Transform.tableOfContents)
+  }
 }
 
 // MARK: - Private
