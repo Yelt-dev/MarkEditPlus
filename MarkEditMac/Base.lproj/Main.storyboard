@@ -992,6 +992,12 @@ Gw
                                                 <action selector="toggleOutline:" target="Ady-hI-5gd" id="Otl-00-act"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Inspector" keyEquivalent="i" id="Ins-00-tog">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleInspector:" target="Ady-hI-5gd" id="Ins-00-act"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="Otl-00-sep"/>
                                         <menuItem title="Preview" id="Prv-00-sub">
                                             <modifierMask key="keyEquivalentModifierMask"/>

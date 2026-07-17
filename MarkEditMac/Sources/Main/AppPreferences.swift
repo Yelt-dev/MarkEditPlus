@@ -77,6 +77,12 @@ enum AppPreferences {
     static var visible: Bool
   }
 
+  enum Inspector {
+    /// Whether the document inspector panel (metrics + findings) is shown beside the editor.
+    @Storage(key: "inspector.visible", defaultValue: false)
+    static var visible: Bool
+  }
+
   enum Editor {
     @Storage(key: "editor.light-theme", defaultValue: AppTheme.GitHubLight.editorTheme)
     static var lightTheme: String {

@@ -6148,6 +6148,24 @@
           }
         }
       }
+    },
+    "Ins-00-tog.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Inspector\"; ObjectID = \"Ins-00-tog\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Inspector"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspector"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
