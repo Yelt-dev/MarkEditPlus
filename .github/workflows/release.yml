@@ -46,6 +46,23 @@ jobs:
             -derivedDataPath build \
             CODE_SIGN_IDENTITY="-" CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
 
+      # The build above is "linker-signed" and carries NO entitlements, so the app runs without
+      # its sandbox file-access grants and macOS prompts for every folder. Re-sign ad-hoc WITH the
+      # entitlements (nested extensions first, then the app) so the shipped .dmg is properly
+      # sandboxed: home-folder access and persistent security-scoped bookmarks actually work.
+      - name: Ad-hoc sign with entitlements
+        run: |
+          set -euo pipefail
+          APP="build/Build/Products/Release/MarkEdit Plus.app"
+          sign() { codesign --force --sign - --entitlements "$2" "$1"; }
+          [ -e "$APP/Contents/PlugIns/PreviewExtension.appex" ] && sign "$APP/Contents/PlugIns/PreviewExtension.appex" PreviewExtension/Info.entitlements
+          [ -e "$APP/Contents/PlugIns/FinderExtension.appex" ] && sign "$APP/Contents/PlugIns/FinderExtension.appex" FinderExtension/Info.entitlements
+          codesign --force --sign - --entitlements MarkEditMac/Info.entitlements "$APP"
+          echo "--- verify ---"
+          codesign --verify --deep --strict --verbose=2 "$APP"
+          echo "--- embedded entitlements (must list app-sandbox + home-relative-path) ---"
+          codesign -d --entitlements - --xml "$APP" | grep -o "com.apple.security[a-z.-]*" | sort -u
+
       - name: Resolve version
         id: meta
         run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
