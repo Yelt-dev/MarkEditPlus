@@ -42,6 +42,11 @@ enum Localized {
     static let summaryHeader = String(localized: "The following changes will be applied:", comment: "Alert message header, followed by the list of transform rules that matched")
   }
 
+  enum Images {
+    static let saveFirstTitle = String(localized: "Save the document first", comment: "Alert title, image insertion needs a saved document")
+    static let saveFirstMessage = String(localized: "Save the document so images can be copied to a folder next to it.", comment: "Alert message, image insertion needs a saved document")
+  }
+
   enum Editor {
     static let controlCharacter = String(localized: "Control Character", comment: "Phrase used in CodeMirror to indicate control character")
     static let foldedLines = String(localized: "Folded Lines", comment: "Phrase used in CodeMirror to indicate folded lines")

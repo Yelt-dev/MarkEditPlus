@@ -33,6 +33,12 @@ final class Application: NSApplication {
 
   override func sendAction(_ action: Selector, to target: Any?, from sender: Any?) -> Bool {
     if action == #selector(NSText.paste(_:)) {
+      // A pasted image is copied into ./assets and inserted as Markdown; cancel the default
+      // paste in that case so the raw image data doesn't land in the editor.
+      if currentEditor?.handlePastedImageIfNeeded() == true {
+        return true
+      }
+
       sanitizePasteboard()
     }
 

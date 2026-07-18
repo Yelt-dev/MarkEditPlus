@@ -336,6 +336,10 @@ function inlineHighlightColors(html: string): string {
 interface FrontMatter {
   title?: string;
   language?: string;
+  author?: string;
+  date?: string;
+  description?: string;
+  keywords?: string;
 }
 
 function parseFrontMatter(source: string): FrontMatter {
@@ -350,7 +354,14 @@ function parseFrontMatter(source: string): FrontMatter {
     return line === null ? undefined : line[1].trim().replace(/^["']|["']$/g, '');
   };
 
-  return { title: read('title'), language: read('language') };
+  return {
+    title: read('title'),
+    language: read('language'),
+    author: read('author'),
+    date: read('date'),
+    description: read('description'),
+    keywords: read('keywords'),
+  };
 }
 
 function firstHeadingText(html: string): string | undefined {
@@ -380,13 +391,38 @@ export function getExportHTML(): string {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${escapeText(title)}</title>
+<title>${escapeText(title)}</title>${metaTags(meta)}
 <style>${exportStyle(templateId)}</style>
 </head>
 <body>
-${body}
+${byline(meta)}${body}
 </body>
 </html>`;
+}
+
+/** `<meta>` tags for the document metadata that has no visible place. */
+function metaTags(meta: FrontMatter): string {
+  const tags: string[] = [];
+  const add = (name: string, value?: string) => {
+    if (value !== undefined && value !== '') {
+      tags.push(`<meta name="${name}" content="${escapeAttribute(value)}">`);
+    }
+  };
+
+  add('author', meta.author);
+  add('description', meta.description);
+  add('keywords', meta.keywords);
+  return tags.length === 0 ? '' : `\n${tags.join('\n')}`;
+}
+
+/** A visible author / date line above the content, when either is present. */
+function byline(meta: FrontMatter): string {
+  const parts = [meta.author, meta.date].filter((part): part is string => part !== undefined && part !== '');
+  if (parts.length === 0) {
+    return '';
+  }
+
+  return `<p class="me-export-byline">${parts.map(escapeText).join(' · ')}</p>\n`;
 }
 
 function previewDocument(): string {
@@ -483,6 +519,7 @@ ${templateStyle(id, 'light')}
 ${baseStyle}
 ${templateExtra(id)}
 ${hljsLightTheme}
+.me-export-byline { color: var(--document-muted-color); font-size: 0.9em; margin: 0 0 1.5em; }
 pre, blockquote, table, img, figure { break-inside: avoid; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid; }
 @media print {

@@ -122,6 +122,9 @@ extension EditorViewController: NSMenuItemValidation {
     case #selector(toggleInspector(_:)):
       menuItem.state = AppPreferences.Inspector.visible ? .on : .off
       return true
+    case #selector(toggleFrontMatter(_:)):
+      menuItem.state = AppPreferences.FrontMatter.visible ? .on : .off
+      return true
     default:
       break
     }
@@ -351,6 +354,7 @@ extension EditorViewController {
     webView.evaluateJavaScript("window.markEditSetScrollSync && window.markEditSetScrollSync(\(AppPreferences.Preview.syncScroll))")
     invokeOutline(AppPreferences.Outline.visible)
     invokeInspector(AppPreferences.Inspector.visible)
+    invokeFrontMatter(AppPreferences.FrontMatter.visible)
   }
 
   // MARK: - Document outline
@@ -367,12 +371,22 @@ extension EditorViewController {
     invokeInspector(visible)
   }
 
+  @IBAction func toggleFrontMatter(_ sender: Any?) {
+    let visible = !AppPreferences.FrontMatter.visible
+    AppPreferences.FrontMatter.visible = visible
+    invokeFrontMatter(visible)
+  }
+
   private func invokeOutline(_ visible: Bool) {
     webView.evaluateJavaScript("window.markEditSetOutlineVisible && window.markEditSetOutlineVisible(\(visible))")
   }
 
   private func invokeInspector(_ visible: Bool) {
     webView.evaluateJavaScript("window.markEditSetInspectorVisible && window.markEditSetInspectorVisible(\(visible))")
+  }
+
+  private func invokeFrontMatter(_ visible: Bool) {
+    webView.evaluateJavaScript("window.markEditSetFrontMatterVisible && window.markEditSetFrontMatterVisible(\(visible))")
   }
 
   private func invokePreviewMode(_ mode: String) {

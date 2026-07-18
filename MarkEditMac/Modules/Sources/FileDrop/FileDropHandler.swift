@@ -23,6 +23,25 @@ public enum FileDropHandler {
     let isTextBundle = documentType?.isTextBundle == true
     return handle(fileURL: fileURL, documentURL: documentURL, isTextBundle: isTextBundle)
   }
+
+  /// Copy an image into `<folderURL>/assets/` under a non-colliding name and return the
+  /// Markdown image link with the relative path. Used to insert a local image into a plain
+  /// Markdown document (drop, paste, or file picker), keeping the document portable.
+  ///
+  /// If the source already lives inside that `assets/` folder it is linked in place, not
+  /// copied again. Throws if the copy fails (e.g. no write access to the folder).
+  public static func copyImageToAssets(fileURL: URL, folderURL: URL) throws -> String {
+    let assetsURL = folderURL.appending(path: "assets", directoryHint: .isDirectory)
+    let target: String
+
+    if fileURL.deletingLastPathComponent().standardizedFileURL == assetsURL.standardizedFileURL {
+      target = "assets/\(fileURL.lastPathComponent)"
+    } else {
+      target = try TextBundleAssets.copy(from: fileURL, into: folderURL)
+    }
+
+    return MarkdownLink.formatted(label: fileURL.lastPathComponent, target: target, isImage: true)
+  }
 }
 
 // MARK: - Private
