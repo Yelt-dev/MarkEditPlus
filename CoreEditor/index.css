@@ -119,6 +119,16 @@ body.me-frontmatter-visible:not(.me-preview-split):not(.me-preview-only) #editor
   font-weight: 600;
 }
 
+.me-outline-toggle {
+  flex: 0 0 auto;
+  width: 12px;
+  text-align: center;
+  font-size: 9px;
+  color: rgba(128, 128, 128, 0.9);
+  cursor: default;
+  user-select: none;
+}
+
 .me-outline-label {
   flex: 1 1 auto;
   min-width: 0;

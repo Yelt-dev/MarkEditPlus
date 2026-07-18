@@ -6,6 +6,7 @@ import hljs from 'highlight.js';
 import hljsLightTheme from 'highlight.js/styles/github.css?raw';
 import hljsDarkTheme from 'highlight.js/styles/github-dark.css?raw';
 import { TemplateId, defaultTemplate, isTemplateId, templateExtra, templateStyle } from './templates';
+import { normalizePageSetup } from './pageSetup';
 
 /**
  * Full-document live preview.
@@ -340,6 +341,8 @@ interface FrontMatter {
   date?: string;
   description?: string;
   keywords?: string;
+  pageSize?: string;
+  orientation?: string;
 }
 
 function parseFrontMatter(source: string): FrontMatter {
@@ -361,7 +364,15 @@ function parseFrontMatter(source: string): FrontMatter {
     date: read('date'),
     description: read('description'),
     keywords: read('keywords'),
+    pageSize: read('page_size'),
+    orientation: read('orientation'),
   };
+}
+
+/** JSON-encoded ExportPageSetup, read by the native PDF exporter to size pages. */
+export function getExportOptions(): string {
+  const meta = parseFrontMatter(window.editor.state.doc.toString());
+  return JSON.stringify(normalizePageSetup(meta.pageSize, meta.orientation));
 }
 
 function firstHeadingText(html: string): string | undefined {

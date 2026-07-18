@@ -1,6 +1,226 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Academic" : {
+      "comment" : "Visual template name",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Académica"
+          }
+        }
+      }
+    },
+    "Business" : {
+      "comment" : "Visual template name",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empresarial"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "comment" : "Button, close the export preview dialog",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        }
+      }
+    },
+    "Export HTML…" : {
+      "comment" : "Button, export the preview as an HTML file",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar HTML…"
+          }
+        }
+      }
+    },
+    "Export PDF…" : {
+      "comment" : "Button, export the preview as a PDF file",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar PDF…"
+          }
+        }
+      }
+    },
+    "Export Preview" : {
+      "comment" : "Window title for the export preview dialog",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa de exportación"
+          }
+        }
+      }
+    },
+    "Heading text" : {
+      "comment" : "TOC option, the heading text above the list",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto del encabezado"
+          }
+        }
+      }
+    },
+    "Include a heading" : {
+      "comment" : "TOC option, add a heading above the list",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incluir un encabezado"
+          }
+        }
+      }
+    },
+    "Landscape" : {
+      "comment" : "Page orientation option, horizontal",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Horizontal"
+          }
+        }
+      }
+    },
+    "Maximum level" : {
+      "comment" : "TOC option, deepest heading level to include",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel máximo"
+          }
+        }
+      }
+    },
+    "Minimal" : {
+      "comment" : "Visual template name",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimalista"
+          }
+        }
+      }
+    },
+    "Minimum level" : {
+      "comment" : "TOC option, shallowest heading level to include",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel mínimo"
+          }
+        }
+      }
+    },
+    "Numbered list" : {
+      "comment" : "TOC option, use an ordered (numbered) list",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lista numerada"
+          }
+        }
+      }
+    },
+    "Orientation" : {
+      "comment" : "Label for the orientation selector in the export preview",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orientación"
+          }
+        }
+      }
+    },
+    "Page Size" : {
+      "comment" : "Label for the page size selector in the export preview",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamaño de página"
+          }
+        }
+      }
+    },
+    "Portrait" : {
+      "comment" : "Page orientation option, vertical",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertical"
+          }
+        }
+      }
+    },
+    "Show page breaks" : {
+      "comment" : "Toggle to overlay page break guides in the export preview",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar saltos de página"
+          }
+        }
+      }
+    },
+    "Table of Contents Options" : {
+      "comment" : "Dialog title for configuring the table of contents",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opciones de tabla de contenido"
+          }
+        }
+      }
+    },
+    "Technical" : {
+      "comment" : "Visual template name",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Técnica"
+          }
+        }
+      }
+    },
+    "Template" : {
+      "comment" : "Label for the template selector in the export preview",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plantilla"
+          }
+        }
+      }
+    },
     "**Author:** %@" : {
       "comment" : "Extension author line (format) in the install confirmation",
       "localizations" : {

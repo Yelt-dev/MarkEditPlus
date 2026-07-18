@@ -47,6 +47,37 @@ enum Localized {
     static let saveFirstMessage = String(localized: "Save the document so images can be copied to a folder next to it.", comment: "Alert message, image insertion needs a saved document")
   }
 
+  enum Export {
+    static let previewTitle = String(localized: "Export Preview", comment: "Window title for the export preview dialog")
+    static let template = String(localized: "Template", comment: "Label for the template selector in the export preview")
+    static let pageSize = String(localized: "Page Size", comment: "Label for the page size selector in the export preview")
+    static let orientation = String(localized: "Orientation", comment: "Label for the orientation selector in the export preview")
+    static let portrait = String(localized: "Portrait", comment: "Page orientation option, vertical")
+    static let landscape = String(localized: "Landscape", comment: "Page orientation option, horizontal")
+    static let showPageBreaks = String(localized: "Show page breaks", comment: "Toggle to overlay page break guides in the export preview")
+    static let exportPDF = String(localized: "Export PDF…", comment: "Button, export the preview as a PDF file")
+    static let exportHTML = String(localized: "Export HTML…", comment: "Button, export the preview as an HTML file")
+    static let close = String(localized: "Close", comment: "Button, close the export preview dialog")
+
+    static func templateName(_ id: String) -> String {
+      switch id {
+      case "technical": return String(localized: "Technical", comment: "Visual template name")
+      case "business": return String(localized: "Business", comment: "Visual template name")
+      case "academic": return String(localized: "Academic", comment: "Visual template name")
+      default: return String(localized: "Minimal", comment: "Visual template name")
+      }
+    }
+  }
+
+  enum TableOfContents {
+    static let configTitle = String(localized: "Table of Contents Options", comment: "Dialog title for configuring the table of contents")
+    static let minLevel = String(localized: "Minimum level", comment: "TOC option, shallowest heading level to include")
+    static let maxLevel = String(localized: "Maximum level", comment: "TOC option, deepest heading level to include")
+    static let ordered = String(localized: "Numbered list", comment: "TOC option, use an ordered (numbered) list")
+    static let includeTitle = String(localized: "Include a heading", comment: "TOC option, add a heading above the list")
+    static let titleText = String(localized: "Heading text", comment: "TOC option, the heading text above the list")
+  }
+
   enum Editor {
     static let controlCharacter = String(localized: "Control Character", comment: "Phrase used in CodeMirror to indicate control character")
     static let foldedLines = String(localized: "Folded Lines", comment: "Phrase used in CodeMirror to indicate folded lines")

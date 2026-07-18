@@ -29,8 +29,8 @@ import { initThemeExtractors, initMarkEditModules } from './src/api/modules';
 import { setUp, applyReducedMotion } from './src/styling/config';
 import { loadTheme } from './src/styling/themes';
 import { startObserving } from './src/modules/events';
-import { setPreviewMode, setScrollSync, setTemplate, renderPreview, getExportHTML } from './src/modules/preview/document';
-import { cleanMarkdown, formatDocument, generateTableOfContents } from './src/modules/transform';
+import { setPreviewMode, setScrollSync, setTemplate, renderPreview, getExportHTML, getExportOptions } from './src/modules/preview/document';
+import { cleanMarkdown, formatDocument, generateTableOfContents, getFormattedMarkdown } from './src/modules/transform';
 import { setOutlineVisible, renderOutline } from './src/modules/outline';
 import { setInspectorVisible, renderInspector } from './src/modules/inspector';
 import { setFrontMatterVisible, renderFrontMatter } from './src/modules/frontMatter/panel';
@@ -135,11 +135,13 @@ window.markEditSetScrollSync = setScrollSync;
 window.markEditSetTemplate = setTemplate;
 window.markEditRenderPreview = renderPreview;
 window.markEditGetExportHTML = getExportHTML;
+window.markEditGetExportOptions = getExportOptions;
 
 // Deterministic transforms: called with apply=false for a summary, apply=true to commit
 window.markEditFormatDocument = formatDocument;
 window.markEditCleanMarkdown = cleanMarkdown;
 window.markEditGenerateTableOfContents = generateTableOfContents;
+window.markEditGetFormattedMarkdown = getFormattedMarkdown;
 
 // Document outline panel
 window.markEditSetOutlineVisible = setOutlineVisible;

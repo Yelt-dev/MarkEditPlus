@@ -57,10 +57,15 @@ declare global {
     markEditSetTemplate: (id: string) => void;
     markEditRenderPreview: () => void;
     markEditGetExportHTML: () => string;
+    /** JSON-encoded ExportPageSetup ({ pageSize, orientation }), read by the native PDF exporter. */
+    markEditGetExportOptions: () => string;
     /** Returns a JSON-encoded TransformSummary; only mutates the document when apply is true. */
     markEditFormatDocument: (apply: boolean) => string;
     markEditCleanMarkdown: (apply: boolean) => string;
-    markEditGenerateTableOfContents: (apply: boolean) => string;
+    /** optionsJSON (optional) is a partial TOCOptions from the native config dialog. */
+    markEditGenerateTableOfContents: (apply: boolean, optionsJSON?: string) => string;
+    /** Normalized Markdown for the clean-export; never mutates the document. */
+    markEditGetFormattedMarkdown: () => string;
     markEditSetOutlineVisible: (visible: boolean) => void;
     markEditRenderOutline: () => void;
     markEditSetInspectorVisible: (visible: boolean) => void;

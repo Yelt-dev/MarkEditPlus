@@ -223,6 +223,18 @@
                                                             <action selector="exportPDF:" target="Ady-hI-5gd" id="Exp-03-act"/>
                                                         </connections>
                                                     </menuItem>
+                                                    <menuItem title="Export Preview…" id="Exp-05-prev">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="showExportPreview:" target="Ady-hI-5gd" id="Exp-05-act"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Clean Markdown…" id="Exp-04-md">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportCleanMarkdown:" target="Ady-hI-5gd" id="Exp-04-act"/>
+                                                        </connections>
+                                                    </menuItem>
                                                 </items>
                                             </menu>
                                         </menuItem>

@@ -65,6 +65,8 @@ const metricLabels: [keyof Metrics, string][] = [
 function metricsSection(metrics: Metrics): HTMLElement {
   const section = document.createElement('section');
   section.className = 'me-inspector-metrics';
+  section.setAttribute('role', 'list');
+  section.setAttribute('aria-label', 'Métricas del documento');
 
   for (const [key, label] of metricLabels) {
     section.append(metricRow(label, `${metrics[key]}`));
@@ -78,18 +80,29 @@ function metricsSection(metrics: Metrics): HTMLElement {
 function metricRow(label: string, value: string): HTMLElement {
   const row = document.createElement('div');
   row.className = 'me-inspector-row';
+  // Announce each metric as a single "label: value" item instead of two stray strings.
+  row.setAttribute('role', 'listitem');
+  row.setAttribute('aria-label', `${label}: ${value}`);
 
   const name = document.createElement('span');
   name.className = 'me-inspector-name';
   name.textContent = label;
+  name.setAttribute('aria-hidden', 'true');
 
   const amount = document.createElement('span');
   amount.className = 'me-inspector-value';
   amount.textContent = value;
+  amount.setAttribute('aria-hidden', 'true');
 
   row.append(name, amount);
   return row;
 }
+
+const severityLabels: Record<Finding['severity'], string> = {
+  info: 'Información',
+  warning: 'Advertencia',
+  error: 'Error',
+};
 
 function findingsSection(findings: Finding[]): HTMLElement {
   const section = document.createElement('section');
@@ -100,9 +113,13 @@ function findingsSection(findings: Finding[]): HTMLElement {
   heading.textContent = findings.length === 0 ? 'Sin problemas' : `Problemas (${findings.length})`;
   section.append(heading);
 
+  const list = document.createElement('div');
+  list.setAttribute('role', 'list');
+  list.setAttribute('aria-label', 'Problemas del documento');
   for (const finding of findings) {
-    section.append(findingRow(finding));
+    list.append(findingRow(finding));
   }
+  section.append(list);
 
   return section;
 }
@@ -112,9 +129,17 @@ function findingRow(finding: Finding): HTMLElement {
   const row = document.createElement(navigable ? 'button' : 'div');
   row.className = `me-inspector-finding ${finding.severity}`;
 
+  const text = finding.line !== undefined ? `${finding.message} (línea ${finding.line})` : finding.message;
+  // The severity is otherwise conveyed only by a colored dot, invisible to VoiceOver — put it
+  // in the accessible name, and a navigable finding hints it activates.
+  const location = navigable ? ' Activa para ir a la ubicación.' : '';
+  row.setAttribute('aria-label', `${severityLabels[finding.severity]}: ${text}.${location}`);
+
   if (row instanceof HTMLButtonElement) {
     row.type = 'button';
     row.addEventListener('click', () => navigateTo(finding.from as number));
+  } else {
+    row.setAttribute('role', 'listitem');
   }
 
   const dot = document.createElement('span');
@@ -123,7 +148,8 @@ function findingRow(finding: Finding): HTMLElement {
 
   const message = document.createElement('span');
   message.className = 'me-inspector-message';
-  message.textContent = finding.line !== undefined ? `${finding.message} (línea ${finding.line})` : finding.message;
+  message.textContent = text;
+  message.setAttribute('aria-hidden', 'true');
 
   row.append(dot, message);
   return row;
