@@ -121,6 +121,17 @@ export function cleanMarkdown(apply: boolean): string {
   return perform(cleanLineRules, apply, cleanTextRules);
 }
 
+/**
+ * Export a normalized copy of the document as Markdown (EXPORT-004).
+ *
+ * Runs the exact same rules as Format Document but never touches the editor — the native side
+ * saves the returned string to a new file, leaving the original untouched. Reusing `runRules`
+ * (not `perform`) is what keeps the output identical to what formatting would produce.
+ */
+export function getFormattedMarkdown(): string {
+  return runRules(window.editor.state.doc.toString(), formatRules).text;
+}
+
 // A TOC covering h2–h6 fits the common shape: h1 is the document title, and the index lists
 // the sections beneath it. h1 is still slugged (see toc.ts) so its anchors don't drift.
 const tocOptions: TOCOptions = {
@@ -131,12 +142,44 @@ const tocOptions: TOCOptions = {
 };
 
 /**
+ * Merge caller-supplied options (from the native config dialog) over the defaults.
+ *
+ * The argument is a JSON string so it can cross the `evaluateJavaScript` boundary; anything
+ * missing or malformed falls back to the default, so a bad payload can never break generation.
+ */
+function resolveTOCOptions(optionsJSON?: string): TOCOptions {
+  if (optionsJSON === undefined || optionsJSON === '') {
+    return tocOptions;
+  }
+
+  try {
+    const raw = JSON.parse(optionsJSON) as Partial<TOCOptions>;
+    const clampLevel = (value: unknown, fallback: number) =>
+      typeof value === 'number' && Number.isFinite(value) ? Math.min(6, Math.max(1, Math.round(value))) : fallback;
+
+    const minLevel = clampLevel(raw.minLevel, tocOptions.minLevel);
+    const maxLevel = Math.max(minLevel, clampLevel(raw.maxLevel, tocOptions.maxLevel));
+    return {
+      minLevel,
+      maxLevel,
+      ordered: typeof raw.ordered === 'boolean' ? raw.ordered : tocOptions.ordered,
+      title: typeof raw.title === 'string' ? raw.title : tocOptions.title,
+    };
+  } catch {
+    return tocOptions;
+  }
+}
+
+/**
  * Generate (or refresh) the table of contents. Unlike the rule-based transforms this builds
  * the new document directly, then commits it in one transaction so undo stays a single step.
+ *
+ * `optionsJSON` (optional) carries the choices from the native config dialog; omitted, the
+ * defaults apply so existing callers keep working unchanged.
  */
-export function generateTableOfContents(apply: boolean): string {
+export function generateTableOfContents(apply: boolean, optionsJSON?: string): string {
   const source = window.editor.state.doc.toString();
-  const { text, count, mode } = buildTableOfContents(source, tocOptions);
+  const { text, count, mode } = buildTableOfContents(source, resolveTOCOptions(optionsJSON));
 
   const changed = mode !== 'none' && text !== source;
   if (apply && changed) {

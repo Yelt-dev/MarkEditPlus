@@ -141,3 +141,69 @@ describe('Inspector: structural validation', () => {
     expect(messages(findings)).not.toContain('El documento no tiene un encabezado H1.');
   });
 });
+
+describe('Inspector: extended validation', () => {
+  test('test an unsupported image format is flagged', () => {
+    const finding = findingsOf('# T\n\n![diagram](sketch.psd)\n').find(f => f.message.includes('no soportado'));
+    expect(finding?.severity).toBe('warning');
+    expect(finding?.message).toContain('.psd');
+  });
+
+  test('test a supported local image format passes', () => {
+    expect(messages(findingsOf('# T\n\n![ok](pic.png)\n')).some(m => m.includes('no soportado'))).toBe(false);
+  });
+
+  test('test remote images are not checked for format', () => {
+    expect(messages(findingsOf('# T\n\n![x](https://example.com/a.psd)\n')).some(m => m.includes('no soportado'))).toBe(false);
+  });
+
+  test('test a table row with the wrong number of cells is flagged', () => {
+    const doc = '# T\n\n| a | b |\n| - | - |\n| 1 |\n';
+    const finding = findingsOf(doc).find(f => f.message.includes('celda'));
+    expect(finding?.severity).toBe('warning');
+    expect(finding?.message).toContain('se esperaban 2');
+  });
+
+  test('test a consistent table passes', () => {
+    const doc = '# T\n\n| a | b |\n| - | - |\n| 1 | 2 |\n';
+    expect(messages(findingsOf(doc)).some(m => m.includes('celda'))).toBe(false);
+  });
+
+  test('test an undefined reference link is flagged', () => {
+    const finding = findingsOf('# T\n\nSee [the docs][missing] here.\n').find(f => f.message.includes('Referencia no definida'));
+    expect(finding?.severity).toBe('warning');
+    expect(finding?.message).toContain('[missing]');
+  });
+
+  test('test a defined reference link passes', () => {
+    const doc = '# T\n\nSee [the docs][ok] here.\n\n[ok]: https://example.com\n';
+    expect(messages(findingsOf(doc)).some(m => m.includes('Referencia no definida'))).toBe(false);
+  });
+
+  test('test reference matching is case-insensitive', () => {
+    const doc = '# T\n\nSee [the docs][OK] here.\n\n[ok]: https://example.com\n';
+    expect(messages(findingsOf(doc)).some(m => m.includes('Referencia no definida'))).toBe(false);
+  });
+
+  test('test an unclosed frontmatter block is an error', () => {
+    const finding = findingsOf('---\ntitle: X\n\n# Body\n').find(f => f.message.includes('Frontmatter sin cerrar'));
+    expect(finding?.severity).toBe('error');
+  });
+
+  test('test a malformed frontmatter line is flagged', () => {
+    const doc = '---\ntitle: X\nesto no es válido\n---\n\n# Body\n';
+    const finding = findingsOf(doc).find(f => f.message.includes('clave: valor'));
+    expect(finding?.severity).toBe('warning');
+  });
+
+  test('test a leading thematic break is not mistaken for frontmatter', () => {
+    // A `---` followed by prose (not key: value) is an <hr>, not an unclosed frontmatter block.
+    const doc = '---\n\nJust some text, not metadata.\n';
+    expect(messages(findingsOf(doc)).some(m => m.includes('Frontmatter'))).toBe(false);
+  });
+
+  test('test valid frontmatter passes', () => {
+    const doc = '---\ntitle: X\nauthor: Yo\n---\n\n# Body\n';
+    expect(messages(findingsOf(doc)).some(m => m.includes('Frontmatter') || m.includes('clave: valor'))).toBe(false);
+  });
+});

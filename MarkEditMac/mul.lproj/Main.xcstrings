@@ -5915,6 +5915,42 @@
         }
       }
     },
+    "Exp-04-md.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Clean Markdown…\"; ObjectID = \"Exp-04-md\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clean Markdown…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markdown limpio…"
+          }
+        }
+      }
+    },
+    "Exp-05-prev.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Export Preview…\"; ObjectID = \"Exp-05-prev\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Export Preview…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa de exportación…"
+          }
+        }
+      }
+    },
     "Exp-00-sub.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Export\"; ObjectID = \"Exp-00-sub\";",
       "extractionState" : "extracted_with_value",

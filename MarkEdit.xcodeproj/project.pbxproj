@@ -62,6 +62,7 @@
 		8765FD252AF28F1000C645A8 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765FD242AF28F1000C645A8 /* AppUpdater.swift */; };
 		8765FD292AF291D300C645A8 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765FD282AF291D300C645A8 /* AppVersion.swift */; };
 		8767BBE3295A8BA500BFACAE /* EditorViewController+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767BBE2295A8BA500BFACAE /* EditorViewController+Images.swift */; };
+		F4749700E5510AE1912FDA51 /* EditorViewController+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FBEFF48B1880A058C86322 /* EditorViewController+Export.swift */; };
 		8767BBE1295A8BA500BFACAE /* EditorViewController+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767BBE0295A8BA500BFACAE /* EditorViewController+Transform.swift */; };
 		8767BBAF295A8BA500BFACAE /* EditorViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767BBAE295A8BA500BFACAE /* EditorViewController+UI.swift */; };
 		8767BBB1295A8C1D00BFACAE /* EditorViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767BBB0295A8C1D00BFACAE /* EditorViewController+Delegate.swift */; };
@@ -217,6 +218,7 @@
 		8765FD242AF28F1000C645A8 /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
 		8765FD282AF291D300C645A8 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		8767BBE2295A8BA500BFACAE /* EditorViewController+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+Images.swift"; sourceTree = "<group>"; };
+		61FBEFF48B1880A058C86322 /* EditorViewController+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+Export.swift"; sourceTree = "<group>"; };
 		8767BBE0295A8BA500BFACAE /* EditorViewController+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+Transform.swift"; sourceTree = "<group>"; };
 		8767BBAE295A8BA500BFACAE /* EditorViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+UI.swift"; sourceTree = "<group>"; };
 		8767BBB0295A8C1D00BFACAE /* EditorViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 			children = (
 				870A51B4294702AF0095C7EB /* EditorViewController.swift */,
 				8767BBE2295A8BA500BFACAE /* EditorViewController+Images.swift */,
+				61FBEFF48B1880A058C86322 /* EditorViewController+Export.swift */,
 				8767BBE0295A8BA500BFACAE /* EditorViewController+Transform.swift */,
 				8767BBAE295A8BA500BFACAE /* EditorViewController+UI.swift */,
 				874065782BB505F500B5CE5A /* EditorViewController+Events.swift */,
@@ -926,6 +929,7 @@
 				87585FE42DA3EC7A0053069E /* Error+Scripting.swift in Sources */,
 				87A73AB3294C4B27006A710E /* EditorWebView.swift in Sources */,
 				8767BBE3295A8BA500BFACAE /* EditorViewController+Images.swift in Sources */,
+				F4749700E5510AE1912FDA51 /* EditorViewController+Export.swift in Sources */,
 				8767BBE1295A8BA500BFACAE /* EditorViewController+Transform.swift in Sources */,
 				8767BBAF295A8BA500BFACAE /* EditorViewController+UI.swift in Sources */,
 				878AABE92CB111410081C5E1 /* EditorMenuItem.swift in Sources */,
