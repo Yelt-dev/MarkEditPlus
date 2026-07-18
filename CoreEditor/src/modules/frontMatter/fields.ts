@@ -32,6 +32,8 @@ interface Block {
   body: string;
   close: string;
   after: string;
+  /** The block's line ending, so lines split and rejoin without corrupting CRLF documents. */
+  eol: string;
 }
 
 function parseBlock(source: string): Block | undefined {
@@ -47,12 +49,18 @@ function parseBlock(source: string): Block | undefined {
     // The trailing newline after the closing --- belongs to the block, not the body after it.
     close: match[3] + match[4],
     after: source.slice(match.index + match[0].length),
+    eol: match[1].includes('\r\n') ? '\r\n' : '\n',
   };
 }
 
-/** A `key: value` line at the top level of the block (not indented, not a comment). */
+/**
+ * A `key: value` line at the top level of the block (not indented, not a comment).
+ *
+ * The trailing `\r` of a CRLF line is stripped first: JavaScript's `.` and `$` treat `\r` as a
+ * line terminator, so without this every field on a CRLF document would fail to parse.
+ */
 function fieldLine(line: string): { key: string; value: string } | undefined {
-  const match = /^([A-Za-z0-9_-]+)[ \t]*:[ \t]*(.*)$/.exec(line);
+  const match = /^([A-Za-z0-9_-]+)[ \t]*:[ \t]*(.*)$/.exec(line.replace(/\r$/, ''));
   if (match === null) {
     return undefined;
   }
@@ -91,7 +99,7 @@ export function readFields(source: string): FrontMatterFields {
   const unknownKeys: string[] = [];
   const known = new Set<string>(knownFields);
 
-  for (const line of block.body.split('\n')) {
+  for (const line of block.body.split(block.eol)) {
     const field = fieldLine(line);
     if (field === undefined) {
       continue;
@@ -119,10 +127,17 @@ export function setField(source: string, key: FieldKey, value: string): string {
   const block = parseBlock(source);
 
   if (block === undefined) {
-    return trimmed === '' ? source : `---\n${key}: ${quoteIfNeeded(trimmed)}\n---\n\n${source}`;
+    if (trimmed === '') {
+      return source;
+    }
+
+    const eol = source.includes('\r\n') ? '\r\n' : '\n';
+    return ['---', `${key}: ${quoteIfNeeded(trimmed)}`, '---', '', ''].join(eol) + source;
   }
 
-  const lines = block.body.split('\n');
+  // Split on the block's own line ending, and strip any stray \r so a rewritten line doesn't
+  // end up with a doubled carriage return.
+  const lines = block.body.split(block.eol).map(line => line.replace(/\r$/, ''));
   const index = lines.findIndex(line => fieldLine(line)?.key === key);
 
   if (index !== -1) {
@@ -135,6 +150,6 @@ export function setField(source: string, key: FieldKey, value: string): string {
     lines.push(`${key}: ${quoteIfNeeded(trimmed)}`);
   }
 
-  const body = lines.join('\n');
+  const body = lines.join(block.eol);
   return `${block.before}${block.open}${body}${block.close}${block.after}`;
 }

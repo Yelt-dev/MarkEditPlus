@@ -81,3 +81,32 @@ describe('Frontmatter fields: write', () => {
     expect(setField(once, 'title', 'Hola mundo')).toBe(once);
   });
 });
+
+describe('Frontmatter fields: CRLF line endings', () => {
+  // The editor may hold CRLF internally; the line-based parsing must not choke on the \r.
+  const crlf = '---\r\ntitle: Doc\r\nauthor: \r\ncustom_field: keep\r\n---\r\n\r\n# Body\r\n';
+
+  test('test fields are read from a CRLF document', () => {
+    const result = readFields(crlf);
+    expect(result.present).toBe(true);
+    expect(result.values.title).toBe('Doc');
+    expect(result.unknownKeys).toEqual(['custom_field']);
+  });
+
+  test('test editing an existing field on CRLF does not duplicate it', () => {
+    const next = setField(crlf, 'author', 'Yeltsin');
+    // One block (two --- markers), author edited in place, not appended.
+    expect((next.match(/---/g) ?? []).length).toBe(2);
+    expect(next).toContain('author: Yeltsin');
+    expect(next).not.toContain('author: \r');
+    expect(next).toContain('custom_field: keep');
+    // CRLF is preserved.
+    expect(next).toContain('title: Doc\r\n');
+  });
+
+  test('test adding a field on CRLF keeps CRLF', () => {
+    const next = setField(crlf, 'language', 'es');
+    expect(next).toContain('language: es\r\n');
+    expect((next.match(/---/g) ?? []).length).toBe(2);
+  });
+});
